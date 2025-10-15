@@ -1,0 +1,32 @@
+# Default feeds for AI news collection. Customize by adding or removing sources.
+# Each source must have a name and URL. You can optionally supply a list of
+# keywords to filter the feed for that particular source.
+#
+# Keywords are evaluated case-insensitively against the title and summary of
+# each entry. If no keywords are supplied for a feed, the global keyword list is
+# used. An empty list disables keyword filtering for that feed.
+
+timezone: Asia/Taipei
+keywords:
+  - AI
+  - artificial intelligence
+  - machine learning
+sources:
+  - name: Google News (AI)
+    url: https://news.google.com/rss/search?q=%22artificial+intelligence%22+OR+AI+OR+%22machine+learning%22+when:1d&hl=en-US&gl=US&ceid=US:en
+    keywords: []
+  - name: MIT Technology Review (AI)
+    url: https://www.technologyreview.com/feed/
+    keywords:
+      - AI
+      - artificial intelligence
+      - machine learning
+  - name: The Verge (AI)
+    url: https://www.theverge.com/rss/index.xml
+    keywords:
+      - AI
+      - artificial intelligence
+      - machine learning
+  - name: VentureBeat AI
+    url: https://venturebeat.com/category/ai/feed/
+    keywords: []
