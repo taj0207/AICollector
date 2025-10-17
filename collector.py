@@ -6,7 +6,9 @@ import calendar
 import datetime as dt
 import logging
 import pathlib
+import re
 from dataclasses import dataclass
+from html import unescape
 from typing import Iterable, List, Optional
 
 import feedparser
@@ -161,7 +163,7 @@ def collect_entries(config: Config, target_date: dt.date) -> List[dict]:
                     "link": entry.get("link"),
                     "source": feed.name,
                     "published": published,
-                    "summary": entry.get("summary", ""),
+                    "summary": clean_summary(entry.get("summary", "")),
                 }
             )
     collected.sort(key=lambda item: item["published"], reverse=True)
@@ -188,12 +190,51 @@ def format_markdown(entries: List[dict], target_date: dt.date, timezone: ZoneInf
     return "\n".join(header + body) + "\n"
 
 
+def format_social_posts(entries: List[dict], target_date: dt.date) -> str:
+    header = [
+        f"# AI News Social Summaries for {target_date.isoformat()}",
+        "",
+        f"Collected {len(entries)} article(s).",
+        "",
+    ]
+    body = []
+    for idx, entry in enumerate(entries, start=1):
+        social = entry.get("social_summary", "").strip()
+        if not social:
+            continue
+        body.append(f"{idx}. {entry['title']}")
+        body.append(f"   {social}")
+        link = entry.get("link")
+        if link:
+            body.append(f"   {link}")
+        body.append("")
+    if not body:
+        body.append("No social summaries were generated.")
+    return "\n".join(header + body).rstrip() + "\n"
+
+
 def write_output(markdown: str, target_date: dt.date, output_dir: pathlib.Path) -> pathlib.Path:
     subdir = output_dir / str(target_date.year) / f"{target_date.month:02d}"
     subdir.mkdir(parents=True, exist_ok=True)
     file_path = subdir / f"{target_date.isoformat()}-ai-news.md"
     file_path.write_text(markdown, encoding="utf-8")
     return file_path
+
+
+def write_social_output(content: str, target_date: dt.date, output_dir: pathlib.Path) -> pathlib.Path:
+    subdir = output_dir / str(target_date.year) / f"{target_date.month:02d}"
+    subdir.mkdir(parents=True, exist_ok=True)
+    file_path = subdir / f"{target_date.isoformat()}-ai-news-social.txt"
+    file_path.write_text(content, encoding="utf-8")
+    return file_path
+
+
+def clean_summary(summary: str) -> str:
+    if not summary:
+        return ""
+    text = unescape(summary)
+    text = re.sub(r"<[^>]+>", "", text)
+    return text.strip()
 
 
 def main() -> None:
@@ -208,6 +249,26 @@ def main() -> None:
     output_path = write_output(markdown, target_date, args.output_dir)
 
     LOGGER.info("Wrote %d entries to %s", len(entries), output_path)
+
+    try:
+        from summarizer import SocialSummarizer
+    except ImportError:  # pragma: no cover - optional dependency
+        LOGGER.debug("summarizer module is unavailable; skipping social summaries")
+        return
+
+    summarizer = SocialSummarizer.from_env()
+    if not summarizer:
+        LOGGER.info("OPENAI_API_KEY not set; skipping social summary generation")
+        return
+
+    generated = summarizer.enrich_entries(entries)
+    if not generated:
+        LOGGER.warning("Social summary generation was requested but no summaries were produced")
+        return
+
+    social_content = format_social_posts(entries, target_date)
+    social_path = write_social_output(social_content, target_date, args.output_dir)
+    LOGGER.info("Wrote %d social summaries to %s", generated, social_path)
 
 
 if __name__ == "__main__":

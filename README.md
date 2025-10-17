@@ -8,6 +8,7 @@ AICollector 是一個簡單的腳本，可以每天自動收集與人工智慧�
 - 以人類可讀的 Markdown 格式儲存在 `data/YYYY/MM/DD-ai-news.md`
 - 可自訂資料來源、關鍵字與時區
 - 可透過 GitHub Actions 或排程工具每天自動執行
+- 若設定 `OPENAI_API_KEY`，會為每篇文章額外生成適合 Threads/Twitter 的約 150 字摘要，並儲存在 `data/YYYY/MM/DD-ai-news-social.txt`
 
 ## 安裝
 
@@ -87,3 +88,4 @@ Collected 5 article(s).
 - RSS 來源是否提供摘要及發佈時間會影響結果。
 - 若某些來源未提供發佈日期，相關文章將不會出現在輸出中。
 - 可依需求調整 `feeds.yaml` 中的關鍵字與來源，或新增其他語言的 feed。
+- 若要啟用社群摘要，請在執行環境設定 `OPENAI_API_KEY`，腳本會呼叫 OpenAI API 產生繁體中文摘要。
