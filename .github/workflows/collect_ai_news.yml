@@ -28,4 +28,4 @@ jobs:
         with:
           commit_message: 'chore: update AI news digest'
           branch: ${{ github.ref }}
-          file_pattern: data/**/*.md
+          file_pattern: data/**/*.md data/**/*.txt
