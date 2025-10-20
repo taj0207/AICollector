@@ -1,0 +1,19 @@
+# AI News Social Summaries for 2025-10-19
+
+Collected 4 article(s).
+
+1. Organizers say over 7 million showed up to No Kings protests
+   周六的「No Kings」抗議活動成為唐納德·特朗普第二任期以來最大規模的示威，組織者估計超過七百萬人走上街頭，表達對總統及其政策的反對。該運動由Indivisible組織推動，並聲稱在全國範圍內舉辦了超過2,700場集會。這一抗議活動顯示出社會對特朗普政府的不滿情緒持續高漲，可能對未來的政治局勢產生深遠影響，尤其是在即將到來的選舉中，民眾的集體行動可能會影響選民的投票意向和政治動態。
+   https://www.theverge.com/news/802321/organizers-say-over-7-million-showed-up-to-no-kings-protests
+
+2. The Sony Watchman was must-see TV
+   Sony Watchman於1982年推出，標誌著便攜式電視的開創性時代。當時的「電視」不僅是內容的代名詞，而是特定設備的象徵。Watchman的出現使得觀眾能夠隨時隨地收看節目，顛覆了傳統觀看習慣。這款設備不僅展示了Sony在消費電子領域的創新能力，也反映了當時人們對於媒體消費方式的轉變。隨著技術的進步，Watchman的影響力延續至今，成為便攜式媒體設備發展的重要里程碑，啟發了後續的數位設備設計與功能。
+   https://www.theverge.com/podcast/802307/sony-watchman-tv-version-history
+
+3. Opera&#8217;s Neon shows just how confusing AI browsers still are
+   Opera的Neon瀏覽器展示了當前AI瀏覽器的複雜性。該瀏覽器並非僅僅在傳統功能上增加了一個AI機器人，而是同時整合了三個AI機器人，這一點既是其優勢也是劣勢。用戶無需切換應用即可進行多種AI操作，但這種設計也可能導致使用上的混淆。Opera的這一創新嘗試反映了AI技術在瀏覽器領域的潛力與挑戰，未來可能影響用戶對瀏覽器功能的期望和使用習慣。
+   https://www.theverge.com/tech/801899/opera-neon-ai-browser-trial-run
+
+4. The teacher is the new engineer: Inside the rise of AI enablement and PromptOps
+   隨著企業迅速採用生成式人工智慧（gen AI），正確的上線培訓變得至關重要。許多公司在使用大型語言模型（LLM）時，常將其視為簡單工具，忽視了必要的培訓和監管，這可能導致法律、數據安全和聲譽風險。研究顯示，未經適當上線的AI系統可能會產生錯誤信息、偏見或數據洩漏。為了降低風險，企業應該像培訓新員工一樣，對AI進行明確的角色定義、上下文訓練和模擬測試。此外，持續的監控和用戶反饋也至關重要。隨著AI逐漸融入各行各業，重視上線和治理的企業將能更有效地利用這一技術，提升效率並降低潛在風險。
+   https://venturebeat.com/ai/the-teacher-is-the-new-engineer-inside-the-rise-of-ai-enablement-and
