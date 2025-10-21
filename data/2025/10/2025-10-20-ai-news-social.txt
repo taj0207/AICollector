@@ -1,0 +1,23 @@
+# AI News Social Summaries for 2025-10-20
+
+Collected 5 article(s).
+
+1. Fold your own tessellation
+   Yoder 推薦下載「舞動的絲帶」圖案，並建議將其列印於介於普通打印紙與卡片紙之間的紙張上。這樣的選擇有助於確保折疊時能夠保持直線，並且在相同的折線上能夠輕鬆地來回折疊。適當的紙張厚度能夠產生清脆的聲音，增強折疊的滿足感。這一過程不僅是藝術創作的體驗，也可能對於教育及手工藝領域的發展產生影響。
+   https://www.technologyreview.com/2025/10/20/1125594/technologyreview-com-tessellation/
+
+2. Adobe Foundry wants to rebuild Firefly for your brand — not just tweak it
+   Adobe推出了AI Foundry，旨在為企業客戶提供專屬的Firefly模型定制服務。與傳統的定制模型不同，Foundry版本能理解多個概念，並具備多模態功能，能生成符合公司品牌調性和風格的內容。Adobe將直接與企業合作，重構和再訓練Firefly模型，確保企業的知識產權得到保護，並使其擁有生成內容的所有權。這一服務被形容為深度調整，超越了簡單的微調，並將企業的專有數據安全地整合進模型中。Home Depot和Walt Disney Imagineering是首批客戶，這項服務有望提升企業的客戶體驗和創意工作流程。
+   https://venturebeat.com/ai/adobe-foundry-wants-to-rebuild-firefly-for-your-brand-not-just-tweak-it
+
+3. The Download: a promising retina implant, and how climate change affects flowers
+   Science Corporation推出了一款新型視網膜植入物，能夠幫助視力受損者進行日常活動，如解填字遊戲。該公司由前Neuralink總裁創立，這項技術的成功標誌著其在腦機介面領域的重大突破，可能改變數百萬人的生活質量。此外，研究還指出氣候變遷對花卉的影響，揭示了植物生長模式的變化及其對生態系統的潛在威脅。這些發展不僅展示了科技在醫療上的應用潛力，也提醒人們對環境變遷的重視。
+   https://www.technologyreview.com/2025/10/20/1126099/the-download-a-promising-retina-implant-and-how-climate-change-affects-flowers/
+
+4. This retina implant lets people with vision loss do a crossword puzzle
+   Science Corporation，前Neuralink總裁創立的競爭對手，最近以低價收購了一項正在進行高階測試的視網膜植入物，這一進展使其在市場上超越了競爭對手。該植入物能夠提供一種“人工視覺”，使部分視力受損的患者能夠閱讀文字和進行填字遊戲。這項技術的成功不僅可能改善視力障礙者的生活質量，還可能為未來的視覺恢復療法開闢新方向，對醫療科技領域產生深遠影響。
+   https://www.technologyreview.com/2025/10/20/1126065/this-retina-implant-lets-people-with-vision-loss-do-a-crossword-puzzle/
+
+5. AI could predict who will have a heart attack
+   儘管現代心臟病學技術日益進步，心臟病發作的預測仍然面臨挑戰，許多人甚至未接受過篩檢。近期，初創公司如Bunkerhill Health、Nanox.AI及HeartLung Technologies正利用AI算法分析數百萬份CT掃描，以尋找心臟病的早期跡象。這項技術有望成為心臟病篩檢的突破，能夠提高早期診斷的準確性，從而改善患者的預後並降低心臟病發作的風險。若成功推廣，將可能改變心臟病的篩檢與治療方式，對公共健康產生深遠影響。
+   https://www.technologyreview.com/2025/10/20/1125336/ai-heart-attack-prediction/
