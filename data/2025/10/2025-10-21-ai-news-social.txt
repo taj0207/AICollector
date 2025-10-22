@@ -1,0 +1,23 @@
+# AI News Social Summaries for 2025-10-21
+
+Collected 5 article(s).
+
+1. New 'Markovian Thinking' technique unlocks a path to million-token AI reasoning
+   Mila 研究團隊提出了一種名為「馬可夫思維」（Markovian Thinking）的新技術，顯著提升大型語言模型（LLMs）在複雜推理任務中的效率。該技術透過將推理過程分解為固定大小的區塊，解決了長推理鏈所帶來的計算成本問題。初步估算顯示，對於一個1.5B參數的模型，這種方法可將訓練成本降低超過三分之二。研究者使用名為Delethink的環境進行實驗，結果顯示該模型能在數學基準測試中達到或超越傳統長鏈推理模型的表現，且在推理過程中保持線性計算需求。這一突破不僅提升了AI推理的能力，還為未來的科學發現鋪平了道路，顯示出馬可夫思維在開發下一代推理模型中的潛力。
+   https://venturebeat.com/ai/new-markovian-thinking-technique-unlocks-a-path-to-million-token-ai
+
+2. OpenAI announces ChatGPT Atlas, an AI-enabled web browser to challenge Google Chrome
+   OpenAI推出了ChatGPT Atlas，這是一款具備AI功能的網頁瀏覽器，旨在挑戰Google Chrome的市場主導地位。Atlas目前已在全球範圍內推出，支持macOS，並計劃不久後擴展至Windows、iOS和Android。OpenAI首席執行官Sam Altman表示，Atlas希望改變用戶與網絡的互動方式，通過對話而非輸入網址來進行搜尋。Atlas的特色在於其內建的聊天功能，允許用戶在任何網站上與ChatGPT互動，並能直接在瀏覽器內執行任務。雖然目前僅限於ChatGPT Business、Plus和Pro用戶使用，但Atlas的推出標誌著AI瀏覽器競爭的開始，未來可能會對傳統瀏覽器市場造成影響。
+   https://venturebeat.com/ai/openai-releases-chatgpt-atlas-an-ai-enabled-web-browser-to-challenge-google
+
+3. The unexpected benefits of AI PCs: why creativity could be the new productivity
+   最新研究顯示，生成式人工智慧（AI）不僅提升效率，還能增強人類創造力。麻省理工學院斯隆管理學院的研究指出，當員工擁有合適的工具與技能時，AI能促進創意發展。新一代AI電腦結合本地AI處理與強大的神經處理單元（NPU），提供快速且安全的工作環境，並開啟新的創意可能性。這些設備已被行銷、工程及銷售團隊廣泛應用，顯著縮短工作流程並激發創新思維。然而，儘管近半數IT決策者已開始使用AI電腦，創造性應用的普及率仍然不高，顯示出在知識工作者中存在創意的鴻溝。企業應重視創造力的培養，以提升員工滿意度和留任率，並最終促進業務成果。
+   https://venturebeat.com/ai/the-unexpected-benefits-of-ai-pcs-why-creativity-could-be-the-new
+
+4. AI’s financial blind spot: Why long-term success depends on cost transparency
+   隨著人工智慧（AI）在商業運作中的潛力逐漸顯現，企業面臨的挑戰是如何將成本與成果有效連結。研究顯示，68%的技術領導者預計將增加AI預算，但僅有不到30%的AI領導者對投資回報感到滿意。AI項目的高成本及其與業務成果之間的模糊關係，使得企業在資源配置上面臨風險。傳統的財務規劃無法應對AI的動態需求，企業需採用透明的成本管理框架，如技術商業管理（TBM），以確保AI投資能帶來實質價值。這種透明度不僅有助於優化資源配置，還能提高決策的準確性，避免不必要的開支，從而將AI轉變為可衡量的商業資產。
+   https://venturebeat.com/ai/ais-financial-blind-spot-why-long-term-success-depends-on-cost-transparency
+
+5. Claude Code comes to web and mobile, letting devs launch parallel jobs on Anthropic’s managed infra
+   Anthropic 宣布其 AI 編程工具 Claude Code 現已在網頁和 iOS 應用上提供，允許開發者在其管理的基礎設施上啟動並行任務。這一服務原本僅可通過終端機使用，現在用戶可直接連接 GitHub 倉庫，描述需求，Claude 將負責實現，並在獨立環境中進行實時進度跟蹤。此更新使得開發者能夠更高效地處理多個項目，符合企業對異步編程的需求。Claude Code 的雲端運行保證了安全性，並支持用戶自定義連接域。該工具的推出有助於提升開發效率，並使 Anthropic 更接近於競爭對手 OpenAI 的 Codex 平台。
+   https://venturebeat.com/ai/claude-code-comes-to-web-and-mobile-letting-devs-launch-parallel-jobs-on
