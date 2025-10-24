@@ -1,0 +1,27 @@
+# AI News Social Summaries for 2025-10-23
+
+Collected 6 article(s).
+
+1. New updates and more access to Google Earth AI - blog.google
+   Google Earth AI近期推出重要更新，擴大了用戶的訪問權限。新功能包括改進的地圖視覺化技術和更精確的數據分析工具，旨在提升用戶在環境監測、城市規劃及教育等領域的應用能力。這些更新不僅增強了Google Earth的實用性，還為研究人員和開發者提供了更豐富的資源，促進創新應用的開發。隨著AI技術的進一步整合，Google Earth將在全球範圍內推動更深入的地理資訊分析，影響環境政策和城市發展的決策過程。
+   https://news.google.com/rss/articles/CBMikAFBVV95cUxPaHlBWldaV1FFWmJNZ0hkcXJyd1E4WVpGSkJxNUlKOHZXbEplUmdqY256a2Jsc1VnOFJLVUZqYTZXRUJZUWd6dUNVM0p3ZEk3MF9RQ1hFdEJrcHpwMnNKeWhCNHpYc0lDR0JPYlh0Ry1yekg2eGZObFdDVUNXQlJTdlpwaWEzV2lZcUczaHZxRXo?oc=5
+
+2. ‘AI is tearing companies apart’: Writer AI CEO slams Fortune 500 leaders for mismanaging tech
+   Writer AI的聯合創始人兼CEO梅·哈比布在TED AI大會上指出，近半數的《財富》500強高管認為人工智慧正在損害他們的公司，並將責任歸咎於領導層。哈比布強調，問題不在於技術本身，而是企業領導者將AI轉型視為傳統技術推廣，錯誤地將其委派給IT部門。她指出，AI的出現改變了工作執行的經濟學，要求商業領導者重新設計工作流程，而非僅僅依賴IT。哈比布認為，成功的AI轉型需要領導者面對人員流失的恐懼，並重新思考組織結構，以適應AI所帶來的變革。她呼籲企業領導者親自推動轉型，以避免AI導致的企業內部混亂。
+   https://venturebeat.com/ai/ai-is-tearing-companies-apart-writer-ai-ceo-slams-fortune-500-leaders-for
+
+3. Redefining data engineering in the age of AI
+   隨著企業將人工智慧融入更多業務流程，高層主管逐漸意識到數據工程師在實現這些計劃中的核心角色。報告指出，人工智慧的有效性依賴於大量可靠且高品質的數據管理，數據工程師因此成為推動這一變革的關鍵人物。他們不僅負責數據的收集和整理，還確保數據的質量和可用性，這對於企業在競爭激烈的市場中保持優勢至關重要。隨著對數據需求的增加，數據工程師的角色將愈加重要，未來的數據策略將需要更深入的專業知識和技術支持。
+   https://www.technologyreview.com/2025/10/23/1125651/redefining-data-engineering-in-the-age-of-ai/
+
+4. Sakana AI's CTO says he's 'absolutely sick' of transformers, the tech that powers every major AI model
+   Sakana AI的首席技術官Llion Jones在TED AI會議上表達了對變壓器技術的失望，指出當前的人工智慧研究過於狹隘，可能阻礙未來的重大突破。他認為，儘管資金和人才大量湧入，研究者卻因投資者的回報壓力而選擇安全的項目，導致創意減少。Jones強調，這種情況類似於過去在變壓器出現前的神經網絡研究，當時研究者不斷微調舊技術而忽視了更具潛力的創新。他提議，應該鼓勵開放的探索環境，讓研究者有更多的自由去追求創新，而非僅僅追求短期成果。Jones的觀點可能預示著AI領域需要重新思考其研究激勵機制，以促進更具創造性的突破。
+   https://venturebeat.com/ai/sakana-ais-cto-says-hes-absolutely-sick-of-transformers-the-tech-that-powers
+
+5. The Download: aluminium’s potential as a zero-carbon fuel, and what’s next for energy storage
+   波士頓的初創公司Found Energy即將進行全球最大的鋁作為零碳燃料的實地測試。該公司計畫利用鋁金屬廢料中的能量，探索其在能源儲存和轉換中的潛力。鋁作為燃料的應用不僅有助於減少碳排放，還可能為可再生能源的儲存提供新解決方案，進一步推動能源行業的可持續發展。這一創新測試的結果將對未來的能源政策和技術發展產生深遠影響，可能改變我們對能源來源的傳統認知。
+   https://www.technologyreview.com/2025/10/23/1126428/the-download-aluminiums-potential-as-a-zero-carbon-fuel-and-whats-next-for-energy-storage/
+
+6. What enterprises can take away from Microsoft CEO Satya Nadella's shareholder letter
+   微軟首席執行官納德拉在最新的股東信中強調，企業在AI時代必須重視安全性和可靠性，並將其視為AI基礎架構的首要任務。他指出，微軟正在建設混合、開放且符合主權要求的AI基礎設施，並推出多樣化的AI模型以支持企業的需求。此外，納德拉提到，未來AI代理將取代傳統的聊天機器人，並強調統一數據平台對於釋放AI價值的重要性。最後，他強調信任、合規和負責任的AI將成為企業部署的必要條件。這些要點顯示，企業在AI成熟度上不僅需要技術創新，還需在系統層面做好準備，以應對未來的挑戰。
+   https://venturebeat.com/ai/what-enterprises-can-take-away-from-microsoft-ceo-satya-nadellas-shareholder
