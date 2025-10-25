@@ -1,0 +1,39 @@
+# AI News Social Summaries for 2025-10-24
+
+Collected 9 article(s).
+
+1. What we know about energy use at U.S. data centers amid the AI boom - Pew Research Center
+   根據Pew Research Center的報告，隨著人工智慧的迅速發展，美國數據中心的能源使用量顯著增加。這些數據中心在AI運算需求上持續攀升，導致其能源消耗成為關注焦點。報告指出，數據中心已成為全美電力需求的重要來源，並可能對環境產生深遠影響。隨著企業和政府對可持續發展的重視，如何有效管理數據中心的能源使用，將成為未來政策和技術發展的關鍵挑戰。此趨勢不僅影響能源市場，也可能促進再生能源的投資與應用。
+   https://news.google.com/rss/articles/CBMiuAFBVV95cUxPb1lqZC1Wdnk4aEwzVVFZZ01DTmxycVRBWENTTUFpSGdZZ2NWYlFnWDdWVXBzbjhIZnJpZ1V6akc5YnVQY2pTVjFPSDQ1dUlLN3ZiVjhaM2dXTVplU29hWndlSU9SeTNGc2JqRVQ3b1lWUnJoVXdQRmR4dC1ITkNIdDg5TWpwVVJrc1lDZVJ4X2dRNzlqaWJOdGpodS1Va1pQeFRTRGhLZUJUQVhvUlBEbVFlM2gwSlRY?oc=5
+
+2. The Download: carbon removal’s future, and measuring pain using an app
+   碳移除產業在經歷多年成長後，正面臨重大挑戰。多家初創公司出現困境，其中以Running Tide為例，這家有潛力的水產養殖公司已宣佈關閉。此情況引發對碳移除未來的深刻反思，業界需重新評估其可行性與長期發展策略。此外，科技界正在探索利用應用程式來測量疼痛，這一創新可能改變醫療診斷與疼痛管理的方式，提升患者的治療體驗。這些發展不僅影響相關產業的運作模式，也可能對環境政策及健康科技領域產生深遠影響。
+   https://www.technologyreview.com/2025/10/24/1126569/the-download-carbon-removals-future-and-measuring-pain-using-an-app/
+
+3. Thinking Machines challenges OpenAI's AI scaling strategy: 'First superintelligence will be a superhuman learner'
+   在人工智慧領域，Thinking Machines Lab的研究員拉法伊洛夫提出對現有AI擴展策略的挑戰，主張未來的超智能將取決於學習能力而非模型規模。他指出，當前的AI系統缺乏內部化學習的能力，導致它們在面對新任務時無法利用過去的經驗。拉法伊洛夫強調，真正的智能應該能夠自我改進和適應環境，而不僅僅是解決眼前的任務。他建議採用「元學習」的方法，讓AI像學生一樣逐步學習，而非僅僅依賴於解決特定問題的獎勵。這一觀點可能會改變業界對AGI的發展方向，並引發對學習數據和目標設計的重新思考。儘管面臨挑戰，Thinking Machines Lab仍致力於追求這一創新路徑。
+   https://venturebeat.com/ai/thinking-machines-challenges-openais-ai-scaling-strategy-first
+
+4. An AI app to measure pain is here
+   一款利用人工智慧技術的手機應用程式已經問世，旨在幫助用戶量測和評估疼痛。根據《麻省理工科技評論》的報導，這款應用程式能夠透過分析用戶的反饋和生理數據，提供更精確的疼痛評估。這一創新不僅有助於個人更好地理解自身的疼痛狀況，還可能對醫療專業人士在診斷和治療過程中提供重要支持。隨著科技的進步，這類應用程式有潛力改善疼痛管理，提升患者的生活質量，並促進醫療領域的數據驅動決策。
+   https://www.technologyreview.com/2025/10/24/1126451/an-ai-app-to-measure-pain-is-here/
+
+5. What’s next for carbon removal?
+   MIT Technology Review的《未來展望》系列探討了各行各業的趨勢與技術，特別關注碳移除的未來。2020年代初期，一家位於緬因州波特蘭的水產養殖公司成功籌集超過5000萬美元，提出利用自然力量對抗氣候變化的計劃。這一舉措不僅展示了創新技術在環保領域的潛力，還可能促進可持續發展的商業模式，對於減緩全球暖化具有深遠影響。隨著對碳移除技術的關注增加，相關產業的投資與發展將可能加速，推動更廣泛的環境政策與市場變革。
+   https://www.technologyreview.com/2025/10/24/1126478/whats-next-for-carbon-removal/
+
+6. Mistral launches its own AI Studio for quick development with its European open source, proprietary models
+   法國 AI 初創公司 Mistral 推出 Mistral AI Studio，旨在幫助企業快速開發和運營 AI 應用。該平台整合了 Mistral 的專有及開源大型語言模型，提供一個便捷的開發環境，並強調可觀察性和治理功能，以解決企業在 AI 採用過程中常見的原型轉化問題。Mistral AI Studio 支持多種部署模式，包括雲端和自我部署，並提供豐富的模型目錄，涵蓋多種應用場景。此外，該平台還具備即時信息檢索和多模態生成能力，促進企業在 AI 開發上的靈活性和創新。此舉可能吸引對美國科技公司持保留態度的歐洲企業，進一步推動歐洲本土 AI 生態系統的發展。
+   https://venturebeat.com/ai/mistral-launches-its-own-ai-studio-for-quick-development-with-its-european
+
+7. Inside Ring-1T: Ant engineers solve reinforcement learning bottlenecks at trillion scale
+   中國螞蟻集團近日公布其新模型Ring-1T，該模型擁有一兆個參數，並被稱為首個開源推理模型。Ring-1T旨在與OpenAI的GPT-5及谷歌的Gemini 2.5等競爭，並在數學、邏輯推理及編碼生成等領域表現卓越。為了訓練這樣一個龐大的模型，螞蟻集團開發了三項互聯創新技術，包括IcePop、C3PO++和ASystem，以解決強化學習中的瓶頸問題。基準測試顯示，Ring-1T在多項挑戰中表現優異，僅次於GPT-5，顯示出中國在AI領域的快速進步與競爭力。此舉進一步加劇了美中在人工智慧領域的競爭。
+   https://venturebeat.com/ai/inside-ring-1t-ant-engineers-solve-reinforcement-learning-bottlenecks-at
+
+8. OpenAI launches company knowledge in ChatGPT, letting you access your firm's data from Google Drive, Slack, GitHub
+   OpenAI推出了ChatGPT的公司知識功能，允許企業用戶直接從第三方工作應用（如Slack、Google Drive、GitHub等）調取公司數據，並將其整合到ChatGPT的回答中。此功能專為付費的商業、企業和教育計劃設計，旨在提升工作效率，幫助員工更快速地獲取所需信息。該功能基於一個經過調整的GPT-5版本，能夠跨多個來源提供更準確的答案，並確保數據的透明度和可追溯性。企業管理者可以控制用戶訪問權限，並確保符合內部治理和合規要求。這一創新不僅有助於打破數據孤島，還能提升組織的生產力，未來OpenAI計劃進一步擴展支持的應用程序和功能。
+   https://venturebeat.com/ai/openai-launches-company-knowledge-in-chatgpt-letting-you-access-your-firms
+
+9. Microsoft Copilot gets 12 big updates for fall, including new AI assistant character Mico
+   微軟在近期的線上發布會上介紹了Copilot AI數位助理的重大更新，推出了12項新功能，旨在加強其在Windows、Edge和Microsoft 365中的整合性。這些更新不僅強化了生成式AI的可及性，還引入了新的角色Mico，增添了情感表達，提升用戶體驗。新功能包括可容納32人的共享會議、AI輔助的即時內容創建平台、以及長期記憶功能，讓Copilot能夠記住用戶的關鍵資訊。這些變化顯示微軟正從靜態的生產力工具轉向更具上下文的AI基礎設施，強調技術應服務於人，而非相反。此更新將在美國立即推出，並計劃在其他市場推廣，對依賴微軟產品的企業及競爭者將產生深遠影響。
+   https://venturebeat.com/ai/microsoft-copilot-gets-12-big-updates-for-fall-including-new-ai-assistant
