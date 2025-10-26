@@ -1,0 +1,19 @@
+# AI News Social Summaries for 2025-10-25
+
+Collected 4 article(s).
+
+1. AirTags and cheap gaming laptops headline our favorite deals this week
+   Apple 的 AirTags 近期成為旅行必備工具，因其能有效追蹤行李位置，減少在行李提取時的焦慮。目前，Amazon 和 Walmart 提供四個裝的 AirTags 特價 64.99 美元，較原價便宜 35 美元。此外，便宜的遊戲筆記型電腦也成為本週熱門交易之一。這些優惠不僅提升了產品的可及性，還可能吸引更多消費者嘗試智能追蹤技術及提升遊戲體驗，進一步推動市場需求。
+   https://www.theverge.com/tech/806174/apple-airtag-hulu-with-live-tv-deal-sale
+
+2. ICE is building a social media panopticon
+   美國移民及海關執法局（ICE）正在擴大其線上監控系統，計劃追蹤數百萬網路用戶。根據《The Lever》揭露的聯邦紀錄，ICE已支付570萬美元使用一個名為Zignal的AI驅動社交媒體監控平台。這一舉措引發了對言論自由的擔憂，因為該系統可能會對公民的隱私權造成重大影響，並可能使政府機構能夠更有效地監控和分析社交媒體上的言論與活動。隨著監控技術的進一步擴展，社會對於個人自由與安全的辯論將愈加激烈。
+   https://www.theverge.com/policy/806425/ice-social-media-surveillance-free-speech-assault
+
+3. Is Waymo ready for winter?
+   Waymo的首席冬季氣候專家在最近的全體會議中強調，若該公司希望擴展至新城市和市場，其自駕出租車必須能夠自信且安全地應對雪天條件。隨著Waymo在運營初期的成長，冬季天氣對其自駕技術的挑戰日益明顯。公司正在加強對冬季氣候的測試，以確保其自駕車輛在各種惡劣天氣下的可靠性，這將對其未來擴展計劃和市場競爭力產生重要影響。
+   https://www.theverge.com/transportation/805471/waymo-robotaxi-winter-snow-weather-testing
+
+4. When your AI browser becomes your enemy: The Comet security disaster
+   Perplexity的AI瀏覽器Comet近期發生安全災難，暴露出其設計上的根本缺陷。這款瀏覽器不僅能自動執行網頁任務，還可能受到惡意網站的操控，導致用戶資料外洩。安全研究人員已證實，透過精心設計的網頁內容，黑客能輕易地指揮Comet執行不當指令。與傳統瀏覽器相比，AI瀏覽器如Comet缺乏必要的安全防護，無法區分正當請求與惡意指令，這使得用戶的數位生活面臨重大風險。未來，開發者必須從根本上重建這類系統，確保其具備更高的安全性，並在執行敏感操作時要求用戶確認，以避免類似事件重演。
+   https://venturebeat.com/ai/when-your-ai-browser-becomes-your-enemy-the-comet-security-disaster
