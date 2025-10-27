@@ -1,0 +1,19 @@
+# AI News Social Summaries for 2025-10-26
+
+Collected 4 article(s).
+
+1. How Guitar Hero made everybody a rock star
+   《Guitar Hero》系列遊戲在2000年代初期迅速崛起，成為家庭娛樂的代表，塑造了許多玩家的音樂體驗。透過模擬彈奏吉他的玩法，這款遊戲不僅讓玩家感受到搖滾音樂的魅力，也促進了社交互動。其獨特的塑膠吉他控制器成為家庭聚會的必備品，吸引了各年齡層的玩家參與。隨著遊戲的流行，許多原本不熟悉音樂的玩家也因此對搖滾樂產生興趣，進一步影響了音樂文化的發展。儘管《Guitar Hero》隨著時間推移而逐漸淡出，但其對音樂遊戲市場及玩家社群的影響仍然深遠。
+   https://www.theverge.com/podcast/806168/guitar-hero-game-version-history
+
+2. The next legal frontier is your face and AI
+   隨著人工智慧技術的發展，個人肖像權的法律問題日益突顯。近期，一首名為《Heart on My Sleeve》的歌曲引發了關於使用名人面孔和聲音的法律爭議。這一事件標誌著AI在創作領域的潛在影響，特別是在如何合法使用個人形象和聲音方面。專家指出，未來的法律框架需要明確規範AI生成內容的使用，以保護個人權益並促進創新。這不僅涉及音樂產業，還可能影響廣告、電影等多個領域，對於創作者和消費者而言，都是一個需要密切關注的重要議題。
+   https://www.theverge.com/column/805821/the-next-legal-frontier-is-your-face-and-ai
+
+3. From human clicks to machine intent: Preparing the web for agentic AI
+   隨著 AI 驅動的代理瀏覽技術興起，現有的網頁設計面臨重大挑戰。過去三十年，網頁主要為人類用戶設計，但當機器開始代替人類進行瀏覽時，這種以人為中心的假設顯得脆弱。實驗顯示，當代理執行隱藏指令時，缺乏判斷與上下文理解，可能導致安全風險。此外，企業應用中的複雜性使得代理難以有效操作，顯示出人機之間的結構性差異。未來的網頁設計必須考慮機器的可讀性，並引入語義結構、行動端點及標準化介面，以確保代理能安全且有效地執行任務。這一變革不僅是技術上的必要，也是企業競爭的關鍵。
+   https://venturebeat.com/ai/from-human-clicks-to-machine-intent-preparing-the-web-for-agentic-ai
+
+4. Tech left teens fighting over scraps, and now it wants those too
+   日本的便利商店已開始使用機器人進行貨架補貨，這項技術在美國尚未普及，但隨著機器視覺和人工智慧的進步，像7-11和Walmart等零售商可能很快會進行實驗。Walmart在2020年放棄了貨架掃描機器人，但目前的技術發展可能促使其重新考慮。這一趨勢可能會對青少年就業市場造成影響，因為自動化技術逐漸取代傳統工作，未來的勞動力需求將更加依賴技術技能。
+   https://www.theverge.com/report/806728/tech-left-teens-fighting-over-scraps-robots-taking-jobs
