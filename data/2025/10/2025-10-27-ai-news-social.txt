@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-10-27
+
+Collected 3 article(s).
+
+1. The Download: what to make of OpenAI’s Atlas browser, and how to make climate progress
+   OpenAI 最近推出了名為 Atlas 的新網頁瀏覽器，內建 ChatGPT 功能。然而，對於其具體用途及應用場景，仍存在不確定性。這款瀏覽器的推出引發了對於其在日常網路使用中的潛在影響的討論，特別是在人工智慧整合方面的進展。此外，該報導還探討了氣候變遷的進展與挑戰，強調科技在應對環境問題中的關鍵角色。隨著 AI 技術的迅速發展，Atlas 瀏覽器的功能與實際應用將可能改變用戶的網路互動方式，並推動更廣泛的科技創新。
+   https://www.technologyreview.com/2025/10/27/1126679/the-download-what-to-make-of-openais-atlas-browser-and-how-to-make-climate-progress/
+
+2. I tried OpenAI’s new Atlas browser but I still don’t know what it’s for
+   OpenAI最近推出了一款名為Atlas的新型網頁瀏覽器，內建ChatGPT和智能代理，旨在同時提供瀏覽、即時回答問題及自動執行任務的功能。儘管這款瀏覽器具備多項創新特性，但使用者對其具體用途仍感到困惑。Atlas的推出可能會改變用戶的網絡互動方式，提升效率，但其實際應用價值和用戶接受度仍需進一步觀察。這一創新工具的成功與否將取決於OpenAI如何解釋其功能及用戶如何適應這種新型瀏覽體驗。
+   https://www.technologyreview.com/2025/10/27/1126673/openai-new-atlas-browser/
+
+3. Google Cloud takes aim at CoreWeave and AWS with managed Slurm for enterprise-scale AI training
+   Google Cloud推出了Vertex AI Training服務，旨在幫助企業進行大規模AI模型訓練，並與CoreWeave、AWS等競爭對手展開競爭。該服務提供受管理的Slurm環境、數據科學工具及大規模訓練所需的計算資源，讓企業能夠自定義或創建專屬的AI模型。Google Cloud的高層表示，越來越多企業希望在可靠的環境中優化計算，並專注於長期訓練作業。Vertex AI Training的定價將根據企業所需的計算量而定，並強調其在監控和管理訓練過程中的專業知識。此服務不僅能降低企業訓練模型的難度和成本，還能提高訓練效率，對於希望建立特定領域模型的企業而言，意義重大。
+   https://venturebeat.com/ai/google-cloud-takes-aim-at-coreweave-and-aws-with-managed-slurm-for
