@@ -1,0 +1,35 @@
+# AI News Social Summaries for 2025-10-28
+
+Collected 8 article(s).
+
+1. Finding return on AI investments across industries
+   隨著市場進入 ChatGPT 上線三年後，對於生成式 AI 的投資回報問題引發廣泛討論。許多專家開始使用「泡沫」一詞，指出除了少數科技供應商外，生成式 AI 在其他行業尚未實現顯著的回報。麻省理工學院的 NANDA 報告在九月引起關注，報告中提到的觀點被多位作者和影響者廣泛引用，顯示出業界對於 AI 投資的潛在挑戰與不確定性。這一情況可能影響企業在未來的 AI 項目投資決策，促使他們重新評估技術的實際應用價值及其長期回報。
+   https://www.technologyreview.com/2025/10/28/1126693/finding-return-on-ai-investments-across-industries/
+
+2. The Download: Microsoft’s stance on erotic AI, and an AI hype mystery
+   Microsoft AI CEO Mustafa Suleyman 表示，公司不會開發性機器人，強調在道德與技術創新之間的平衡。他指出，雖然AI技術的應用潛力巨大，但涉及性與倫理的議題需要謹慎處理。此言論反映出科技界對於性相關AI應用的爭議與挑戰，並引發對未來AI發展方向的思考。Suleyman 的立場可能影響業界對於性科技的接受度，並促使其他科技公司重新評估其產品開發策略，以符合社會倫理標準。
+   https://www.technologyreview.com/2025/10/28/1126802/the-download-microsofts-stance-on-erotic-ai-and-an-ai-hype-mystery/
+
+3. Intuit learned to build AI agents for finance the hard way: Trust lost in buckets, earned back in spoonfuls
+   Intuit近期推出的QuickBooks更新引入了Intuit Intelligence系統，該系統整合了專業的AI代理，專注於財務任務如銷售稅合規和薪資處理。這一進展源於Intuit在GenOS上的持續投資，旨在提高AI的準確性和反應速度。Intuit的設計選擇強調實際數據查詢而非生成回應，降低了AI在財務應用中的錯誤風險。此外，Intuit強調解釋性，讓用戶了解AI決策的背後邏輯，以重建信任。該公司逐步將AI嵌入現有工作流程，避免用戶因為新介面而感到困惑。Intuit的經驗為企業AI的實施提供了重要啟示，強調信任、透明度和人類監督的重要性。
+   https://venturebeat.com/ai/intuit-learned-to-build-ai-agents-for-finance-the-hard-way-trust-lost-in
+
+4. “We will never build a sex robot,” says Mustafa Suleyman
+   Mustafa Suleyman，微軟AI的首席執行官，對於當前AI產業的發展方向表達了擔憂。他認為，許多聊天機器人模擬人類行為，可能會誤導用戶，使其將機器的擬人化行為視為真正的生命。Suleyman強調，這種趨勢可能帶來潛在的倫理與社會問題，並明言公司不會開發性機器人，以避免進一步複雜化人類與機器之間的關係。他的觀點反映出對AI技術未來發展的深刻思考，並呼籲業界在創新與道德之間取得平衡。
+   https://www.technologyreview.com/2025/10/28/1126781/we-will-never-build-a-sex-robot-says-mustafa-suleyman/
+
+5. An AI adoption riddle
+   近期對人工智慧（AI）採用的報導揭示了該技術面臨的挑戰與矛盾。儘管過去幾年AI的發展勢頭強勁，並受到廣泛關注，但目前對其實際應用的熱情有所減退。許多企業在考慮導入AI時，仍然對其潛在風險與效益持謹慎態度，導致採用進程緩慢。這種情況可能影響AI技術的創新與發展，並使企業在競爭中處於不利地位。未來，如何平衡AI的潛力與其帶來的挑戰，將成為業界關注的焦點。
+   https://www.technologyreview.com/2025/10/28/1126687/an-ai-adoption-riddle/
+
+6. PayPal’s agentic commerce play shows why flexibility, not standards, will define the eext c-commerce wave
+   PayPal 正在推動其代理商務服務，以滿足企業在 AI 驅動的電子商務中日益增長的需求。該公司推出的兩項新功能，Agent Ready 和 Shop Sync，旨在幫助商家在各種聊天平台上進行產品銷售。Agent Ready 將於 2026 年推出，讓現有商家能在 AI 平台上接受支付；而 Shop Sync 目前已可用，能將商家的產品數據整合至不同的 AI 聊天介面。PayPal 強調，靈活性將是未來代理商務的關鍵，因為不同平台之間存在協議和數據解讀的差異。隨著 AI 購物的興起，商家需提前布局，以保持競爭力並保護消費者投資。
+   https://venturebeat.com/ai/paypals-agentic-commerce-play-shows-why-flexibility-not-standards-will
+
+7. MiniMax-M2 is the new king of open source LLMs (especially for agentic tool calling)
+   MiniMax-M2，來自中國初創公司MiniMax的最新開源大型語言模型（LLM），被評為目前最強大的開源模型，特別在企業日益重視的自主工具使用方面表現突出。該模型在開放許可下提供，允許開發者自由使用和部署，甚至用於商業目的。根據第三方評估機構Artificial Analysis的數據，MiniMax-M2在全球開源模型中排名第一，尤其在計劃、執行及使用外部工具的能力上，與頂尖的專有系統如GPT-5相媲美。其高效的Mixture-of-Experts架構使得企業能以較少的計算資源運行高端推理和自動化工作負載，降低了基礎設施需求和許可成本，對企業技術決策者而言，這是一個重要的轉折點。MiniMax-M2的推出標誌著開源模型在商業環境中的新機遇，為企業提供了一個透明且可調整的智能系統基礎。
+   https://venturebeat.com/ai/minimax-m2-is-the-new-king-of-open-source-llms-especially-for-agentic-tool
+
+8. Anthropic rolls out Claude AI for finance, integrates with Excel to rival Microsoft Copilot
+   Anthropic 正式推出 Claude AI，進軍金融服務市場，並將其整合至 Microsoft Excel，讓金融分析師能直接在電子表格中與 AI 互動。這一舉措不僅提升了分析師的工作效率，還解決了 AI 在金融領域的透明度問題，增強了用戶對 AI 決策的信任。此外，Anthropic 擴展了與多家金融信息提供商的數據合作，確保其 AI 系統能獲得即時市場數據，進一步提升其競爭力。該公司還推出了針對金融分析常見任務的預配置工作流程，旨在簡化分析師的日常工作。隨著 AI 在金融行業的應用加速，Anthropic 的策略可能會改變市場格局，並提升整體行業的生產力。然而，隨之而來的監管挑戰與技術風險仍需謹慎應對。
+   https://venturebeat.com/ai/anthropic-rolls-out-claude-ai-for-finance-integrates-with-excel-to-rival
