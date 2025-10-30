@@ -1,0 +1,33 @@
+# AI News Social Summaries for 2025-10-29
+
+Collected 7 article(s).
+
+1. Geostar pioneers GEO as traditional SEO faces 25% decline from AI chatbots, Gartner says
+   隨著 AI 聊天機器人的興起，Gartner 預測傳統搜尋引擎的使用量將在 2026 年前下降 25%。Geostar 作為一家新創公司，專注於開發「生成引擎優化」（GEO），旨在幫助企業適應這一變化。GEO 不同於傳統的搜尋引擎優化（SEO），它強調理解大型語言模型如何解析和合成網路資訊。Geostar 的技術能夠持續優化網站內容，並自動實施變更，這對於中小型企業尤其重要，因為它們面臨在 AI 驅動的搜尋中被忽視的風險。隨著 AI 系統對品牌提及的重視程度上升，企業必須迅速調整策略，以確保在新環境中保持可見性。
+   https://venturebeat.com/ai/geostar-pioneers-geo-as-traditional-seo-faces-25-decline-from-ai-chatbots
+
+2. Agentic AI is all about the context — engineering, that is
+   隨著企業對於自主型人工智慧（agentic AI）解決方案的需求增加，獲取準確的上下文資料成為關鍵。這類系統透過自動收集工具和數據來提供答案，但其可靠性取決於上下文的準確性。根據Elastic的產品長Ken Exner，未來幾年，解決上下文資料的分散問題將加速agentic AI的推廣。預計到2026年，超過60%的大型企業將大規模部署此技術。Elastic最近推出的Agent Builder工具，簡化了代理的開發和配置流程，並支持用戶將私有數據與大語言模型（LLM）結合，以提升自動化效率。隨著上下文工程的興起，企業將需要掌握新的最佳實踐，以驅動生產力和創新。
+   https://venturebeat.com/ai/agentic-ai-is-all-about-the-context-engineering-that-is
+
+3. From static classifiers to reasoning engines: OpenAI’s new model rethinks content moderation
+   OpenAI推出了兩款新型開源模型gpt-oss-safeguard-120b和gpt-oss-safeguard-20b，旨在提升企業在內容審核上的靈活性與安全性。這些模型能夠在推理過程中直接解釋開發者的安全政策，並根據即時需求進行調整，與傳統的靜態分類器相比，提供了更高的彈性。OpenAI強調，這種方法不僅能夠快速適應新興或變化的潛在風險，還能在缺乏足夠訓練樣本的情況下有效運作。然而，專家對於這種集中化的安全標準表示擔憂，認為可能會限制對AI安全需求的全面探討。OpenAI計畫於12月8日在舊金山舉辦黑客松，以促進開發者社群對這些模型的進一步完善。
+   https://venturebeat.com/ai/from-static-classifiers-to-reasoning-engines-openais-new-model-rethinks
+
+4. Nvidia researchers unlock 4-bit LLM training that matches 8-bit performance
+   Nvidia 研究人員開發了一種新技術 NVFP4，能在 4 位元量化格式下訓練大型語言模型（LLM），同時保持與高精度模型相當的穩定性和準確性。該技術不僅超越了其他 4 位元格式的表現，還能與 8 位元 FP8 格式的性能相匹配，並且僅需一半的記憶體和計算資源。這一突破顯示企業能夠透過運行更精簡的模型來降低推理成本，未來更多組織將能夠從零開始訓練自定義模型，而不僅僅是微調現有模型。NVFP4 的成功也預示著在模型訓練和推理效率上將出現新的可能性，促進更廣泛的創新和應用。
+   https://venturebeat.com/ai/nvidia-researchers-unlock-4-bit-llm-training-that-matches-8-bit-performance
+
+5. IBM's open source Granite 4.0 Nano AI models are small enough to run locally directly in your browser
+   IBM近日推出Granite 4.0 Nano系列開源AI模型，這些模型的參數數量從3.5億到15億不等，顯著小於其他大型模型，並可在本地環境中運行。這些模型設計旨在提高可及性和效率，350M版本可在普通筆記型電腦上運行，而1.5B版本則需具備一定的GPU或RAM支持。Granite 4.0 Nano模型在指令跟隨和功能調用等基準測試中表現優異，顯示出即使在硬體限制下也能提供高效能。這一系列模型的開放性和靈活性，讓開發者能在不依賴雲計算的情況下，開發出更具隱私性的應用，並可能改變當前AI模型的開發趨勢，強調小型模型的潛力。
+   https://venturebeat.com/ai/ibms-open-source-granite-4-0-nano-ai-models-are-small-enough-to-run-locally
+
+6. Microsoft’s Copilot can now build apps and automate your job — here’s how it works
+   微軟於週二宣布擴展其Copilot AI助手，推出App Builder和Workflows等新工具，讓員工能透過自然語言提示建構應用程式及自動化工作流程，無需編碼。這一變革旨在使約1億名Microsoft 365用戶能像撰寫電子郵件或製作試算表一樣輕鬆創建商業工具。新功能將Copilot轉變為一個全面的開發環境，讓非技術人員也能創建完整的應用程式，並自動化日常任務。微軟強調，這些工具的推出不僅能提高生產力，還可能改變員工的工作方式，讓他們在日常工作中更常參與軟體開發。儘管如此，專業開發人員在處理外部系統時仍然不可或缺。這一系列改變反映了微軟對AI技術的深入承諾，並可能進一步鞏固其在企業市場的地位。
+   https://venturebeat.com/ai/microsofts-copilot-can-now-build-apps-and-automate-your-job-heres-how-it
+
+7. GitHub's Agent HQ aims to solve enterprises' biggest AI coding problem: Too many agents, no central control
+   GitHub在其Universe 2025大會上推出了Agent HQ，旨在解決企業在使用多個AI編碼代理時面臨的管理問題。這一新架構將GitHub轉變為一個統一的控制平台，支持來自Anthropic、OpenAI、Google等競爭對手的多個AI編碼代理，並提供集中管理的能力。Agent HQ的核心是Mission Control，開發者可以通過這一界面同時管理多個代理的工作、進度和權限，並確保安全性。
+
+此外，GitHub引入了AGENTS.md文件，允許企業創建自定義代理規則，並支持Native Model Context Protocol (MCP)，進一步提升了與外部工具的整合能力。這一策略不僅減少了企業對單一供應商的依賴，還能在統一的安全環境中測試和切換不同的代理，提升開發效率和質量。
+   https://venturebeat.com/ai/githubs-agent-hq-aims-to-solve-enterprises-biggest-ai-coding-problem-too
