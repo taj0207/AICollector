@@ -1,0 +1,19 @@
+# AI News Social Summaries for 2025-10-31
+
+Collected 4 article(s).
+
+1. Tim Cook says Apple is open to M&A on the AI front - TechCrunch
+   蘋果首席執行官蒂姆·庫克表示，該公司對於在人工智慧領域進行併購持開放態度。庫克強調，蘋果將持續尋找能夠增強其AI能力的機會，並認為這將對公司的未來發展至關重要。這一表態顯示出蘋果在AI競爭中的積極策略，可能會促使市場上相關初創企業的價值上升，並引發其他科技巨頭的跟進行動。隨著AI技術的迅速發展，蘋果的併購計劃可能會加速其產品創新及市場佔有率的提升。
+   https://news.google.com/rss/articles/CBMijAFBVV95cUxPZ1N1M3RLMWQtcFp3RGVQZVpTVG1hRGxZdnFJd1pGSjdaR2UwRzRPQVRtVV9GMVhIeUZYbGhFVjBoZmFaNGI3Mi1EaWJ5N0pBbkJoVnhtb2IzdzQ2UjJkcTZBOGFpOFFnTzBOdWY1TXdTalFiMGxiWlhEX2VlMTFneG85TUlqZUZxR1BpTg?oc=5
+
+2. A.I. Spending Is Accelerating Among Tech’s Biggest Companies - The New York Times
+   根據《紐約時報》的報導，科技巨頭們在人工智慧領域的支出正在加速增長。隨著企業對 AI 技術的需求不斷攀升，許多公司正積極投資於相關研發，以提升其產品和服務的競爭力。這一趨勢反映出 AI 在商業運作中的重要性日益增加，並可能改變市場格局。專家指出，隨著資金的湧入，未來將出現更多創新應用，並可能促進整體經濟的數位轉型。然而，這也引發了對技術倫理和就業影響的擔憂，企業需謹慎應對相關挑戰。
+   https://news.google.com/rss/articles/CBMigAFBVV95cUxObzRMbGRuUldtOVhPYTk3QU1lZ3E0ZHp5Ym45VnBrUGg3NmJNX2VHZGFnOGNER0JwczZMbGZLWFUxRzA2TjkxdkVNZ0VpcXJTaW1XVXdhTGhfMDdQUVV4ZmY5QTIwRVRpdTRfVmhYWV96VktHbnZjSTVfSmxFSkk3Rg?oc=5
+
+3. The Download: down the Mandela effect rabbit hole, and the promise of a vaccine for colds
+   今日的科技新聞聚焦於兩個主題：曼德拉效應與感冒疫苗的前景。首先，許多人錯誤地記得「Fruit of the Loom」的標誌中包含一個豐饒角，這一現象被稱為曼德拉效應，反映了集體記憶的錯誤。其次，科學家們正在研究針對感冒的疫苗，這一進展可能會顛覆傳統對感冒治療的認知，若成功，將有助於減少感冒的傳播與影響，改善公共健康狀況。這些話題不僅引發了人們對記憶與認知的思考，也可能對未來的醫療科技發展產生深遠影響。
+   https://www.technologyreview.com/2025/10/31/1127444/the-download-down-the-mandela-effect-rabbit-hole-and-the-promise-of-a-vaccine-for-colds/
+
+4. Inside Celosphere 2025: Why there’s no ‘enterprise AI’ without process intelligence
+   隨著AI採用加速，企業領導者面臨著證明AI解決方案可衡量回報的壓力。Celonis的共同創辦人兼執行長亞歷克斯·林克指出，成功的企業AI必須理解業務流程的背景及其改進方法，否則AI可能僅成為內部實驗。即將舉行的Celosphere 2025將專注於解決AI回報挑戰，展示如何利用Celonis的流程智能平台持續改善業務運作，並強調可衡量的商業價值。研究顯示，使用Celonis平台的企業在三年內可實現383%的回報，並在六個月內收回投資。Celonis強調，流程智能是企業AI的基礎，能夠提供實時的業務運營可見性，應對全球貿易波動和供應鏈挑戰。
+   https://venturebeat.com/ai/inside-celosphere-2025-why-theres-no-enterprise-ai-without-process
