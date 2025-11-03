@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-02
+
+Collected 3 article(s).
+
+1. The best things to watch over and over and over
+   本週的報導聚焦於重複觀看的最佳影視作品，探討其對觀眾的吸引力及潛在影響。文章提及彩票、珍妮佛·勞倫斯及宗教AI等主題，並分析了為何某些作品能夠吸引觀眾反覆欣賞。這些內容不僅反映了當前文化趨勢，也揭示了重複觀看對情感連結和記憶的影響，顯示出影視作品在觀眾生活中的重要性。此現象可能促使內容創作者在未來更重視情感共鳴和故事深度，以滿足觀眾的重複需求。
+   https://www.theverge.com/tech/811575/best-shows-rewatch-multiple-times-installer
+
+2. Moving past speculation: How deterministic CPUs deliver predictable AI performance
+   現代CPU長期依賴推測執行技術以提升性能，但這種方法帶來了能源浪費和安全漏洞等問題。近期，六項美國專利的發明提出了一種新的確定性執行模型，透過時間計數器來精確安排指令執行時機，從而消除推測所帶來的隨機性和不確定性。這一架構不僅提高了執行效率，還特別適合於處理AI和高效能計算的矩陣運算。與傳統CPU相比，這種設計在降低成本和能耗的同時，提供了穩定的性能表現。雖然目前尚不清楚確定性CPU是否會取代推測執行，但隨著AI工作負載的增長，這一新模型可能成為未來計算架構的關鍵轉折點。
+   https://venturebeat.com/ai/moving-past-speculation-how-deterministic-cpus-deliver-predictable-ai
+
+3. Google’s Pixel Watch 3 and Anker’s two-headed USB-C cable are our favorite deals this week
+   Google的Pixel Watch 3智能手錶目前在亞馬遜、沃爾瑪和塔吉特的售價為199.99美元，較原價便宜100美元，創下新低，並且比Pixel Watch 4便宜150美元。這款手錶的性價比吸引了不少消費者，顯示出市場對於高性價比智能手錶的需求。此外，Anker推出的雙頭USB-C充電線也引起了關注，顯示出配件市場的持續增長。這些優惠不僅提升了產品的可及性，還可能影響消費者在選擇智能設備時的決策。
+   https://www.theverge.com/tech/811879/google-pixel-watch-3-anker-140w-usb-c-cable-deal-sale
