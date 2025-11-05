@@ -1,0 +1,23 @@
+# AI News Social Summaries for 2025-11-04
+
+Collected 5 article(s).
+
+1. Why the for-profit race into solar geoengineering is bad for science and public trust
+   美國與以色列合資的公司Stardust近日宣布已籌集6,000萬美元，成為目前為止最大的太陽地球工程初創企業融資。該公司聲稱其擁有的專有技術能夠降低全球氣溫。這一資金的獲得將促進其系統的開發，並可能在未來進行實地部署。然而，專家指出，將太陽地球工程商業化可能對科學研究和公眾信任造成負面影響。此類技術的追求若以盈利為目的，可能導致不透明的決策過程，並引發對其安全性和有效性的質疑，進一步削弱社會對科學界的信任。
+   https://www.technologyreview.com/2025/11/04/1127532/why-the-for-profit-race-into-solar-geoengineering-is-bad-for-science-and-public-trust/
+
+2. The Download: the AGI myth, and US/China AI competition
+   近期報導探討了人工通用智慧（AGI）如何成為當前最具影響力的陰謀論之一。許多專家對AGI的實現時間持不同看法，預測範圍從明年到數年後不等。此現象反映了社會對AI未來的強烈關注與期待。此外，報導還提及美國與中國在AI領域的競爭加劇，兩國在技術創新、人才培養及政策制定上展現出不同的策略，可能對全球科技生態系統造成深遠影響。這場競爭不僅影響經濟發展，還可能改變國際關係與科技治理的格局。
+   https://www.technologyreview.com/2025/11/04/1127547/the-download-the-agi-myth-and-us-china-ai-competition/
+
+3. 98% of market researchers use AI daily, but 4 in 10 say it makes errors — revealing a major trust problem
+   根據最新調查，98%的市場研究專業人士已經將人工智慧（AI）工具納入日常工作中，但仍有40%的人表示AI會出錯，顯示出信任問題的嚴重性。調查發現，儘管56%的研究人員表示使用AI每週可節省至少五小時，但39%則擔心對錯誤技術的依賴增加，37%提到數據質量和準確性的新風險。研究人員將AI視為初級分析師，能加速任務但需持續監督。隨著AI在數據分析和報告自動化等方面的應用增長，未來的研究工作可能會轉向人機協作模式，專注於質量控制和策略解讀。然而，數據隱私和透明度問題仍然是AI廣泛應用的主要障礙，未來的挑戰在於如何平衡效率與信任。
+   https://venturebeat.com/ai/98-of-market-researchers-use-ai-daily-but-4-in-10-say-it-makes-errors
+
+4. Forget Fine-Tuning: SAP’s RPT-1 Brings Ready-to-Use AI for Business Tasks
+   SAP推出的RPT-1模型是一種預訓練的關聯基礎模型，專為商業任務設計，旨在取代傳統的大型語言模型。該模型能夠直接進行預測分析，無需進一步的微調，並且基於SAP數十年的商業數據進行訓練。RPT-1的設計使其能夠理解數據之間的關係，提供結構化且精確的答案，特別適合財務和企業應用。SAP預計在2025年第四季度正式推出RPT-1，並將提供無需編碼的實驗環境。此模型的推出標誌著企業對行業專用模型的需求增長，並可能改變企業在AI應用上的策略，減少對大型語言模型的依賴。
+   https://venturebeat.com/ai/forget-fine-tuning-saps-rpt-1-brings-ready-to-use-ai-for-business-tasks
+
+5. Inside Zendesk’s dual AI leap: From reliable agents to real-time intelligence with GPT-5 and HyperArc
+   Zendesk 正在推動其人工智慧（AI）技術的雙重進步，特別是透過 GPT-5 和 HyperArc 平台的整合。該公司已經實施 AI 代理，能夠獨立解決約 80% 的客戶請求，並在面對複雜問題時將其轉交給人類代理。這不僅提升了客戶滿意度，還加速了問題解決的速度。GPT-5 的引入使得 AI 代理能夠更好地理解客戶意圖並執行操作，顯著降低了工作流程失敗率和升級需求。此外，Zendesk 收購 HyperArc 以增強其分析能力，將結構化和非結構化數據整合，提供更深入的商業見解，幫助企業主動應對問題，進一步提升整體服務質量。
+   https://venturebeat.com/ai/inside-zendesks-dual-ai-leap-from-reliable-agents-to-real-time-intelligence
