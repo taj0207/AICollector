@@ -1,0 +1,29 @@
+# AI News Social Summaries for 2025-11-05
+
+Collected 6 article(s).
+
+1. The Download: the solar geoengineering race, and future gazing with the The Simpsons
+   近期的報導指出，商業化的太陽地球工程競賽可能對科學研究和公眾信任造成負面影響。芝加哥大學的地球物理科學教授大衛·基思與助理教授丹尼爾·維西奧尼探討了這一現象。他們認為，將太陽地球工程視為利潤驅動的競賽，可能會削弱科學的客觀性與透明度，並進一步侵蝕公眾對科學界的信任。這一發展引發了對未來氣候技術治理的深刻思考，尤其是在全球面臨氣候變遷挑戰的背景下。
+   https://www.technologyreview.com/2025/11/05/1127627/the-download-the-solar-geoengineering-race-and-future-gazing-with-the-the-simpsons/
+
+2. From vibe coding to context engineering: 2025 in software development
+   在2025年，科技產業正經歷一場關於人工智慧（AI）與人類技術專家的實時實驗，AI在軟體工程領域的能力受到考驗。儘管年初時AI表現強勁，但從「氛圍編碼」轉向「上下文工程」的過程顯示，軟體開發的工作性質正在發生變化。這一轉型不僅影響開發流程，還可能重塑技術團隊的組成與協作方式，進一步推動AI在軟體開發中的應用與整合。隨著上下文工程的興起，開發者需要重新評估AI技術的角色及其對創新和效率的潛在影響。
+   https://www.technologyreview.com/2025/11/05/1127477/from-vibe-coding-to-context-engineering-2025-in-software-development/
+
+3. From logs to insights: The AI breakthrough redefining observability
+   Elastic推出的新功能Streams，旨在改變現代IT環境中的可觀察性，特別是在處理大量日誌數據時。隨著企業面臨數據過載的挑戰，Streams利用AI自動解析和分割原始日誌，提取相關信息，減少SREs的工作負擔。這項技術不僅能及時識別關鍵錯誤和異常，還能主動生成信息豐富的警報，幫助團隊更快解決問題。Elastic的首席產品官Ken Exner指出，AI的應用將使得日誌成為自動化流程的核心，從而解決人力資源短缺的問題，並提升新手工程師的專業能力。未來，大型語言模型將進一步推動自動化修復流程的標準化。
+   https://venturebeat.com/ai/from-logs-to-insights-the-ai-breakthrough-redefining-observability
+
+4. AI’s capacity crunch: Latency risk, escalating costs, and the coming surge-pricing breakpoint
+   近期AI領域的關注焦點轉向「容量危機」，這一問題在VentureBeat的AI Impact活動中被深入探討。WEKA的首席AI官Val Bercovici指出，隨著延遲、雲端鎖定及成本上升，AI可能面臨類似Uber的漲價情況，尤其是在推理階段。Bercovici強調，當前的補貼價格無法持續，未來市場將出現真實價格，這將改變行業格局，促使更高效的運作。
+
+他還提到，AI的經濟學正在演變，尤其是對於高準確度的需求使得延遲成為關鍵瓶頸。隨著強化學習的興起，數據科學家們正在探索更高效的模型訓練與推理方法。Bercovici建議企業應關注單位經濟學，尋求在成本上升的情況下，如何更智能地運用AI以提升效率。
+   https://venturebeat.com/ai/ais-capacity-crunch-latency-risk-escalating-costs-and-the-coming-surge
+
+5. Databricks research reveals that building better AI judges isn't just a technical concern, it's a people problem
+   Databricks的研究指出，企業在AI部署上面臨的主要障礙並非模型的智能，而是難以定義和衡量質量。AI評估中的“評判者”系統越來越重要，Databricks推出的Judge Builder框架旨在解決這一問題。初期版本專注於技術實施，但用戶反饋顯示，組織內部的協調才是真正的瓶頸。該框架通過結構化工作坊幫助團隊解決三大挑戰，包括確定質量標準、捕捉專業知識及大規模部署評估系統。此外，Judge Builder強調以人類專家的標準作為評分基準，並鼓勵企業將評判者視為不斷演進的資產，以適應系統的變化。這一方法有助於提高評估的可靠性，並促進企業在AI技術上的投資和應用。
+   https://venturebeat.com/ai/databricks-research-reveals-that-building-better-ai-judges-isnt-just-a
+
+6. Attention ISN'T all you need?! New Qwen3 variant Brumby-14B-Base leverages Power Retention technique
+   Manifest AI於2025年10月28日推出了Brumby-14B-Base，這是一款不再依賴注意力機制的模型，取而代之的是一種名為Power Retention的架構。該架構能夠在處理任意長度的上下文時保持計算成本不變，顯著減少了傳統變壓器模型在計算和記憶方面的瓶頸。Brumby-14B-Base以僅4,000美元的成本訓練，表現與現有的變壓器模型相當，並在數據推理和理解基準上達到接近最先進的準確度。這一創新不僅顯示出無注意力系統在性能上可與變壓器模型平起平坐，還可能大幅降低大型模型的訓練和部署成本，促進小型研究團隊的實驗能力，並可能引發AI模型架構的多樣化發展。
+   https://venturebeat.com/ai/attention-isnt-all-you-need-new-qwen3-variant-brumby-14b-base-leverages
