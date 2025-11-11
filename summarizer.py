@@ -260,13 +260,21 @@ class SocialSummarizer:
             role = message.get("role", "user")
             content = message.get("content", "")
 
-            default_type = "output_text" if role == "assistant" else "text"
+            default_type = "output_text" if role == "assistant" else "input_text"
 
             segments: list[dict] = []
             if isinstance(content, list):
                 for part in content:
                     if isinstance(part, dict) and "type" in part:
-                        segments.append(part)
+                        # Older calling code may still provide the deprecated
+                        # ``text`` type. Normalize it to ``input_text`` so the
+                        # Responses API accepts the payload.
+                        if part.get("type") == "text":
+                            normalized = dict(part)
+                            normalized["type"] = "input_text"
+                            segments.append(normalized)
+                        else:
+                            segments.append(part)
                     elif part:
                         segments.append({"type": default_type, "text": str(part)})
             elif content:
