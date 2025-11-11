@@ -1,0 +1,3 @@
+Meta has unveiled its groundbreaking Omnilingual ASR, a multilingual speech recognition system that supports over 1,600 languages and can adapt to thousands more. This open-source model allows developers to create inclusive applications without the need for extensive retraining. By empowering communities and breaking down language barriers, Meta aims to redefine digital access. Explore the possibilities of this innovative technology on GitHub and Hugging Face.
+
+Source: https://venturebeat.com/ai/meta-returns-to-open-source-ai-with-omnilingual-asr-models-that-can
