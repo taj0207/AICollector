@@ -126,6 +126,7 @@ class SocialSummarizer:
 
         parsed = self._parse_model_response(message)
         if not parsed:
+            self._log_parse_failure(article_title, message)
             raise RuntimeError("Model response was not valid JSON")
 
         return parsed
@@ -310,6 +311,19 @@ class SocialSummarizer:
             kind,
             reason,
             preview_text or "<empty>",
+        )
+
+    @staticmethod
+    def _log_parse_failure(title: str, message: str) -> None:
+        """Surface unparseable model responses for easier debugging."""
+
+        snippet = message.strip().replace("\n", " ")
+        if len(snippet) > 500:
+            snippet = snippet[:497] + "..."
+        LOGGER.error(
+            "Model response for '%s' was not valid JSON. Snippet: %s",
+            title,
+            snippet or "<empty>",
         )
 
     @staticmethod
