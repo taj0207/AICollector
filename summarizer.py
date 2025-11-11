@@ -138,12 +138,23 @@ class SocialSummarizer:
         ]
 
         if hasattr(self._client, "responses"):
-            return self._client.responses.create(
-                model=self._model,
-                temperature=self._temperature,
-                response_format={"type": "json_object"},
-                messages=messages,
-            )
+            try:
+                return self._client.responses.create(
+                    model=self._model,
+                    temperature=self._temperature,
+                    response_format={"type": "json_object"},
+                    messages=messages,
+                )
+            except TypeError:
+                # Some OpenAI client versions do not yet support the
+                # ``response_format`` argument on the Responses API. In that
+                # scenario we retry without the argument and rely on our
+                # validation and JSON parsing fallback logic instead.
+                return self._client.responses.create(
+                    model=self._model,
+                    temperature=self._temperature,
+                    messages=messages,
+                )
 
         # Fallback to the legacy Chat Completions API for older client versions.
         return self._client.chat.completions.create(
