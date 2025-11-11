@@ -135,6 +135,7 @@ class SocialSummarizer:
                 "model": self._model,
                 "temperature": self._temperature,
                 "input": self._messages_to_responses_input(messages),
+                "max_output_tokens": 2048,
             }
 
             try:
@@ -142,12 +143,37 @@ class SocialSummarizer:
                     **base_kwargs, response_format={"type": "json_object"}
                 )
             except TypeError as exc:
-                # Older SDKs may not yet accept ``response_format`` on the
-                # Responses API. Retry without the argument but bubble up
-                # unrelated ``TypeError`` instances for easier debugging.
-                if "response_format" not in str(exc):
-                    raise
-                return self._client.responses.create(**base_kwargs)
+                message = str(exc)
+
+                if "max_output_tokens" in message:
+                    fallback_kwargs = {
+                        key: value
+                        for key, value in base_kwargs.items()
+                        if key != "max_output_tokens"
+                    }
+                    try:
+                        return self._client.responses.create(
+                            **fallback_kwargs, response_format={"type": "json_object"}
+                        )
+                    except TypeError as inner_exc:
+                        if "response_format" not in str(inner_exc):
+                            raise
+                        return self._client.responses.create(**fallback_kwargs)
+
+                if "response_format" in message:
+                    try:
+                        return self._client.responses.create(**base_kwargs)
+                    except TypeError as inner_exc:
+                        if "max_output_tokens" not in str(inner_exc):
+                            raise
+                        fallback_kwargs = {
+                            key: value
+                            for key, value in base_kwargs.items()
+                            if key != "max_output_tokens"
+                        }
+                        return self._client.responses.create(**fallback_kwargs)
+
+                raise
 
         # Fallback to the legacy Chat Completions API for older client versions.
         return self._client.chat.completions.create(
@@ -155,6 +181,7 @@ class SocialSummarizer:
             temperature=self._temperature,
             response_format={"type": "json_object"},
             messages=messages,
+            max_tokens=2048,
         )
 
     @staticmethod
@@ -260,13 +287,21 @@ class SocialSummarizer:
             role = message.get("role", "user")
             content = message.get("content", "")
 
-            default_type = "output_text" if role == "assistant" else "text"
+            default_type = "output_text" if role == "assistant" else "input_text"
 
             segments: list[dict] = []
             if isinstance(content, list):
                 for part in content:
                     if isinstance(part, dict) and "type" in part:
-                        segments.append(part)
+                        # Older calling code may still provide the deprecated
+                        # ``text`` type. Normalize it to ``input_text`` so the
+                        # Responses API accepts the payload.
+                        if part.get("type") == "text":
+                            normalized = dict(part)
+                            normalized["type"] = "input_text"
+                            segments.append(normalized)
+                        else:
+                            segments.append(part)
                     elif part:
                         segments.append({"type": default_type, "text": str(part)})
             elif content:
