@@ -255,9 +255,15 @@ class SocialSummarizer:
         """Convert chat-style messages to the Responses API ``input`` format."""
 
         converted: list[dict] = []
+        type_overrides = {
+            "assistant": "output_text",
+        }
+
         for message in messages:
             role = message.get("role", "user")
             content = message.get("content", "")
+
+            default_type = type_overrides.get(role, "input_text")
 
             segments: list[dict] = []
             if isinstance(content, list):
@@ -265,11 +271,11 @@ class SocialSummarizer:
                     if isinstance(part, dict) and "type" in part:
                         segments.append(part)
                     elif part:
-                        segments.append({"type": "text", "text": str(part)})
+                        segments.append({"type": default_type, "text": str(part)})
             elif content:
-                segments.append({"type": "text", "text": str(content)})
+                segments.append({"type": default_type, "text": str(content)})
             else:
-                segments.append({"type": "text", "text": ""})
+                segments.append({"type": default_type, "text": ""})
 
             converted.append({"role": role, "content": segments})
         return converted
