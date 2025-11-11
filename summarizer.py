@@ -423,7 +423,7 @@ class SocialSummarizer:
         link_segment = f"URL: {article.link}\n" if article.link else ""
         return (
             "Write two distinct English outputs based on the article below.\n"
-            "1. Social media post: fewer than 150 words, concise yet vivid, avoiding bullet lists and emojis.\n"
+            "1. Social media post: fewer than 100 words, concise yet vivid, avoiding bullet lists and emojis.\n"
             "2. Blog post: aim for roughly 600-750 words so it reads like a full article, with an engaging introduction, "
             "multiple body sections framed by Markdown subheadings, and a reflective conclusion. Add specific context, "
             "analysis, and implications drawn from the summary so the piece feels comprehensive.\n"
@@ -455,8 +455,8 @@ class SocialSummarizer:
         if any(ord(char) >= 0x1F300 for char in content):
             return False, "contains_emoji"
         word_count = SocialSummarizer._word_count(content)
-        if word_count >= 150:
-            return False, f"word_count={word_count} >= max=150"
+        if word_count >= 100:
+            return False, f"word_count={word_count} >= max=100"
         return True, f"word_count={word_count}"
 
     @staticmethod
