@@ -7,7 +7,7 @@ import os
 from dataclasses import dataclass
 from typing import Iterable, Optional
 
-from openai import OpenAI
+from openai import APIError, OpenAI
 
 LOGGER = logging.getLogger(__name__)
 
@@ -27,6 +27,67 @@ class GeneratedContent:
 
     social: str
     blog: str
+
+
+class GenerationFailure(RuntimeError):
+    """Base exception that carries structured failure details for logging."""
+
+    def __init__(self, message: str, *, details: Optional[dict] = None) -> None:
+        super().__init__(message)
+        self.details = details or {}
+
+
+class ValidationFailure(GenerationFailure):
+    """Raised when model output does not satisfy validation requirements."""
+
+    def __init__(self, kind: str, reason: str, content: str) -> None:
+        preview_lines = content.strip().splitlines() if content else []
+        preview_text = " ".join(line.strip() for line in preview_lines[:3] if line.strip())
+        if len(preview_text) > 240:
+            preview_text = preview_text[:237] + "..."
+        word_count = len(content.split()) if content else 0
+        details = {
+            "kind": kind,
+            "reason": reason,
+            "word_count": word_count,
+            "preview": preview_text or "<empty>",
+        }
+        super().__init__(f"{kind} failed validation: {reason}", details=details)
+
+
+class APIRequestFailure(GenerationFailure):
+    """Raised when the OpenAI API request itself fails."""
+
+    def __init__(self, title: str, details: dict) -> None:
+        status = details.get("status_code")
+        error_type = details.get("error_type")
+        message = "OpenAI API request failed"
+        if status is not None or error_type:
+            message += (
+                f" (status={status if status is not None else 'unknown'},"
+                f" type={error_type or 'unknown'})"
+            )
+        merged_details = dict(details)
+        merged_details.setdefault("title", title)
+        super().__init__(message, details=merged_details)
+
+
+class EmptyResponseFailure(GenerationFailure):
+    """Raised when the model returns no text content."""
+
+    def __init__(self, title: str) -> None:
+        super().__init__("Model returned an empty response", details={"title": title})
+
+
+class ParseFailure(GenerationFailure):
+    """Raised when the model response cannot be parsed as JSON."""
+
+    def __init__(self, title: str, raw_message: str) -> None:
+        snippet = raw_message.strip().replace("\n", " ")
+        if len(snippet) > 500:
+            snippet = snippet[:497] + "..."
+        details = {"title": title, "snippet": snippet or "<empty>"}
+        super().__init__("Model response was not valid JSON", details=details)
 
 
 class SummarizationError(RuntimeError):
@@ -72,7 +133,12 @@ class SocialSummarizer:
             try:
                 content = self._create_content(article)
             except Exception as exc:  # pragma: no cover - defensive logging
-                LOGGER.warning("Failed to generate content for '%s': %s", article.title, exc)
+                LOGGER.warning(
+                    "Failed to generate content for '%s': %s | details=%s",
+                    article.title,
+                    exc,
+                    self._format_failure_details(exc),
+                )
                 failures.append(article.title or "(untitled)")
                 continue
 
@@ -96,25 +162,46 @@ class SocialSummarizer:
 
     def _create_content(self, article: ArticleForSummary) -> GeneratedContent:
         prompt = self._build_prompt(article)
-        response = self._create_response(prompt)
-
-        message = self._extract_response_text(response)
-        if not message:
-            raise RuntimeError("Model returned an empty response")
-
-        parsed = self._parse_model_response(message)
-        if not parsed:
-            raise RuntimeError("Model response was not valid JSON")
+        parsed = self._request_structured_response(prompt, article.title)
 
         social = (parsed.get("social_post") or "").strip()
         blog = (parsed.get("blog_post") or "").strip()
 
-        if not self._is_valid_social(social):
-            raise RuntimeError("social_post failed validation")
-        if not self._is_valid_blog(blog):
-            raise RuntimeError("blog_post failed validation")
+        social_ok, social_reason = self._validate_social(social)
+        if not social_ok:
+            failure = ValidationFailure("social_post", social_reason, social)
+            self._log_validation_failure(failure)
+            raise failure
+
+        blog_ok, blog_reason = self._validate_blog(blog)
+        if not blog_ok:
+            failure = ValidationFailure("blog_post", blog_reason, blog)
+            self._log_validation_failure(failure)
+            raise failure
 
         return GeneratedContent(social=social, blog=blog)
+
+    def _request_structured_response(self, prompt: str, article_title: str) -> dict:
+        try:
+            response = self._create_response(prompt)
+        except APIError as exc:
+            details = self._build_api_error_details(exc)
+            self._log_api_error(article_title, details)
+            raise APIRequestFailure(article_title, details) from exc
+
+        message = self._extract_response_text(response)
+        if not message:
+            failure = EmptyResponseFailure(article_title)
+            self._log_empty_response(failure)
+            raise failure
+
+        parsed = self._parse_model_response(message)
+        if not parsed:
+            failure = ParseFailure(article_title, message)
+            self._log_parse_failure(failure)
+            raise failure
+
+        return parsed
 
     def _create_response(self, prompt: str):
         """Issue a generation request using the most modern OpenAI API available."""
@@ -124,7 +211,8 @@ class SocialSummarizer:
                 "role": "system",
                 "content": (
                     "You are an experienced technology journalist who writes natural, human-sounding "
-                    "English prose without using emoji. Always follow length requirements precisely."
+                    "English prose without using emoji. Follow the caller's length guidance while "
+                    "delivering thorough, well-structured coverage without sounding repetitive."
                 ),
             },
             {"role": "user", "content": prompt},
@@ -135,6 +223,7 @@ class SocialSummarizer:
                 "model": self._model,
                 "temperature": self._temperature,
                 "input": self._messages_to_responses_input(messages),
+                "max_output_tokens": 2048,
             }
 
             try:
@@ -142,12 +231,37 @@ class SocialSummarizer:
                     **base_kwargs, response_format={"type": "json_object"}
                 )
             except TypeError as exc:
-                # Older SDKs may not yet accept ``response_format`` on the
-                # Responses API. Retry without the argument but bubble up
-                # unrelated ``TypeError`` instances for easier debugging.
-                if "response_format" not in str(exc):
-                    raise
-                return self._client.responses.create(**base_kwargs)
+                message = str(exc)
+
+                if "max_output_tokens" in message:
+                    fallback_kwargs = {
+                        key: value
+                        for key, value in base_kwargs.items()
+                        if key != "max_output_tokens"
+                    }
+                    try:
+                        return self._client.responses.create(
+                            **fallback_kwargs, response_format={"type": "json_object"}
+                        )
+                    except TypeError as inner_exc:
+                        if "response_format" not in str(inner_exc):
+                            raise
+                        return self._client.responses.create(**fallback_kwargs)
+
+                if "response_format" in message:
+                    try:
+                        return self._client.responses.create(**base_kwargs)
+                    except TypeError as inner_exc:
+                        if "max_output_tokens" not in str(inner_exc):
+                            raise
+                        fallback_kwargs = {
+                            key: value
+                            for key, value in base_kwargs.items()
+                            if key != "max_output_tokens"
+                        }
+                        return self._client.responses.create(**fallback_kwargs)
+
+                raise
 
         # Fallback to the legacy Chat Completions API for older client versions.
         return self._client.chat.completions.create(
@@ -155,6 +269,7 @@ class SocialSummarizer:
             temperature=self._temperature,
             response_format={"type": "json_object"},
             messages=messages,
+            max_tokens=2048,
         )
 
     @staticmethod
@@ -224,7 +339,9 @@ class SocialSummarizer:
         return (
             "Write two distinct English outputs based on the article below.\n"
             "1. Social media post: fewer than 150 words, concise yet vivid, avoiding bullet lists and emojis.\n"
-            "2. Blog post: at least 400 words, structured with paragraphs and subheadings that feel naturally written by a human editor.\n"
+            "2. Blog post: aim for roughly 600-750 words so it reads like a full article, with an engaging introduction, "
+            "multiple body sections framed by Markdown subheadings, and a reflective conclusion. Add specific context, "
+            "analysis, and implications drawn from the summary so the piece feels comprehensive.\n"
             "Ensure both pieces avoid hashtags and marketing clichés.\n"
             "Respond in strict JSON format with keys 'social_post' and 'blog_post'.\n"
             f"Title: {article.title}\n"
@@ -233,22 +350,96 @@ class SocialSummarizer:
         )
 
     @staticmethod
-    def _is_valid_social(content: str) -> bool:
+    def _validate_social(content: str) -> tuple[bool, str]:
         if not content:
-            return False
+            return False, "empty"
         if any(ord(char) >= 0x1F300 for char in content):
-            return False
-        word_count = len(content.split())
-        return word_count < 150
+            return False, "contains_emoji"
+        word_count = SocialSummarizer._word_count(content)
+        if word_count >= 150:
+            return False, f"word_count={word_count} >= max=150"
+        return True, f"word_count={word_count}"
 
     @staticmethod
-    def _is_valid_blog(content: str) -> bool:
+    def _validate_blog(content: str) -> tuple[bool, str]:
         if not content:
-            return False
+            return False, "empty"
         if any(ord(char) >= 0x1F300 for char in content):
-            return False
-        word_count = len(content.split())
-        return word_count >= 400
+            return False, "contains_emoji"
+        word_count = SocialSummarizer._word_count(content)
+        if word_count < 280:
+            return False, f"word_count={word_count} < min=280"
+        return True, f"word_count={word_count}"
+
+    @staticmethod
+    def _word_count(content: str) -> int:
+        return len(content.split())
+
+    @staticmethod
+    def _log_validation_failure(failure: ValidationFailure) -> None:
+        details = failure.details
+        LOGGER.warning(
+            "%s failed validation (%s). Preview: %s",
+            details.get("kind", "<unknown>"),
+            details.get("reason", "<unknown>"),
+            details.get("preview", "<empty>"),
+        )
+
+    @staticmethod
+    def _log_parse_failure(failure: ParseFailure) -> None:
+        """Surface unparseable model responses for easier debugging."""
+
+        details = failure.details
+        LOGGER.error(
+            "Model response for '%s' was not valid JSON. Snippet: %s",
+            details.get("title", "<unknown>"),
+            details.get("snippet", "<empty>"),
+        )
+
+    @staticmethod
+    def _log_api_error(title: str, details: dict) -> None:
+        LOGGER.error(
+            "OpenAI API request failed for '%s' (status=%s, type=%s, message=%s, body=%s)",
+            title,
+            details.get("status_code", "unknown"),
+            details.get("error_type", "unknown"),
+            details.get("error_message", "<empty>"),
+            details.get("response_body", "<empty>"),
+        )
+
+    @staticmethod
+    def _log_empty_response(failure: EmptyResponseFailure) -> None:
+        LOGGER.error(
+            "Model returned an empty response for '%s'", failure.details.get("title", "<unknown>")
+        )
+
+    @staticmethod
+    def _build_api_error_details(exc: APIError) -> dict:
+        status_code = getattr(exc, "status_code", None)
+        response = getattr(exc, "response", None)
+        body: str = ""
+        if response is not None:
+            try:
+                body = response.text
+            except Exception:  # pragma: no cover - defensive logging
+                body = repr(response)
+
+        return {
+            "status_code": status_code,
+            "error_type": getattr(exc, "type", None) or exc.__class__.__name__,
+            "error_message": str(exc),
+            "response_body": (body.strip() or "<empty>"),
+        }
+
+    @staticmethod
+    def _format_failure_details(exc: Exception) -> str:
+        details = getattr(exc, "details", None)
+        if not details:
+            return "<none>"
+        try:
+            return json.dumps(details, ensure_ascii=False, sort_keys=True)
+        except Exception:  # pragma: no cover - defensive
+            return repr(details)
 
     @staticmethod
     def _messages_to_responses_input(messages: list[dict]) -> list[dict]:
@@ -260,13 +451,21 @@ class SocialSummarizer:
             role = message.get("role", "user")
             content = message.get("content", "")
 
-            default_type = "output_text" if role == "assistant" else "text"
+            default_type = "output_text" if role == "assistant" else "input_text"
 
             segments: list[dict] = []
             if isinstance(content, list):
                 for part in content:
                     if isinstance(part, dict) and "type" in part:
-                        segments.append(part)
+                        # Older calling code may still provide the deprecated
+                        # ``text`` type. Normalize it to ``input_text`` so the
+                        # Responses API accepts the payload.
+                        if part.get("type") == "text":
+                            normalized = dict(part)
+                            normalized["type"] = "input_text"
+                            segments.append(normalized)
+                        else:
+                            segments.append(part)
                     elif part:
                         segments.append({"type": default_type, "text": str(part)})
             elif content:
