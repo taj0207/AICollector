@@ -7,7 +7,7 @@ import os
 from dataclasses import dataclass
 from typing import Iterable, Optional
 
-from openai import OpenAI
+from openai import APIError, OpenAI
 
 LOGGER = logging.getLogger(__name__)
 
@@ -96,7 +96,29 @@ class SocialSummarizer:
 
     def _create_content(self, article: ArticleForSummary) -> GeneratedContent:
         prompt = self._build_prompt(article)
-        response = self._create_response(prompt)
+        parsed = self._request_structured_response(prompt, article.title)
+
+        social = (parsed.get("social_post") or "").strip()
+        blog = (parsed.get("blog_post") or "").strip()
+
+        social_ok, social_reason = self._validate_social(social)
+        if not social_ok:
+            self._log_validation_failure("social_post", social_reason, social)
+            raise RuntimeError(f"social_post failed validation: {social_reason}")
+
+        blog_ok, blog_reason = self._validate_blog(blog)
+        if not blog_ok:
+            self._log_validation_failure("blog_post", blog_reason, blog)
+            raise RuntimeError(f"blog_post failed validation: {blog_reason}")
+
+        return GeneratedContent(social=social, blog=blog)
+
+    def _request_structured_response(self, prompt: str, article_title: str) -> dict:
+        try:
+            response = self._create_response(prompt)
+        except APIError as exc:
+            self._log_api_error(article_title, exc)
+            raise
 
         message = self._extract_response_text(response)
         if not message:
@@ -106,15 +128,7 @@ class SocialSummarizer:
         if not parsed:
             raise RuntimeError("Model response was not valid JSON")
 
-        social = (parsed.get("social_post") or "").strip()
-        blog = (parsed.get("blog_post") or "").strip()
-
-        if not self._is_valid_social(social):
-            raise RuntimeError("social_post failed validation")
-        if not self._is_valid_blog(blog):
-            raise RuntimeError("blog_post failed validation")
-
-        return GeneratedContent(social=social, blog=blog)
+        return parsed
 
     def _create_response(self, prompt: str):
         """Issue a generation request using the most modern OpenAI API available."""
@@ -135,6 +149,7 @@ class SocialSummarizer:
                 "model": self._model,
                 "temperature": self._temperature,
                 "input": self._messages_to_responses_input(messages),
+                "max_output_tokens": 2048,
             }
 
             try:
@@ -142,12 +157,37 @@ class SocialSummarizer:
                     **base_kwargs, response_format={"type": "json_object"}
                 )
             except TypeError as exc:
-                # Older SDKs may not yet accept ``response_format`` on the
-                # Responses API. Retry without the argument but bubble up
-                # unrelated ``TypeError`` instances for easier debugging.
-                if "response_format" not in str(exc):
-                    raise
-                return self._client.responses.create(**base_kwargs)
+                message = str(exc)
+
+                if "max_output_tokens" in message:
+                    fallback_kwargs = {
+                        key: value
+                        for key, value in base_kwargs.items()
+                        if key != "max_output_tokens"
+                    }
+                    try:
+                        return self._client.responses.create(
+                            **fallback_kwargs, response_format={"type": "json_object"}
+                        )
+                    except TypeError as inner_exc:
+                        if "response_format" not in str(inner_exc):
+                            raise
+                        return self._client.responses.create(**fallback_kwargs)
+
+                if "response_format" in message:
+                    try:
+                        return self._client.responses.create(**base_kwargs)
+                    except TypeError as inner_exc:
+                        if "max_output_tokens" not in str(inner_exc):
+                            raise
+                        fallback_kwargs = {
+                            key: value
+                            for key, value in base_kwargs.items()
+                            if key != "max_output_tokens"
+                        }
+                        return self._client.responses.create(**fallback_kwargs)
+
+                raise
 
         # Fallback to the legacy Chat Completions API for older client versions.
         return self._client.chat.completions.create(
@@ -155,6 +195,7 @@ class SocialSummarizer:
             temperature=self._temperature,
             response_format={"type": "json_object"},
             messages=messages,
+            max_tokens=2048,
         )
 
     @staticmethod
@@ -233,22 +274,62 @@ class SocialSummarizer:
         )
 
     @staticmethod
-    def _is_valid_social(content: str) -> bool:
+    def _validate_social(content: str) -> tuple[bool, str]:
         if not content:
-            return False
+            return False, "empty"
         if any(ord(char) >= 0x1F300 for char in content):
-            return False
-        word_count = len(content.split())
-        return word_count < 150
+            return False, "contains_emoji"
+        word_count = SocialSummarizer._word_count(content)
+        if word_count >= 150:
+            return False, f"word_count={word_count} >= max=150"
+        return True, f"word_count={word_count}"
 
     @staticmethod
-    def _is_valid_blog(content: str) -> bool:
+    def _validate_blog(content: str) -> tuple[bool, str]:
         if not content:
-            return False
+            return False, "empty"
         if any(ord(char) >= 0x1F300 for char in content):
-            return False
-        word_count = len(content.split())
-        return word_count >= 400
+            return False, "contains_emoji"
+        word_count = SocialSummarizer._word_count(content)
+        if word_count < 400:
+            return False, f"word_count={word_count} < min=400"
+        return True, f"word_count={word_count}"
+
+    @staticmethod
+    def _word_count(content: str) -> int:
+        return len(content.split())
+
+    @staticmethod
+    def _log_validation_failure(kind: str, reason: str, content: str) -> None:
+        preview = content.strip().splitlines()
+        preview_text = " ".join(preview[:3]) if preview else ""
+        if len(preview_text) > 240:
+            preview_text = preview_text[:237] + "..."
+        LOGGER.warning(
+            "%s failed validation (%s). Preview: %s",
+            kind,
+            reason,
+            preview_text or "<empty>",
+        )
+
+    @staticmethod
+    def _log_api_error(title: str, exc: APIError) -> None:
+        status_code = getattr(exc, "status_code", None)
+        response = getattr(exc, "response", None)
+        body: str = ""
+        if response is not None:
+            try:
+                body = response.text
+            except Exception:  # pragma: no cover - defensive logging
+                body = repr(response)
+        LOGGER.error(
+            "OpenAI API request failed for '%s' (status=%s, type=%s, message=%s, body=%s)",
+            title,
+            status_code if status_code is not None else "unknown",
+            exc.__class__.__name__,
+            str(exc),
+            body.strip() or "<empty>",
+        )
 
     @staticmethod
     def _messages_to_responses_input(messages: list[dict]) -> list[dict]:
@@ -260,13 +341,21 @@ class SocialSummarizer:
             role = message.get("role", "user")
             content = message.get("content", "")
 
-            default_type = "output_text" if role == "assistant" else "text"
+            default_type = "output_text" if role == "assistant" else "input_text"
 
             segments: list[dict] = []
             if isinstance(content, list):
                 for part in content:
                     if isinstance(part, dict) and "type" in part:
-                        segments.append(part)
+                        # Older calling code may still provide the deprecated
+                        # ``text`` type. Normalize it to ``input_text`` so the
+                        # Responses API accepts the payload.
+                        if part.get("type") == "text":
+                            normalized = dict(part)
+                            normalized["type"] = "input_text"
+                            segments.append(normalized)
+                        else:
+                            segments.append(part)
                     elif part:
                         segments.append({"type": default_type, "text": str(part)})
             elif content:
