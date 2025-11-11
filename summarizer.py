@@ -30,6 +30,10 @@ class GeneratedContent:
     blog: str
 
 
+class SummarizationError(RuntimeError):
+    """Raised when summary generation fails for all attempted entries."""
+
+
 class SocialSummarizer:
     """Wrapper around the OpenAI API to build both social and blog content."""
 
@@ -60,6 +64,7 @@ class SocialSummarizer:
         """Mutate entries in-place by adding social and blog content when possible."""
 
         generated = 0
+        failures: list[str] = []
         for entry in entries:
             article = ArticleForSummary(
                 title=entry.get("title", ""),
@@ -73,6 +78,7 @@ class SocialSummarizer:
                 content = self._create_content(article)
             except Exception as exc:  # pragma: no cover - defensive logging
                 LOGGER.warning("Failed to generate content for '%s': %s", article.title, exc)
+                failures.append(article.title or "(untitled)")
                 continue
 
             if not content.social or not content.blog:
@@ -81,6 +87,15 @@ class SocialSummarizer:
             entry["social_summary"] = content.social
             entry["blog_post"] = content.blog
             generated += 1
+
+        if failures and generated == 0:
+            unique_failures = sorted(set(failures))
+            joined = ", ".join(unique_failures[:5])
+            extra = "" if len(unique_failures) <= 5 else ", …"
+            raise SummarizationError(
+                "Unable to generate summaries for any article (attempted: "
+                f"{joined}{extra})"
+            )
 
         return generated
 
@@ -286,4 +301,4 @@ class SocialSummarizer:
         return converted
 
 
-__all__ = ["SocialSummarizer"]
+__all__ = ["SocialSummarizer", "SummarizationError"]

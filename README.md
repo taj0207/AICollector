@@ -89,3 +89,4 @@ Collected 5 article(s).
 - 若某些來源未提供發佈日期，相關文章將不會出現在輸出中。
 - 可依需求調整 `feeds.yaml` 中的關鍵字與來源，或新增其他語言的 feed。
 - 若要啟用社群摘要，請在執行環境設定 `OPENAI_API_KEY`，腳本會呼叫 OpenAI API 產生繁體中文摘要。
+- 若希望在語言模型內容生成失敗時讓指令回傳錯誤碼，可加上 `--require-summaries` 參數。

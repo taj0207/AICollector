@@ -91,6 +91,13 @@ def parse_args() -> argparse.Namespace:
         choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
         help="Logging level.",
     )
+    parser.add_argument(
+        "--require-summaries",
+        action="store_true",
+        help=(
+            "Fail the run when the language model content generation step cannot be completed."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -301,19 +308,42 @@ def main() -> None:
     LOGGER.info("Wrote %d entries to %s", len(entries), output_path)
 
     try:
-        from summarizer import SocialSummarizer
+        from summarizer import SocialSummarizer, SummarizationError
     except ImportError:  # pragma: no cover - optional dependency
         LOGGER.debug("summarizer module is unavailable; skipping social summaries")
         return
 
     summarizer = SocialSummarizer.from_env()
     if not summarizer:
-        LOGGER.info("OPENAI_API_KEY not set; skipping social summary generation")
+        message = "OPENAI_API_KEY not set; skipping social summary generation"
+        if args.require_summaries:
+            LOGGER.error("%s (required for this run)", message)
+            raise SystemExit(1)
+        LOGGER.info(message)
         return
 
-    generated = summarizer.enrich_entries(entries)
+    try:
+        generated = summarizer.enrich_entries(entries)
+    except SummarizationError as exc:
+        if args.require_summaries:
+            LOGGER.error("Social summary generation failed: %s", exc)
+            raise SystemExit(1)
+        LOGGER.warning("Social summary generation failed: %s", exc)
+        return
+    except Exception as exc:  # pragma: no cover - defensive logging
+        if args.require_summaries:
+            LOGGER.error("Unexpected error during social summary generation: %s", exc)
+            raise SystemExit(1)
+        LOGGER.warning(
+            "Unexpected error encountered during social summary generation; skipping: %s",
+            exc,
+        )
+        return
+
     if not generated:
         LOGGER.warning("Social summary generation was requested but no summaries were produced")
+        if args.require_summaries:
+            raise SystemExit(1)
         return
 
     social_content = format_social_posts(entries, target_date)
