@@ -1,6 +1,7 @@
-"""Generate social-media-ready summaries for collected news articles."""
+"""Generate long- and short-form content for collected news articles."""
 from __future__ import annotations
 
+import json
 import logging
 import os
 import time
@@ -14,15 +15,23 @@ LOGGER = logging.getLogger(__name__)
 
 @dataclass
 class ArticleForSummary:
-    """Minimal representation of an article for social summarization."""
+    """Minimal representation of an article for content generation."""
 
     title: str
     summary: str
     link: Optional[str]
 
 
+@dataclass
+class GeneratedContent:
+    """Structured response from the language model."""
+
+    social: str
+    blog: str
+
+
 class SocialSummarizer:
-    """Wrapper around the OpenAI API to build concise social media summaries."""
+    """Wrapper around the OpenAI API to build both social and blog content."""
 
     def __init__(
         self,
@@ -48,7 +57,7 @@ class SocialSummarizer:
         return cls(client)
 
     def enrich_entries(self, entries: Iterable[dict]) -> int:
-        """Mutate entries in-place by adding a `social_summary` key when possible."""
+        """Mutate entries in-place by adding social and blog content when possible."""
 
         generated = 0
         for entry in entries:
@@ -61,20 +70,21 @@ class SocialSummarizer:
                 continue
 
             try:
-                social_summary = self._create_summary(article)
+                content = self._create_content(article)
             except Exception as exc:  # pragma: no cover - defensive logging
-                LOGGER.warning("Failed to summarize '%s': %s", article.title, exc)
+                LOGGER.warning("Failed to generate content for '%s': %s", article.title, exc)
                 continue
 
-            if not social_summary:
+            if not content.social or not content.blog:
                 continue
 
-            entry["social_summary"] = social_summary
+            entry["social_summary"] = content.social
+            entry["blog_post"] = content.blog
             generated += 1
 
         return generated
 
-    def _create_summary(self, article: ArticleForSummary) -> str:
+    def _create_content(self, article: ArticleForSummary) -> GeneratedContent:
         prompt = self._build_prompt(article)
 
         delay = self._retry_delay
@@ -87,8 +97,8 @@ class SocialSummarizer:
                         {
                             "role": "system",
                             "content": (
-                                "你是一名專業的科技新聞編輯，擅長將 AI 新聞濃縮成適合 Threads 與 Twitter 的貼文。"
-                                "請僅輸出摘要內容，不要加上標題、表情符號或 hashtag。"
+                                "You are an experienced technology journalist who writes natural, human-sounding "
+                                "English prose without using emoji. Always follow length requirements precisely."
                             ),
                         },
                         {"role": "user", "content": prompt},
@@ -97,27 +107,68 @@ class SocialSummarizer:
             except Exception as exc:  # pragma: no cover - network failure
                 if attempt == self._max_retries:
                     raise
-                LOGGER.debug("OpenAI call failed (attempt %d/%d): %s", attempt, self._max_retries, exc)
+                LOGGER.debug(
+                    "OpenAI call failed (attempt %d/%d): %s", attempt, self._max_retries, exc
+                )
                 time.sleep(delay)
                 delay *= 2
                 continue
 
             message = response.choices[0].message.content if response.choices else ""
-            return (message or "").strip()
+            if not message:
+                continue
 
-        return ""
+            try:
+                parsed = json.loads(message)
+            except json.JSONDecodeError:
+                LOGGER.debug("Received non-JSON response; retrying")
+                continue
+
+            social = (parsed.get("social_post") or "").strip()
+            blog = (parsed.get("blog_post") or "").strip()
+
+            if not self._is_valid_social(social):
+                LOGGER.debug("Social post failed validation; retrying")
+                continue
+            if not self._is_valid_blog(blog):
+                LOGGER.debug("Blog post failed validation; retrying")
+                continue
+
+            return GeneratedContent(social=social, blog=blog)
+
+        raise RuntimeError("Unable to generate content that satisfies constraints")
 
     def _build_prompt(self, article: ArticleForSummary) -> str:
         base = article.summary or ""
-        link_segment = f"文章連結：{article.link}\n" if article.link else ""
+        link_segment = f"URL: {article.link}\n" if article.link else ""
         return (
-            "請根據以下資訊撰寫約 150 字的繁體中文摘要，"
-            "語氣專業、精準，著重新聞的核心重點與潛在影響，"
-            "避免冗長鋪陳。不要加入網址，亦不要包含 emoji 或 hashtag。\n"
-            f"新聞標題：{article.title}\n"
-            f"原始摘要：{base}\n"
+            "Write two distinct English outputs based on the article below.\n"
+            "1. Social media post: fewer than 150 words, concise yet vivid, avoiding bullet lists and emojis.\n"
+            "2. Blog post: at least 700 words, structured with paragraphs and subheadings that feel naturally written by a human editor.\n"
+            "Ensure both pieces avoid hashtags and marketing clichés.\n"
+            "Respond in strict JSON format with keys 'social_post' and 'blog_post'.\n"
+            f"Title: {article.title}\n"
+            f"Summary: {base}\n"
             f"{link_segment}"
         )
+
+    @staticmethod
+    def _is_valid_social(content: str) -> bool:
+        if not content:
+            return False
+        if any(ord(char) >= 0x1F300 for char in content):
+            return False
+        word_count = len(content.split())
+        return word_count < 150
+
+    @staticmethod
+    def _is_valid_blog(content: str) -> bool:
+        if not content:
+            return False
+        if any(ord(char) >= 0x1F300 for char in content):
+            return False
+        word_count = len(content.split())
+        return word_count >= 700
 
 
 __all__ = ["SocialSummarizer"]

@@ -213,6 +213,56 @@ def format_social_posts(entries: List[dict], target_date: dt.date) -> str:
     return "\n".join(header + body).rstrip() + "\n"
 
 
+def slugify(value: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+    return slug or "article"
+
+
+def write_entry_content(
+    entries: List[dict],
+    target_date: dt.date,
+    output_dir: pathlib.Path,
+) -> tuple[int, int]:
+    base_dir = (
+        output_dir
+        / str(target_date.year)
+        / f"{target_date.month:02d}"
+        / target_date.isoformat()
+    )
+    base_dir.mkdir(parents=True, exist_ok=True)
+
+    slug_counts: dict[str, int] = {}
+    social_files = 0
+    blog_files = 0
+
+    for entry in entries:
+        social = (entry.get("social_summary") or "").strip()
+        blog = (entry.get("blog_post") or "").strip()
+        if not social or not blog:
+            continue
+
+        slug = slugify(entry.get("title", ""))
+        count = slug_counts.get(slug, 0)
+        slug_counts[slug] = count + 1
+        if count:
+            slug = f"{slug}-{count + 1}"
+
+        source = entry.get("link") or entry.get("source") or "Unknown source"
+        source_line = f"Source: {source}"
+
+        if social:
+            social_path = base_dir / f"{slug}-social.txt"
+            social_path.write_text(f"{social}\n\n{source_line}\n", encoding="utf-8")
+            social_files += 1
+
+        if blog:
+            blog_path = base_dir / f"{slug}-blog.md"
+            blog_path.write_text(f"{blog}\n\n{source_line}\n", encoding="utf-8")
+            blog_files += 1
+
+    return social_files, blog_files
+
+
 def write_output(markdown: str, target_date: dt.date, output_dir: pathlib.Path) -> pathlib.Path:
     subdir = output_dir / str(target_date.year) / f"{target_date.month:02d}"
     subdir.mkdir(parents=True, exist_ok=True)
@@ -269,6 +319,13 @@ def main() -> None:
     social_content = format_social_posts(entries, target_date)
     social_path = write_social_output(social_content, target_date, args.output_dir)
     LOGGER.info("Wrote %d social summaries to %s", generated, social_path)
+
+    social_files, blog_files = write_entry_content(entries, target_date, args.output_dir)
+    LOGGER.info(
+        "Wrote %d social post file(s) and %d blog post file(s) for individual articles",
+        social_files,
+        blog_files,
+    )
 
 
 if __name__ == "__main__":
