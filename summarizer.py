@@ -42,12 +42,10 @@ class SocialSummarizer:
         *,
         model: str = "gpt-4o-mini",
         temperature: float = 0.4,
-        max_retries: int = 3,
     ) -> None:
         self._client = client
         self._model = model
         self._temperature = temperature
-        self._max_retries = max_retries
 
     @classmethod
     def from_env(cls) -> Optional["SocialSummarizer"]:
@@ -97,57 +95,26 @@ class SocialSummarizer:
         return generated
 
     def _create_content(self, article: ArticleForSummary) -> GeneratedContent:
-        last_error: Exception | None = None
+        prompt = self._build_prompt(article)
+        response = self._create_response(prompt)
 
-        for attempt in range(1, self._max_retries + 1):
-            prompt = self._build_prompt(article, attempt=attempt)
-            try:
-                response = self._create_response(prompt)
+        message = self._extract_response_text(response)
+        if not message:
+            raise RuntimeError("Model returned an empty response")
 
-                message = self._extract_response_text(response)
-                if not message:
-                    raise RuntimeError("Model returned an empty response")
+        parsed = self._parse_model_response(message)
+        if not parsed:
+            raise RuntimeError("Model response was not valid JSON")
 
-                parsed = self._parse_model_response(message)
-                if not parsed:
-                    raise RuntimeError("Model response was not valid JSON")
+        social = (parsed.get("social_post") or "").strip()
+        blog = (parsed.get("blog_post") or "").strip()
 
-                social = (parsed.get("social_post") or "").strip()
-                blog = (parsed.get("blog_post") or "").strip()
+        if not self._is_valid_social(social):
+            raise RuntimeError("social_post failed validation")
+        if not self._is_valid_blog(blog):
+            raise RuntimeError("blog_post failed validation")
 
-                if not self._is_valid_social(social):
-                    word_count = self._word_count(social)
-                    raise RuntimeError(
-                        f"social_post failed validation (words={word_count})"
-                    )
-                if not self._is_valid_blog(blog):
-                    word_count = self._word_count(blog)
-                    raise RuntimeError(
-                        f"blog_post failed validation (words={word_count})"
-                    )
-
-                if attempt > 1:
-                    LOGGER.info(
-                        "Recovered summary for '%s' after %d attempt(s)",
-                        article.title,
-                        attempt,
-                    )
-                return GeneratedContent(social=social, blog=blog)
-
-            except Exception as exc:  # pragma: no cover - requires live API
-                last_error = exc
-                LOGGER.debug(
-                    "Attempt %d to summarize '%s' failed: %s",
-                    attempt,
-                    article.title,
-                    exc,
-                    exc_info=not isinstance(exc, RuntimeError),
-                )
-
-        assert last_error is not None  # for type checkers
-        raise RuntimeError(
-            f"Failed to generate content after {self._max_retries} attempts: {last_error}"
-        )
+        return GeneratedContent(social=social, blog=blog)
 
     def _create_response(self, prompt: str):
         """Issue a generation request using the most modern OpenAI API available."""
@@ -251,22 +218,14 @@ class SocialSummarizer:
             LOGGER.debug("Unable to recover JSON payload from model response")
             return None
 
-    def _build_prompt(self, article: ArticleForSummary, *, attempt: int = 1) -> str:
+    def _build_prompt(self, article: ArticleForSummary) -> str:
         base = article.summary or ""
         link_segment = f"URL: {article.link}\n" if article.link else ""
-        emphasis = (
-            "The blog post MUST exceed 420 words and contain at least three rich, well-developed paragraphs. "
-            "Use descriptive subheadings and smooth transitions between sections. "
-            "Do not repeat generic filler sentences.\n"
-            if attempt > 1
-            else ""
-        )
         return (
             "Write two distinct English outputs based on the article below.\n"
             "1. Social media post: fewer than 150 words, concise yet vivid, avoiding bullet lists and emojis.\n"
             "2. Blog post: at least 400 words, structured with paragraphs and subheadings that feel naturally written by a human editor.\n"
             "Ensure both pieces avoid hashtags and marketing clichés.\n"
-            f"{emphasis}"
             "Respond in strict JSON format with keys 'social_post' and 'blog_post'.\n"
             f"Title: {article.title}\n"
             f"Summary: {base}\n"
@@ -292,25 +251,16 @@ class SocialSummarizer:
         return word_count >= 400
 
     @staticmethod
-    def _word_count(content: str) -> int:
-        if not content:
-            return 0
-        return len(content.split())
-
-    @staticmethod
     def _messages_to_responses_input(messages: list[dict]) -> list[dict]:
         """Convert chat-style messages to the Responses API ``input`` format."""
 
         converted: list[dict] = []
-        type_overrides = {
-            "assistant": "output_text",
-        }
 
         for message in messages:
             role = message.get("role", "user")
             content = message.get("content", "")
 
-            default_type = type_overrides.get(role, "input_text")
+            default_type = "output_text" if role == "assistant" else "text"
 
             segments: list[dict] = []
             if isinstance(content, list):
