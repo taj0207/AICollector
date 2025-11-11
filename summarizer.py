@@ -29,6 +29,67 @@ class GeneratedContent:
     blog: str
 
 
+class GenerationFailure(RuntimeError):
+    """Base exception that carries structured failure details for logging."""
+
+    def __init__(self, message: str, *, details: Optional[dict] = None) -> None:
+        super().__init__(message)
+        self.details = details or {}
+
+
+class ValidationFailure(GenerationFailure):
+    """Raised when model output does not satisfy validation requirements."""
+
+    def __init__(self, kind: str, reason: str, content: str) -> None:
+        preview_lines = content.strip().splitlines() if content else []
+        preview_text = " ".join(line.strip() for line in preview_lines[:3] if line.strip())
+        if len(preview_text) > 240:
+            preview_text = preview_text[:237] + "..."
+        word_count = len(content.split()) if content else 0
+        details = {
+            "kind": kind,
+            "reason": reason,
+            "word_count": word_count,
+            "preview": preview_text or "<empty>",
+        }
+        super().__init__(f"{kind} failed validation: {reason}", details=details)
+
+
+class APIRequestFailure(GenerationFailure):
+    """Raised when the OpenAI API request itself fails."""
+
+    def __init__(self, title: str, details: dict) -> None:
+        status = details.get("status_code")
+        error_type = details.get("error_type")
+        message = "OpenAI API request failed"
+        if status is not None or error_type:
+            message += (
+                f" (status={status if status is not None else 'unknown'},"
+                f" type={error_type or 'unknown'})"
+            )
+        merged_details = dict(details)
+        merged_details.setdefault("title", title)
+        super().__init__(message, details=merged_details)
+
+
+class EmptyResponseFailure(GenerationFailure):
+    """Raised when the model returns no text content."""
+
+    def __init__(self, title: str) -> None:
+        super().__init__("Model returned an empty response", details={"title": title})
+
+
+class ParseFailure(GenerationFailure):
+    """Raised when the model response cannot be parsed as JSON."""
+
+    def __init__(self, title: str, raw_message: str) -> None:
+        snippet = raw_message.strip().replace("\n", " ")
+        if len(snippet) > 500:
+            snippet = snippet[:497] + "..."
+        details = {"title": title, "snippet": snippet or "<empty>"}
+        super().__init__("Model response was not valid JSON", details=details)
+
+
 class SummarizationError(RuntimeError):
     """Raised when summary generation fails for all attempted entries."""
 
@@ -72,7 +133,12 @@ class SocialSummarizer:
             try:
                 content = self._create_content(article)
             except Exception as exc:  # pragma: no cover - defensive logging
-                LOGGER.warning("Failed to generate content for '%s': %s", article.title, exc)
+                LOGGER.warning(
+                    "Failed to generate content for '%s': %s | details=%s",
+                    article.title,
+                    exc,
+                    self._format_failure_details(exc),
+                )
                 failures.append(article.title or "(untitled)")
                 continue
 
@@ -103,13 +169,15 @@ class SocialSummarizer:
 
         social_ok, social_reason = self._validate_social(social)
         if not social_ok:
-            self._log_validation_failure("social_post", social_reason, social)
-            raise RuntimeError(f"social_post failed validation: {social_reason}")
+            failure = ValidationFailure("social_post", social_reason, social)
+            self._log_validation_failure(failure)
+            raise failure
 
         blog_ok, blog_reason = self._validate_blog(blog)
         if not blog_ok:
-            self._log_validation_failure("blog_post", blog_reason, blog)
-            raise RuntimeError(f"blog_post failed validation: {blog_reason}")
+            failure = ValidationFailure("blog_post", blog_reason, blog)
+            self._log_validation_failure(failure)
+            raise failure
 
         return GeneratedContent(social=social, blog=blog)
 
@@ -117,17 +185,21 @@ class SocialSummarizer:
         try:
             response = self._create_response(prompt)
         except APIError as exc:
-            self._log_api_error(article_title, exc)
-            raise
+            details = self._build_api_error_details(exc)
+            self._log_api_error(article_title, details)
+            raise APIRequestFailure(article_title, details) from exc
 
         message = self._extract_response_text(response)
         if not message:
-            raise RuntimeError("Model returned an empty response")
+            failure = EmptyResponseFailure(article_title)
+            self._log_empty_response(failure)
+            raise failure
 
         parsed = self._parse_model_response(message)
         if not parsed:
-            self._log_parse_failure(article_title, message)
-            raise RuntimeError("Model response was not valid JSON")
+            failure = ParseFailure(article_title, message)
+            self._log_parse_failure(failure)
+            raise failure
 
         return parsed
 
@@ -301,33 +373,45 @@ class SocialSummarizer:
         return len(content.split())
 
     @staticmethod
-    def _log_validation_failure(kind: str, reason: str, content: str) -> None:
-        preview = content.strip().splitlines()
-        preview_text = " ".join(preview[:3]) if preview else ""
-        if len(preview_text) > 240:
-            preview_text = preview_text[:237] + "..."
+    def _log_validation_failure(failure: ValidationFailure) -> None:
+        details = failure.details
         LOGGER.warning(
             "%s failed validation (%s). Preview: %s",
-            kind,
-            reason,
-            preview_text or "<empty>",
+            details.get("kind", "<unknown>"),
+            details.get("reason", "<unknown>"),
+            details.get("preview", "<empty>"),
         )
 
     @staticmethod
-    def _log_parse_failure(title: str, message: str) -> None:
+    def _log_parse_failure(failure: ParseFailure) -> None:
         """Surface unparseable model responses for easier debugging."""
 
-        snippet = message.strip().replace("\n", " ")
-        if len(snippet) > 500:
-            snippet = snippet[:497] + "..."
+        details = failure.details
         LOGGER.error(
             "Model response for '%s' was not valid JSON. Snippet: %s",
-            title,
-            snippet or "<empty>",
+            details.get("title", "<unknown>"),
+            details.get("snippet", "<empty>"),
         )
 
     @staticmethod
-    def _log_api_error(title: str, exc: APIError) -> None:
+    def _log_api_error(title: str, details: dict) -> None:
+        LOGGER.error(
+            "OpenAI API request failed for '%s' (status=%s, type=%s, message=%s, body=%s)",
+            title,
+            details.get("status_code", "unknown"),
+            details.get("error_type", "unknown"),
+            details.get("error_message", "<empty>"),
+            details.get("response_body", "<empty>"),
+        )
+
+    @staticmethod
+    def _log_empty_response(failure: EmptyResponseFailure) -> None:
+        LOGGER.error(
+            "Model returned an empty response for '%s'", failure.details.get("title", "<unknown>")
+        )
+
+    @staticmethod
+    def _build_api_error_details(exc: APIError) -> dict:
         status_code = getattr(exc, "status_code", None)
         response = getattr(exc, "response", None)
         body: str = ""
@@ -336,14 +420,23 @@ class SocialSummarizer:
                 body = response.text
             except Exception:  # pragma: no cover - defensive logging
                 body = repr(response)
-        LOGGER.error(
-            "OpenAI API request failed for '%s' (status=%s, type=%s, message=%s, body=%s)",
-            title,
-            status_code if status_code is not None else "unknown",
-            exc.__class__.__name__,
-            str(exc),
-            body.strip() or "<empty>",
-        )
+
+        return {
+            "status_code": status_code,
+            "error_type": getattr(exc, "type", None) or exc.__class__.__name__,
+            "error_message": str(exc),
+            "response_body": (body.strip() or "<empty>"),
+        }
+
+    @staticmethod
+    def _format_failure_details(exc: Exception) -> str:
+        details = getattr(exc, "details", None)
+        if not details:
+            return "<none>"
+        try:
+            return json.dumps(details, ensure_ascii=False, sort_keys=True)
+        except Exception:  # pragma: no cover - defensive
+            return repr(details)
 
     @staticmethod
     def _messages_to_responses_input(messages: list[dict]) -> list[dict]:
