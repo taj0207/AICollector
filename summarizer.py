@@ -29,6 +29,14 @@ class GeneratedContent:
     blog: str
 
 
+@dataclass
+class ArticleAssessment:
+    """Impact scoring metadata for an article."""
+
+    score: float
+    rationale: str
+
+
 class GenerationFailure(RuntimeError):
     """Base exception that carries structured failure details for logging."""
 
@@ -119,9 +127,33 @@ class SocialSummarizer:
     def enrich_entries(self, entries: Iterable[dict]) -> int:
         """Mutate entries in-place by adding social and blog content when possible."""
 
+        entry_list = list(entries)
+        if not entry_list:
+            return 0
+
+        scored_entries = self._score_entries(entry_list)
+        if not scored_entries:
+            LOGGER.warning("No impact scores were generated; skipping content generation")
+            return 0
+
+        selected = scored_entries[:3]
+        selected_ids = {id(item) for item in selected}
+        if selected:
+            LOGGER.info(
+                "Top %d article(s) by impact score: %s",
+                len(selected),
+                "; ".join(
+                    f"{entry.get('title', '(untitled)')} (score={entry.get('impact_score'):.0f})"
+                    for entry in selected
+                ),
+            )
+
         generated = 0
         failures: list[str] = []
-        for entry in entries:
+        for entry in entry_list:
+            if id(entry) not in selected_ids:
+                continue
+
             article = ArticleForSummary(
                 title=entry.get("title", ""),
                 summary=entry.get("summary", ""),
@@ -202,6 +234,59 @@ class SocialSummarizer:
             raise failure
 
         return parsed
+
+    def _score_entries(self, entries: list[dict]) -> list[dict]:
+        scored: list[dict] = []
+
+        for entry in entries:
+            article = ArticleForSummary(
+                title=entry.get("title", ""),
+                summary=entry.get("summary", ""),
+                link=entry.get("link"),
+            )
+            if not article.title:
+                continue
+
+            try:
+                assessment = self._request_article_assessment(article)
+            except Exception as exc:  # pragma: no cover - defensive logging
+                LOGGER.warning(
+                    "Failed to score '%s': %s | details=%s",
+                    article.title or "(untitled)",
+                    exc,
+                    self._format_failure_details(exc),
+                )
+                continue
+
+            entry["impact_score"] = assessment.score
+            entry["impact_rationale"] = assessment.rationale
+            scored.append(entry)
+
+        scored.sort(key=lambda item: item.get("impact_score", 0), reverse=True)
+        return scored
+
+    def _request_article_assessment(self, article: ArticleForSummary) -> ArticleAssessment:
+        prompt = self._build_scoring_prompt(article)
+        parsed = self._request_structured_response(prompt, article.title)
+
+        raw_score = parsed.get("impact_score")
+        try:
+            score = float(raw_score)
+        except (TypeError, ValueError):
+            raise ValidationFailure(
+                "impact_score",
+                "not_numeric",
+                str(raw_score) if raw_score is not None else "<missing>",
+            )
+
+        if score < 0 or score > 100:
+            raise ValidationFailure("impact_score", f"out_of_range={score}", str(raw_score))
+
+        rationale = (parsed.get("impact_rationale") or "").strip()
+        if not rationale:
+            raise ValidationFailure("impact_rationale", "empty", rationale)
+
+        return ArticleAssessment(score=score, rationale=rationale)
 
     def _create_response(self, prompt: str):
         """Issue a generation request using the most modern OpenAI API available."""
@@ -346,6 +431,20 @@ class SocialSummarizer:
             "Respond in strict JSON format with keys 'social_post' and 'blog_post'.\n"
             f"Title: {article.title}\n"
             f"Summary: {base}\n"
+            f"{link_segment}"
+        )
+
+    def _build_scoring_prompt(self, article: ArticleForSummary) -> str:
+        link_segment = f"Link: {article.link}\n" if article.link else ""
+        return (
+            "Review the following news item and rate how significantly it could influence the "
+            "development, deployment, regulation, or public perception of artificial intelligence.\n"
+            "Provide a single integer impact score from 0 (no relevance) to 100 (game-changing) and "
+            "a concise rationale of fewer than 80 words.\n"
+            "Focus on why this matters for AI practitioners, businesses, policymakers, or society.\n"
+            "Respond strictly in JSON with keys 'impact_score' and 'impact_rationale'.\n"
+            f"Title: {article.title}\n"
+            f"Summary: {article.summary or ''}\n"
             f"{link_segment}"
         )
 

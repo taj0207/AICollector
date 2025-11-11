@@ -189,8 +189,14 @@ def format_markdown(entries: List[dict], target_date: dt.date, timezone: ZoneInf
         time_str = entry["published"].strftime("%H:%M")
         summary = entry["summary"].strip()
         summary_line = f"\n  > {summary}" if summary else ""
+        score = entry.get("impact_score")
+        rationale = (entry.get("impact_rationale") or "").strip()
+        score_segment = ""
+        if isinstance(score, (int, float)):
+            score_segment = f" (impact score: {int(round(score))}/100)"
+        rationale_line = f"\n  > Impact rationale: {rationale}" if rationale else ""
         body.append(
-            f"- [{entry['title']}]({entry['link']}) — {time_str} · {entry['source']}{summary_line}"
+            f"- [{entry['title']}]({entry['link']}) — {time_str} · {entry['source']}{score_segment}{summary_line}{rationale_line}"
         )
     if not body:
         body.append("No articles found for the selected date.")
@@ -201,15 +207,17 @@ def format_social_posts(entries: List[dict], target_date: dt.date) -> str:
     header = [
         f"# AI News Social Summaries for {target_date.isoformat()}",
         "",
-        f"Collected {len(entries)} article(s).",
+        f"Prepared {sum(1 for entry in entries if (entry.get('social_summary') or '').strip())} social-ready article(s).",
         "",
     ]
     body = []
-    for idx, entry in enumerate(entries, start=1):
+    count = 0
+    for entry in entries:
         social = entry.get("social_summary", "").strip()
         if not social:
             continue
-        body.append(f"{idx}. {entry['title']}")
+        count += 1
+        body.append(f"{count}. {entry['title']}")
         body.append(f"   {social}")
         link = entry.get("link")
         if link:
