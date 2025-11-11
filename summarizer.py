@@ -90,20 +90,7 @@ class SocialSummarizer:
         delay = self._retry_delay
         for attempt in range(1, self._max_retries + 1):
             try:
-                response = self._client.chat.completions.create(
-                    model=self._model,
-                    temperature=self._temperature,
-                    messages=[
-                        {
-                            "role": "system",
-                            "content": (
-                                "You are an experienced technology journalist who writes natural, human-sounding "
-                                "English prose without using emoji. Always follow length requirements precisely."
-                            ),
-                        },
-                        {"role": "user", "content": prompt},
-                    ],
-                )
+                response = self._create_response(prompt)
             except Exception as exc:  # pragma: no cover - network failure
                 if attempt == self._max_retries:
                     raise
@@ -114,14 +101,12 @@ class SocialSummarizer:
                 delay *= 2
                 continue
 
-            message = response.choices[0].message.content if response.choices else ""
+            message = self._extract_response_text(response)
             if not message:
                 continue
 
-            try:
-                parsed = json.loads(message)
-            except json.JSONDecodeError:
-                LOGGER.debug("Received non-JSON response; retrying")
+            parsed = self._parse_model_response(message)
+            if not parsed:
                 continue
 
             social = (parsed.get("social_post") or "").strip()
@@ -138,13 +123,104 @@ class SocialSummarizer:
 
         raise RuntimeError("Unable to generate content that satisfies constraints")
 
+    def _create_response(self, prompt: str):
+        """Issue a generation request using the most modern OpenAI API available."""
+
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "You are an experienced technology journalist who writes natural, human-sounding "
+                    "English prose without using emoji. Always follow length requirements precisely."
+                ),
+            },
+            {"role": "user", "content": prompt},
+        ]
+
+        if hasattr(self._client, "responses"):
+            return self._client.responses.create(
+                model=self._model,
+                temperature=self._temperature,
+                response_format={"type": "json_object"},
+                messages=messages,
+            )
+
+        # Fallback to the legacy Chat Completions API for older client versions.
+        return self._client.chat.completions.create(
+            model=self._model,
+            temperature=self._temperature,
+            response_format={"type": "json_object"},
+            messages=messages,
+        )
+
+    @staticmethod
+    def _extract_response_text(response: object) -> str:
+        """Normalize text extraction across Responses and Chat Completions payloads."""
+
+        if response is None:
+            return ""
+
+        text = getattr(response, "output_text", None)
+        if isinstance(text, str) and text.strip():
+            return text
+
+        output = getattr(response, "output", None)
+        if output:
+            fragments: list[str] = []
+            for item in output:
+                for content in getattr(item, "content", []) or []:
+                    piece = getattr(content, "text", None)
+                    if piece:
+                        fragments.append(piece)
+            if fragments:
+                return "".join(fragments)
+
+        choices = getattr(response, "choices", None)
+        if choices:
+            first = choices[0]
+            message = getattr(first, "message", None)
+            if message and getattr(message, "content", None):
+                content = message.content
+                if isinstance(content, str):
+                    return content
+                if isinstance(content, list):
+                    return "".join(str(part) for part in content if part)
+            text = getattr(first, "text", None)
+            if isinstance(text, str):
+                return text
+
+        return ""
+
+    @staticmethod
+    def _parse_model_response(message: str) -> Optional[dict]:
+        """Attempt to parse a JSON object from the model output."""
+
+        if not message:
+            return None
+
+        try:
+            return json.loads(message)
+        except json.JSONDecodeError:
+            LOGGER.debug("Received non-JSON response; attempting to extract JSON body")
+
+        start = message.find("{")
+        end = message.rfind("}")
+        if start == -1 or end == -1 or end <= start:
+            return None
+
+        try:
+            return json.loads(message[start : end + 1])
+        except json.JSONDecodeError:
+            LOGGER.debug("Unable to recover JSON payload from model response")
+            return None
+
     def _build_prompt(self, article: ArticleForSummary) -> str:
         base = article.summary or ""
         link_segment = f"URL: {article.link}\n" if article.link else ""
         return (
             "Write two distinct English outputs based on the article below.\n"
             "1. Social media post: fewer than 150 words, concise yet vivid, avoiding bullet lists and emojis.\n"
-            "2. Blog post: at least 700 words, structured with paragraphs and subheadings that feel naturally written by a human editor.\n"
+            "2. Blog post: at least 400 words, structured with paragraphs and subheadings that feel naturally written by a human editor.\n"
             "Ensure both pieces avoid hashtags and marketing clichés.\n"
             "Respond in strict JSON format with keys 'social_post' and 'blog_post'.\n"
             f"Title: {article.title}\n"
@@ -168,7 +244,7 @@ class SocialSummarizer:
         if any(ord(char) >= 0x1F300 for char in content):
             return False
         word_count = len(content.split())
-        return word_count >= 700
+        return word_count >= 400
 
 
 __all__ = ["SocialSummarizer"]
