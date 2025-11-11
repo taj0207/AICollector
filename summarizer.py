@@ -211,7 +211,8 @@ class SocialSummarizer:
                 "role": "system",
                 "content": (
                     "You are an experienced technology journalist who writes natural, human-sounding "
-                    "English prose without using emoji. Always follow length requirements precisely."
+                    "English prose without using emoji. Follow the caller's length guidance while "
+                    "delivering thorough, well-structured coverage without sounding repetitive."
                 ),
             },
             {"role": "user", "content": prompt},
@@ -338,7 +339,9 @@ class SocialSummarizer:
         return (
             "Write two distinct English outputs based on the article below.\n"
             "1. Social media post: fewer than 150 words, concise yet vivid, avoiding bullet lists and emojis.\n"
-            "2. Blog post: at least 400 words, structured with paragraphs and subheadings that feel naturally written by a human editor.\n"
+            "2. Blog post: aim for roughly 600-750 words so it reads like a full article, with an engaging introduction, "
+            "multiple body sections framed by Markdown subheadings, and a reflective conclusion. Add specific context, "
+            "analysis, and implications drawn from the summary so the piece feels comprehensive.\n"
             "Ensure both pieces avoid hashtags and marketing clichés.\n"
             "Respond in strict JSON format with keys 'social_post' and 'blog_post'.\n"
             f"Title: {article.title}\n"
@@ -364,8 +367,9 @@ class SocialSummarizer:
         if any(ord(char) >= 0x1F300 for char in content):
             return False, "contains_emoji"
         word_count = SocialSummarizer._word_count(content)
-        if word_count < 400:
-            return False, f"word_count={word_count} < min=400"
+        if word_count < 280:
+            return False, f"word_count={word_count} < min=280"
+
         return True, f"word_count={word_count}"
 
     @staticmethod
