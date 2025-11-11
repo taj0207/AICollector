@@ -369,6 +369,7 @@ class SocialSummarizer:
         word_count = SocialSummarizer._word_count(content)
         if word_count < 280:
             return False, f"word_count={word_count} < min=280"
+
         return True, f"word_count={word_count}"
 
     @staticmethod
