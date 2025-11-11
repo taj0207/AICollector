@@ -138,23 +138,36 @@ class SocialSummarizer:
         ]
 
         if hasattr(self._client, "responses"):
-            try:
-                return self._client.responses.create(
-                    model=self._model,
-                    temperature=self._temperature,
-                    response_format={"type": "json_object"},
-                    messages=messages,
-                )
-            except TypeError:
-                # Some OpenAI client versions do not yet support the
-                # ``response_format`` argument on the Responses API. In that
-                # scenario we retry without the argument and rely on our
-                # validation and JSON parsing fallback logic instead.
-                return self._client.responses.create(
-                    model=self._model,
-                    temperature=self._temperature,
-                    messages=messages,
-                )
+            base_kwargs = {
+                "model": self._model,
+                "temperature": self._temperature,
+            }
+            response_format = {"type": "json_object"}
+
+            # The OpenAI SDK has evolved quickly; try multiple permutations to
+            # support both ``messages`` (legacy) and ``input`` (modern) payloads
+            # as well as optional ``response_format`` support.
+            attempts = [
+                {"messages": messages, "response_format": response_format},
+                {"messages": messages},
+                {"input": self._messages_to_responses_input(messages), "response_format": response_format},
+                {"input": self._messages_to_responses_input(messages)},
+            ]
+
+            last_error: Optional[Exception] = None
+            for extra in attempts:
+                try:
+                    return self._client.responses.create(**base_kwargs, **extra)
+                except TypeError as exc:
+                    # Only continue when the error is caused by unsupported
+                    # keyword arguments; re-raise other ``TypeError`` instances.
+                    if not any(keyword in str(exc) for keyword in ("messages", "input", "response_format")):
+                        raise
+                    last_error = exc
+                    continue
+
+            if last_error:
+                raise last_error
 
         # Fallback to the legacy Chat Completions API for older client versions.
         return self._client.chat.completions.create(
@@ -256,6 +269,21 @@ class SocialSummarizer:
             return False
         word_count = len(content.split())
         return word_count >= 400
+
+    @staticmethod
+    def _messages_to_responses_input(messages: list[dict]) -> list[dict]:
+        """Convert chat-style messages to the Responses API ``input`` format."""
+
+        converted: list[dict] = []
+        for message in messages:
+            role = message.get("role", "user")
+            content = message.get("content", "")
+            if isinstance(content, list):
+                # Already in the structured format expected by the new API.
+                converted.append({"role": role, "content": content})
+            else:
+                converted.append({"role": role, "content": str(content)})
+        return converted
 
 
 __all__ = ["SocialSummarizer"]
