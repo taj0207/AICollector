@@ -4,7 +4,6 @@ from __future__ import annotations
 import json
 import logging
 import os
-import time
 from dataclasses import dataclass
 from typing import Iterable, Optional
 
@@ -43,14 +42,10 @@ class SocialSummarizer:
         *,
         model: str = "gpt-4o-mini",
         temperature: float = 0.4,
-        max_retries: int = 3,
-        retry_delay: float = 2.0,
     ) -> None:
         self._client = client
         self._model = model
         self._temperature = temperature
-        self._max_retries = max_retries
-        self._retry_delay = retry_delay
 
     @classmethod
     def from_env(cls) -> Optional["SocialSummarizer"]:
@@ -101,42 +96,25 @@ class SocialSummarizer:
 
     def _create_content(self, article: ArticleForSummary) -> GeneratedContent:
         prompt = self._build_prompt(article)
+        response = self._create_response(prompt)
 
-        delay = self._retry_delay
-        for attempt in range(1, self._max_retries + 1):
-            try:
-                response = self._create_response(prompt)
-            except Exception as exc:  # pragma: no cover - network failure
-                if attempt == self._max_retries:
-                    raise
-                LOGGER.debug(
-                    "OpenAI call failed (attempt %d/%d): %s", attempt, self._max_retries, exc
-                )
-                time.sleep(delay)
-                delay *= 2
-                continue
+        message = self._extract_response_text(response)
+        if not message:
+            raise RuntimeError("Model returned an empty response")
 
-            message = self._extract_response_text(response)
-            if not message:
-                continue
+        parsed = self._parse_model_response(message)
+        if not parsed:
+            raise RuntimeError("Model response was not valid JSON")
 
-            parsed = self._parse_model_response(message)
-            if not parsed:
-                continue
+        social = (parsed.get("social_post") or "").strip()
+        blog = (parsed.get("blog_post") or "").strip()
 
-            social = (parsed.get("social_post") or "").strip()
-            blog = (parsed.get("blog_post") or "").strip()
+        if not self._is_valid_social(social):
+            raise RuntimeError("social_post failed validation")
+        if not self._is_valid_blog(blog):
+            raise RuntimeError("blog_post failed validation")
 
-            if not self._is_valid_social(social):
-                LOGGER.debug("Social post failed validation; retrying")
-                continue
-            if not self._is_valid_blog(blog):
-                LOGGER.debug("Blog post failed validation; retrying")
-                continue
-
-            return GeneratedContent(social=social, blog=blog)
-
-        raise RuntimeError("Unable to generate content that satisfies constraints")
+        return GeneratedContent(social=social, blog=blog)
 
     def _create_response(self, prompt: str):
         """Issue a generation request using the most modern OpenAI API available."""
@@ -156,33 +134,20 @@ class SocialSummarizer:
             base_kwargs = {
                 "model": self._model,
                 "temperature": self._temperature,
+                "input": self._messages_to_responses_input(messages),
             }
-            response_format = {"type": "json_object"}
 
-            # The OpenAI SDK has evolved quickly; try multiple permutations to
-            # support both ``messages`` (legacy) and ``input`` (modern) payloads
-            # as well as optional ``response_format`` support.
-            attempts = [
-                {"messages": messages, "response_format": response_format},
-                {"messages": messages},
-                {"input": self._messages_to_responses_input(messages), "response_format": response_format},
-                {"input": self._messages_to_responses_input(messages)},
-            ]
-
-            last_error: Optional[Exception] = None
-            for extra in attempts:
-                try:
-                    return self._client.responses.create(**base_kwargs, **extra)
-                except TypeError as exc:
-                    # Only continue when the error is caused by unsupported
-                    # keyword arguments; re-raise other ``TypeError`` instances.
-                    if not any(keyword in str(exc) for keyword in ("messages", "input", "response_format")):
-                        raise
-                    last_error = exc
-                    continue
-
-            if last_error:
-                raise last_error
+            try:
+                return self._client.responses.create(
+                    **base_kwargs, response_format={"type": "json_object"}
+                )
+            except TypeError as exc:
+                # Older SDKs may not yet accept ``response_format`` on the
+                # Responses API. Retry without the argument but bubble up
+                # unrelated ``TypeError`` instances for easier debugging.
+                if "response_format" not in str(exc):
+                    raise
+                return self._client.responses.create(**base_kwargs)
 
         # Fallback to the legacy Chat Completions API for older client versions.
         return self._client.chat.completions.create(
@@ -293,11 +258,20 @@ class SocialSummarizer:
         for message in messages:
             role = message.get("role", "user")
             content = message.get("content", "")
+
+            segments: list[dict] = []
             if isinstance(content, list):
-                # Already in the structured format expected by the new API.
-                converted.append({"role": role, "content": content})
+                for part in content:
+                    if isinstance(part, dict) and "type" in part:
+                        segments.append(part)
+                    elif part:
+                        segments.append({"type": "text", "text": str(part)})
+            elif content:
+                segments.append({"type": "text", "text": str(content)})
             else:
-                converted.append({"role": role, "content": str(content)})
+                segments.append({"type": "text", "text": ""})
+
+            converted.append({"role": role, "content": segments})
         return converted
 
 
