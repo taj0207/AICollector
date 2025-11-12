@@ -455,9 +455,6 @@ class SocialSummarizer:
         if any(ord(char) >= 0x1F300 for char in content):
             return False, "contains_emoji"
         char_count = len(content)
-        if char_count > 280:
-            return False, f"char_count={char_count} > max=280"
-
         word_count = SocialSummarizer._word_count(content)
         return True, f"char_count={char_count}, word_count={word_count}"
 
