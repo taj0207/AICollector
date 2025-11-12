@@ -1,15 +1,11 @@
 # AI News Social Summaries for 2025-11-11
 
-Prepared 3 social-ready article(s).
+Prepared 2 social-ready article(s).
 
-1. Meta’s chief AI scientist Yann LeCun reportedly plans to leave to build his own startup - TechCrunch
-   Yann LeCun, Meta's chief AI scientist, is reportedly set to leave the company to launch his own startup. This move could signal a significant shift in the AI landscape, as LeCun has been a pivotal figure in advancing artificial intelligence technologies. His departure raises questions about the future direction of Meta's AI initiatives and the potential innovations his new venture might bring.
-   https://news.google.com/rss/articles/CBMivgFBVV95cUxNa3luRkIxZ3IyTUYzeXd1RkNRVXg1bXRMUTBORG9kdHZkVUxZdnBiME5ZczM5NzRKWDBNTGdyckEyM2pZT1BhNmNHQnFUS0c3aTJlazFtbzFTSXNfZTRfWEoxQ3JEeTYtZTloMUlFUmM1SmFCM1NmeGpVQUhURFQ1SkRNcUV5QnEzcW9henBQVFM1V0Zkb0QyUVlhNVRhcDh4Y3FIcnZsbWFzN3JjR2gyZ1JuTXcxN2FQWDlRQVlB?oc=5
-
-2. AI cloud firm Nebius signs $3 billion deal with Meta, posts more than four-fold rise in revenue - Reuters
-   Nebius, the AI cloud powerhouse, has secured a monumental $3 billion deal with Meta, propelling its revenue to over four times its previous figures. This partnership not only signifies a major milestone for Nebius but also highlights the growing intersection of AI and cloud services in the tech landscape. The implications of this deal could reshape the industry as both companies push the boundaries of innovation.
-   https://news.google.com/rss/articles/CBMiwgFBVV95cUxONk9JYV9YOTdEeERWZlhpcF8yUXhBbGJwU2x1c19GWVFGT2J5OWtWenduT200eVFtR1owSzlJTmFPbmlnTG13TWhJV3planA3b21PZWJmNl9Xbm04ZHM2a2c1OG5FQlg1OE1yaTlYNmtJcDZsZ3ZkbVA2R1V4MXpiUlVvZHFCQU0wRHVvOHdqY0pRdmlLN2ZMbXFFRWRMOXR6dS1FbnJ0eGdEb1lVVTdXbW1xX252MU91R2Q4NlhYZUdWZw?oc=5
-
-3. Meta returns to open source AI with Omnilingual ASR models that can transcribe 1,600+ languages natively
-   Meta has unveiled its groundbreaking Omnilingual ASR, a multilingual speech recognition system that supports over 1,600 languages and can adapt to thousands more. This open-source model allows developers to create inclusive applications without the need for extensive retraining. By empowering communities and breaking down language barriers, Meta aims to redefine digital access. Explore the possibilities of this innovative technology on GitHub and Hugging Face.
+1. Meta returns to open source AI with Omnilingual ASR models that can transcribe 1,600+ languages natively
+   Meta has unveiled its groundbreaking Omnilingual ASR, a multilingual automatic speech recognition system that supports over 1,600 languages natively. This open-source model, designed for flexibility and community adaptation, can even generalize to over 5,400 languages. With zero-shot in-context learning, developers can easily extend its capabilities. Released under a permissive Apache 2.0 license, it empowers researchers and enterprises alike to break down language barriers and enhance digital accessibility. Explore this transformative technology on Meta’s platforms today.
    https://venturebeat.com/ai/meta-returns-to-open-source-ai-with-omnilingual-asr-models-that-can
+
+2. The State of AI: Energy is king, and the US is falling behind
+   The latest discussion from The State of AI highlights a critical issue: energy is the new currency in the AI race, and the US is lagging behind. As experts from MIT Technology Review and the Financial Times delve into this pressing topic, it becomes clear that the future of AI hinges on energy resources and infrastructure. The implications for global power dynamics are profound, making this a pivotal moment in the generative AI revolution. Read more about it here: https://www.technologyreview.com/2025/11/10/1126805/the-state-of-ai-energy-is-king-and-the-us-is-falling-behind/
+   https://www.technologyreview.com/2025/11/10/1126805/the-state-of-ai-energy-is-king-and-the-us-is-falling-behind/
