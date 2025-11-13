@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-13
+
+Prepared 3 social-ready article(s).
+
+1. What If AI Is a Bubble? - The Atlantic
+   The Atlantic explores a pressing question: Is AI just a bubble? As investment surges and expectations soar, the piece delves into the potential pitfalls and realities of this technology. Are we on the brink of a breakthrough or a bust? Read more to find out.
+   https://news.google.com/rss/articles/CBMifkFVX3lxTE9uRDZWM2xQcTZ3MVJYUDBNekEwRFJvMnUyVC1DTzJVeWx1aWI2T3FmeU5pZ19GalV0cFpNazlMNWx5UDF6YmJ5NUo0SkkteGp5U2g5LVlPb0xSOGxKLWpYa1p6dUFLOFo3eDk2aG1tMTA1SFFzUWo5cFNidlo4QQ?oc=5
+
+2. What the rise of CoreWeave tells us about the AI bubble - The Verge
+   CoreWeave's rise highlights the complexities of the AI bubble. As demand for computing power surges, this company is redefining the landscape, revealing both opportunities and risks in the evolving tech ecosystem. The future of AI is more intricate than it seems.
+   https://news.google.com/rss/articles/CBMijwFBVV95cUxQS0xzdFVaSjJ0N0R5ZlhDWDJRSkRlTi1vcXpncHUtcnUzQWxHYTdCTnNrQ2cyU2pSVUd3WnJaaHRaZ1o4WEtNeWVSMDNPand4anZZcUk4VVBHSVJOQ1V6dExHLUtpSTR2WTczT1JkR2hCaFpna2YtYzhHYmhCTFpJNlo0WWxzR0ZCdmFRaEc4dw?oc=5
+
+3. Weibo's new open source AI model VibeThinker-1.5B outperforms DeepSeek-R1 on $7,800 post-training budget
+   Weibo's VibeThinker-1.5B, a new open-source AI model, has outperformed DeepSeek-R1, showcasing exceptional reasoning capabilities at a fraction of the cost. With just $7,800 for post-training, it challenges the industry's reliance on massive parameter counts. Available now for developers.
+   https://venturebeat.com/ai/weibos-new-open-source-ai-model-vibethinker-1-5b-outperforms-deepseek-r1-on
