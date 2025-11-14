@@ -1,0 +1,3 @@
+Google DeepMind unveils SIMA 2, a groundbreaking agent that navigates 3D virtual worlds, including Goat Simulator 3. This innovation marks a significant leap towards creating versatile agents and enhancing real-world robotics.
+
+Source: https://www.technologyreview.com/2025/11/13/1127921/google-deepmind-is-using-gemini-to-train-agents-inside-goat-simulator-3/

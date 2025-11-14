@@ -1,3 +1,3 @@
-Weibo's VibeThinker-1.5B, a new open-source AI model, has outperformed DeepSeek-R1, showcasing exceptional reasoning capabilities at a fraction of the cost. With just $7,800 for post-training, it challenges the industry's reliance on massive parameter counts. Available now for developers.
+Weibo's VibeThinker-1.5B, a new open-source AI model, outperforms DeepSeek-R1, achieving top reasoning performance on a mere $7,800 budget. This 1.5B parameter model challenges the notion that size equals capability, showcasing a new era in AI efficiency.
 
 Source: https://venturebeat.com/ai/weibos-new-open-source-ai-model-vibethinker-1-5b-outperforms-deepseek-r1-on
