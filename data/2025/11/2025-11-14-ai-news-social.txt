@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-14
+
+Prepared 3 social-ready article(s).
+
+1. ChatGPT Group Chats are here … but not for everyone (yet)
+   OpenAI has officially launched Group Chats for ChatGPT, allowing users to interact with the AI in shared conversations. Currently in pilot mode for select regions, this feature aims to enhance collaboration, creativity, and productivity among users. More to come.
+   https://venturebeat.com/ai/chatgpt-group-chats-are-here-but-not-for-everyone-yet
+
+2. Baidu unveils proprietary ERNIE 5 beating GPT-5 performance on charts, document understanding and more
+   Baidu has launched ERNIE 5.0, a new AI model that reportedly outperforms GPT-5 in document understanding and multimodal tasks. This release, part of a broader strategy for global expansion, positions Baidu as a serious competitor in the enterprise AI landscape.
+   https://venturebeat.com/ai/baidu-unveils-proprietary-ernie-5-beating-gpt-5-performance-on-charts
+
+3. OpenAI’s new LLM exposes the secrets of how AI really works
+   OpenAI has unveiled an experimental large language model that demystifies AI operations. This breakthrough offers researchers a clearer understanding of LLMs, moving us away from the opaque black box models of today. Discover the implications for AI research.
+   https://www.technologyreview.com/2025/11/13/1127914/openais-new-llm-exposes-the-secrets-of-how-ai-really-works/

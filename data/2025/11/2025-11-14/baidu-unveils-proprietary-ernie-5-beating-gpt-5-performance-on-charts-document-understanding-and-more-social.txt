@@ -1,0 +1,3 @@
+Baidu has launched ERNIE 5.0, a new AI model that reportedly outperforms GPT-5 in document understanding and multimodal tasks. This release, part of a broader strategy for global expansion, positions Baidu as a serious competitor in the enterprise AI landscape.
+
+Source: https://venturebeat.com/ai/baidu-unveils-proprietary-ernie-5-beating-gpt-5-performance-on-charts

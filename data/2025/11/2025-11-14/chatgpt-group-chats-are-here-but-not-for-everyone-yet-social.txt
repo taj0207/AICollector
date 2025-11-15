@@ -1,0 +1,3 @@
+OpenAI has officially launched Group Chats for ChatGPT, allowing users to interact with the AI in shared conversations. Currently in pilot mode for select regions, this feature aims to enhance collaboration, creativity, and productivity among users. More to come.
+
+Source: https://venturebeat.com/ai/chatgpt-group-chats-are-here-but-not-for-everyone-yet
