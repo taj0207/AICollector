@@ -1,0 +1,3 @@
+Google Cloud and UCLA unveil a new AI training method that empowers smaller models to tackle complex reasoning tasks. By reformulating problem-solving as sequential actions, this approach enhances learning efficiency and opens doors for innovative applications in various fields.
+
+Source: https://venturebeat.com/ai/googles-new-ai-training-method-helps-small-models-tackle-complex-reasoning
