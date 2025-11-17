@@ -5,10 +5,10 @@ AICollector 是一個簡單的腳本，可以每天自動收集與人工智慧�
 ## 功能
 
 - 從多個 RSS 來源收集前一天的 AI 新聞
-- 以人類可讀的 Markdown 格式儲存在 `data/YYYY/MM/DD-ai-news.md`
+- 以人類可讀的 Markdown 格式儲存在 `data/<今天年>/<今天月>/<今天日期>/<目標日期>-ai-news.md`
 - 可自訂資料來源、關鍵字與時區
 - 可透過 GitHub Actions 或排程工具每天自動執行
-- 若設定 `OPENAI_API_KEY`，會為每篇文章額外生成適合 Threads/Twitter 的約 100 字摘要，並儲存在 `data/YYYY/MM/DD-ai-news-social.txt`
+- 若設定 `OPENAI_API_KEY`，會為每篇文章額外生成適合 Threads/Twitter 的約 100 字摘要，並儲存在 `data/<今天年>/<今天月>/<今天日期>/<目標日期>-ai-news-social.txt`
 
 ## 安裝
 
@@ -26,7 +26,8 @@ pip install -r requirements.txt
 python collector.py --date 2024-06-01
 ```
 
-執行成功後，結果會儲存在 `data/<年份>/<月份>/<日期>-ai-news.md` 中。
+執行成功後，結果會儲存在 `data/<今天年份>/<今天月份>/<今天日期>/<目標日期>-ai-news.md` 中；
+也就是說，即使收集的是「前一天」的內容，檔案仍會依照執行當下的日期分類。
 
 ### 自訂資料來源
 

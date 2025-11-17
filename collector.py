@@ -236,13 +236,14 @@ def slugify(value: str) -> str:
 def write_entry_content(
     entries: List[dict],
     target_date: dt.date,
+    storage_date: dt.date,
     output_dir: pathlib.Path,
 ) -> tuple[int, int]:
     base_dir = (
         output_dir
-        / str(target_date.year)
-        / f"{target_date.month:02d}"
-        / target_date.isoformat()
+        / str(storage_date.year)
+        / f"{storage_date.month:02d}"
+        / storage_date.isoformat()
     )
     base_dir.mkdir(parents=True, exist_ok=True)
 
@@ -278,16 +279,30 @@ def write_entry_content(
     return social_files, blog_files
 
 
-def write_output(markdown: str, target_date: dt.date, output_dir: pathlib.Path) -> pathlib.Path:
-    subdir = output_dir / str(target_date.year) / f"{target_date.month:02d}"
+def write_output(
+    markdown: str,
+    target_date: dt.date,
+    storage_date: dt.date,
+    output_dir: pathlib.Path,
+) -> pathlib.Path:
+    subdir = (
+        output_dir / str(storage_date.year) / f"{storage_date.month:02d}" / storage_date.isoformat()
+    )
     subdir.mkdir(parents=True, exist_ok=True)
     file_path = subdir / f"{target_date.isoformat()}-ai-news.md"
     file_path.write_text(markdown, encoding="utf-8")
     return file_path
 
 
-def write_social_output(content: str, target_date: dt.date, output_dir: pathlib.Path) -> pathlib.Path:
-    subdir = output_dir / str(target_date.year) / f"{target_date.month:02d}"
+def write_social_output(
+    content: str,
+    target_date: dt.date,
+    storage_date: dt.date,
+    output_dir: pathlib.Path,
+) -> pathlib.Path:
+    subdir = (
+        output_dir / str(storage_date.year) / f"{storage_date.month:02d}" / storage_date.isoformat()
+    )
     subdir.mkdir(parents=True, exist_ok=True)
     file_path = subdir / f"{target_date.isoformat()}-ai-news-social.txt"
     file_path.write_text(content, encoding="utf-8")
@@ -308,10 +323,11 @@ def main() -> None:
 
     config = Config.load(args.feeds_file)
     target_date = determine_target_date(config, args.date)
+    storage_date = dt.datetime.now(tz=config.timezone).date()
 
     entries = collect_entries(config, target_date)
     markdown = format_markdown(entries, target_date, config.timezone)
-    output_path = write_output(markdown, target_date, args.output_dir)
+    output_path = write_output(markdown, target_date, storage_date, args.output_dir)
 
     LOGGER.info("Wrote %d entries to %s", len(entries), output_path)
 
@@ -355,10 +371,14 @@ def main() -> None:
         return
 
     social_content = format_social_posts(entries, target_date)
-    social_path = write_social_output(social_content, target_date, args.output_dir)
+    social_path = write_social_output(
+        social_content, target_date, storage_date, args.output_dir
+    )
     LOGGER.info("Wrote %d social summaries to %s", generated, social_path)
 
-    social_files, blog_files = write_entry_content(entries, target_date, args.output_dir)
+    social_files, blog_files = write_entry_content(
+        entries, target_date, storage_date, args.output_dir
+    )
     LOGGER.info(
         "Wrote %d social post file(s) and %d blog post file(s) for individual articles",
         social_files,
