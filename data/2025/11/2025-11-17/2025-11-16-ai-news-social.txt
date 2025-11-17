@@ -1,0 +1,7 @@
+# AI News Social Summaries for 2025-11-16
+
+Prepared 1 social-ready article(s).
+
+1. From shiny object to sober reality: The vector database story, two years later
+   Two years after the hype, the vector database landscape reveals a sobering truth: 95% of organizations see no measurable returns. As competition intensifies, the promise of seamless semantic search fades, giving way to a complex hybrid future in data retrieval.
+   https://venturebeat.com/ai/from-shiny-object-to-sober-reality-the-vector-database-story-two-years-later
