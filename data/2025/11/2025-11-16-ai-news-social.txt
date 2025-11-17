@@ -1,0 +1,11 @@
+# AI News Social Summaries for 2025-11-16
+
+Prepared 2 social-ready article(s).
+
+1. How LimeWire ended the Napster music revolution
+   LimeWire's rise marked a pivotal shift in music piracy, overshadowing Napster's early dominance. As users flocked to this new platform, the landscape of digital music sharing transformed, leading to a decade of innovation and controversy in online music culture.
+   https://www.theverge.com/podcast/820818/limewire-music-piracy-version-history
+
+2. Human-centric IAM is failing: Agentic AI requires a new identity control plane
+   As agentic AI transforms enterprises, traditional identity management falters. Static roles and long-lived passwords can't secure a workforce of digital agents. It's time to rethink identity as a dynamic control plane to prevent catastrophic risks.
+   https://venturebeat.com/security/human-centric-iam-is-failing-agentic-ai-requires-a-new-identity-control

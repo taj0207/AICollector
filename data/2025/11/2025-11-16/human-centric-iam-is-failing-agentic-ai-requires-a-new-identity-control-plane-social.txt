@@ -1,0 +1,3 @@
+As agentic AI transforms enterprises, traditional identity management falters. Static roles and long-lived passwords can't secure a workforce of digital agents. It's time to rethink identity as a dynamic control plane to prevent catastrophic risks.
+
+Source: https://venturebeat.com/security/human-centric-iam-is-failing-agentic-ai-requires-a-new-identity-control
