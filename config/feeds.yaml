@@ -6,7 +6,7 @@
 # each entry. If no keywords are supplied for a feed, the global keyword list is
 # used. An empty list disables keyword filtering for that feed.
 
-timezone: Asia/Taipei
+timezone: America/Los_Angeles
 keywords:
   - AI
   - artificial intelligence
