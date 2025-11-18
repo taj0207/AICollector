@@ -1,0 +1,3 @@
+Google's Antigravity platform launches an agent-first architecture for coding workflows, enabling developers to create autonomous agents for complex tasks. With a focus on trust and self-improvement, it's set to redefine software development. Public preview now available.
+
+Source: https://venturebeat.com/ai/google-antigravity-introduces-agent-first-architecture-for-asynchronous

@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-17
+
+Prepared 3 social-ready article(s).
+
+1. Microsoft’s Agent 365 shifts AI agents from sandbox tools to enterprise-grade infrastructure
+   Microsoft's Agent 365 transforms AI management from isolated experiments to a unified enterprise framework. With features like registry, access control, and visualization, it empowers organizations to govern their AI agents effectively. A new era begins.
+   https://venturebeat.com/ai/microsofts-agent-365-shifts-ai-agents-from-sandbox-tools-to-enterprise-grade
+
+2. Google Antigravity introduces agent-first architecture for asynchronous, verifiable coding workflows
+   Google's Antigravity platform launches an agent-first architecture for coding workflows, enabling developers to create autonomous agents for complex tasks. With a focus on trust and self-improvement, it's set to redefine software development. Public preview now available.
+   https://venturebeat.com/ai/google-antigravity-introduces-agent-first-architecture-for-asynchronous
+
+3. The State of AI: How war will be changed forever
+   The latest from The State of AI explores how generative AI is reshaping warfare. Join Helen Warrell and James O’Donnell as they discuss the profound implications of AI on global power dynamics. Read more on the evolving rules of engagement.
+   https://www.technologyreview.com/2025/11/17/1127514/the-state-of-ai-the-new-rules-of-war/
