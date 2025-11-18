@@ -1,3 +1,0 @@
-Two years after the hype, the vector database landscape reveals a sobering truth: 95% of organizations see no measurable returns. As competition intensifies, the promise of seamless semantic search fades, giving way to a complex hybrid future in data retrieval.
-
-Source: https://venturebeat.com/ai/from-shiny-object-to-sober-reality-the-vector-database-story-two-years-later

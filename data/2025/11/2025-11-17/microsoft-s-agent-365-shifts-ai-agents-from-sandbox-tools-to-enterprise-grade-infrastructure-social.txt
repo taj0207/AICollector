@@ -1,3 +1,0 @@
-Microsoft's Agent 365 transforms AI management from isolated experiments to a unified enterprise framework. With features like registry, access control, and visualization, it empowers organizations to govern their AI agents effectively. A new era begins.
-
-Source: https://venturebeat.com/ai/microsofts-agent-365-shifts-ai-agents-from-sandbox-tools-to-enterprise-grade
