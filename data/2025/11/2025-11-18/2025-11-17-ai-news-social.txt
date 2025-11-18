@@ -1,0 +1,11 @@
+# AI News Social Summaries for 2025-11-17
+
+Prepared 2 social-ready article(s).
+
+1. AI's next big leap is models that understand the world. - Axios
+   AI is on the brink of a transformative leap, with new models set to enhance our understanding of the world. This advancement promises to reshape technology and society, pushing boundaries in how we interact with information and each other.
+   https://news.google.com/rss/articles/CBMib0FVX3lxTFAzQjdBUS10eHl4blFrUDhwWU9uUVUzV2VqUUh2MjQ1S0oyOUpZalAxb25lekwxM3A1bTBQZ2wxUE10UWxvcnhHcUREV25URWY4MzE5Ri1ia0xUV0lPOU5DQ000SjY0bHdtRjhvTS1wNA?oc=5
+
+2. Phi-4 proves that a 'data-first' SFT methodology is the new differentiator
+   The Phi-4 model demonstrates that a data-first SFT methodology can outperform larger models. By focusing on quality over quantity, it achieves remarkable reasoning capabilities with just 1.4 million carefully curated examples. A game-changer for AI teams.
+   https://venturebeat.com/ai/phi-4-proves-that-a-data-first-sft-methodology-is-the-new-differentiator

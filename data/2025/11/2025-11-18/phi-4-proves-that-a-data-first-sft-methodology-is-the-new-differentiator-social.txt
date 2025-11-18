@@ -1,0 +1,3 @@
+The Phi-4 model demonstrates that a data-first SFT methodology can outperform larger models. By focusing on quality over quantity, it achieves remarkable reasoning capabilities with just 1.4 million carefully curated examples. A game-changer for AI teams.
+
+Source: https://venturebeat.com/ai/phi-4-proves-that-a-data-first-sft-methodology-is-the-new-differentiator
