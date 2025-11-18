@@ -1,0 +1,3 @@
+Google's Antigravity platform redefines coding with an agent-first architecture, allowing developers to create autonomous agents for complex tasks. Now in public preview, it promises a collaborative future for software development, powered by Gemini 3.
+
+Source: https://venturebeat.com/ai/google-antigravity-introduces-agent-first-architecture-for-asynchronous
