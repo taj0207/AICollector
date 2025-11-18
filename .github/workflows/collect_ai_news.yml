@@ -2,7 +2,7 @@ name: Collect AI News
 
 on:
   schedule:
-    - cron: '0 12 * * *'   # 07:00 America/New_York (12:00 UTC)
+    - cron: '0 15 * * *'   # 07:00 America/Los_Angeles PST (15:00 UTC) | 08:00 PDT during daylight saving
   workflow_dispatch:
 
 jobs:
