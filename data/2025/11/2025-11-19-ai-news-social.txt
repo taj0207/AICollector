@@ -1,0 +1,11 @@
+# AI News Social Summaries for 2025-11-19
+
+Prepared 2 social-ready article(s).
+
+1. European Commission proposes significant reforms to GDPR, AI Act - IAPP
+   The European Commission is set to overhaul the GDPR and AI Act, aiming for enhanced data protection and clearer regulations on artificial intelligence. These reforms could reshape the digital landscape, impacting businesses and consumers alike. Read more here: https://news.google.com/rss/articles/CBMikAFBVV95cUxOaWVVWWNIbDVySk5IbmRoTHdKbGdRTUJTc1NpMFpfT2V4VmJXdjVpVkV5TXZ6QWVGbFQxY0M0VnBiVm81THFUNi1KRnEtcUwybVp1aFdzcFdzTHduNks4RWNYc1pfMXljNEJPODlOZ3d3WXVqb0ZXcWRzOWxPUG9kdG1aNTZHV2JxajRrdTdJYkM?oc=5
+   https://news.google.com/rss/articles/CBMikAFBVV95cUxOaWVVWWNIbDVySk5IbmRoTHdKbGdRTUJTc1NpMFpfT2V4VmJXdjVpVkV5TXZ6QWVGbFQxY0M0VnBiVm81THFUNi1KRnEtcUwybVp1aFdzcFdzTHduNks4RWNYc1pfMXljNEJPODlOZ3d3WXVqb0ZXcWRzOWxPUG9kdG1aNTZHV2JxajRrdTdJYkM?oc=5
+
+2. The Google Search of AI agents? Fetch launches ASI:One and Business tier for new era of non-human web
+   Fetch AI has unveiled ASI:One, Fetch Business, and Agentverse, aiming to revolutionize AI agent interactions. This interconnected ecosystem allows personal AIs to collaborate with verified brand agents, transforming task execution in the digital landscape. Discover more.
+   https://venturebeat.com/ai/the-google-search-of-ai-agents-fetch-launches-asi-one-and-business-tier-for
