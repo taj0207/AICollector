@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-20
+
+Prepared 3 social-ready article(s).
+
+1. Who Takes the Blame When AI Gets It Wrong? - Medscape
+   As AI technology evolves, so do the questions of accountability. When algorithms err, who bears the responsibility? This pressing issue raises ethical concerns and challenges the boundaries of innovation. Explore the complexities of AI accountability in healthcare and beyond.
+   https://news.google.com/rss/articles/CBMikAFBVV95cUxNaE1qem5LLTlIbERMcldXZnI4aGlCOGxGbmRNV1YtSlZ5bzBJUTNKbXNhRzVQeHNHS1F1RDFLOVV4TGxBcDVkVHdoVFVucXBmbU9xekZZbk5hR1pUYUxWcGJzRUJnbmpVR0pEWEFYSVh3TDhUdW1RTWx2ckFiNUJiejVMa005OHZpbHd1eWNHRVA?oc=5
+
+2. Google's upgraded Nano Banana Pro AI image model hailed as 'absolutely bonkers' for enterprises and users
+   Google's Nano Banana Pro AI image model is turning heads with its stunning visual outputs and precision. Designed for enterprise use, it excels in infographic generation and structured workflows, setting a new standard in AI-driven image creation.
+   https://venturebeat.com/ai/googles-upgraded-nano-banana-pro-ai-image-model-hailed-as-absolutely-bonkers
+
+3. Tome's founders ditch viral presentation app with 20M users to build AI-native CRM Lightfield
+   Lightfield, the new AI-native CRM from Tome's founders, aims to revolutionize customer relationship management by eliminating manual data entry. With over 100 early adopters, it challenges legacy giants like Salesforce and HubSpot. Can it redefine how we manage customer interactions?
+   https://venturebeat.com/ai/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai
