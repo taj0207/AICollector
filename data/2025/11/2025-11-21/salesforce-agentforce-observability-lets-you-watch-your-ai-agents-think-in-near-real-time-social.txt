@@ -1,0 +1,3 @@
+Salesforce has launched Agentforce Observability, a suite of monitoring tools that provides real-time insights into AI agent decision-making. This innovation addresses the critical need for transparency in AI, helping businesses trust their autonomous systems while optimizing performance.
+
+Source: https://venturebeat.com/ai/salesforce-agentforce-observability-lets-you-watch-your-ai-agents-think-in

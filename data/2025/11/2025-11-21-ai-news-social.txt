@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-21
+
+Prepared 3 social-ready article(s).
+
+1. Xiaomi open-sources AI model spanning autonomous driving and robotics - South China Morning Post
+   Xiaomi has taken a bold step by open-sourcing its AI model designed for autonomous driving and robotics. This move not only fosters innovation but also invites collaboration within the tech community. Explore the implications of this decision.
+   https://news.google.com/rss/articles/CBMivAFBVV95cUxQV0c3WXZTNGJ2d1ZWMDRBLTNPYUU3a1JBMVc1OU5DZjFpdmdmXzdkcUluczFBMmRSemJiQ1FjNzBpeDNHalJwRURUTEZaM3JMbmJFUWxjM2dnTTE3VVhOcEpBOXNzQWEwVjVDRDdRcWE2clQtMG5mTDA5WE9DNEF2MTFBdm5IcklMU1BUVnBNY2R4cEs4b0NacTFCUHpud19kYlR0X3FpaThOTzJzV3BHUmNfWVJLWi0tdWFybtIBvAFBVV95cUxOaWJnOHNyTDFGeXI4MG9Wekwxel9lZ2NkZmQ3Skg4WE90QkhVUXhQRTVfSTkyT0dPNEo1b1RKU3F6RDh6ckh1N2lrWmUycFlsXzhZSHB4NUpYenVZX3VWVVpDNExxakFsdlNDOGdQQ1E1SE5KU203NllxOUhpRERqTmpaT0gwMWVhM3FEdnZTMnZEN0gyRi1sZzMzZ2FsVGczT1ZJcTV3VzVpX0NQYmdMcUVUeW9zZm1xMHBWXw?oc=5
+
+2. 'Spicy' AI chatbot and image generator left millions of photos exposed - Mashable
+   A recent breach involving the 'Spicy' AI chatbot and image generator has exposed millions of photos, raising serious concerns about data privacy and security. This incident highlights the vulnerabilities in AI systems and the need for stricter safeguards.
+   https://news.google.com/rss/articles/CBMiYEFVX3lxTFBoUV9mUlMwOFBOTFlKemtqMS1MUXAxOUlVanBVUGlCckVFVU03Vzd4M2FiaUtoeHZCdGg2MDBEMGtjcDZySDRoeWZ2eVlQUFJJdmI2aDZkS0RxNFJiMExQYg?oc=5
+
+3. Salesforce Agentforce Observability lets you watch your AI agents think in near-real time
+   Salesforce has launched Agentforce Observability, a suite of monitoring tools that provides real-time insights into AI agent decision-making. This innovation addresses the critical need for transparency in AI, helping businesses trust their autonomous systems while optimizing performance.
+   https://venturebeat.com/ai/salesforce-agentforce-observability-lets-you-watch-your-ai-agents-think-in
