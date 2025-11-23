@@ -1,0 +1,3 @@
+Lean4 is revolutionizing AI by providing formal verification, ensuring outputs are reliable and deterministic. As AI faces challenges like hallucinations, Lean4 offers a safety net, transforming how we trust AI systems. The future of trustworthy AI starts here.
+
+Source: https://venturebeat.com/ai/lean4-how-the-theorem-prover-works-and-why-its-the-new-competitive-edge-in

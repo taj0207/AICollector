@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-22
+
+Prepared 3 social-ready article(s).
+
+1. Insurers retreat from AI cover as risk of multibillion-dollar claims mounts - Financial Times
+   Insurers are stepping back from AI coverage as the potential for multibillion-dollar claims looms large. This shift highlights the growing concerns around the risks associated with artificial intelligence and its implications for the insurance industry.
+   https://news.google.com/rss/articles/CBMicEFVX3lxTFAyS2s1T09kQ2x3Qnk2LUxxdWZkMndmY3FXeXBzUEYwaE13VVpPNmE4cGUtbE02VktocjhobjA5dG1kMjJFRHIxN1NheExYU014N01DWG9LSm1qSGlLeW5abU14bkdqanMtTUJwNmdqM08?oc=5
+
+2. Lean4: How the theorem prover works and why it's the new competitive edge in AI
+   Lean4 is revolutionizing AI by providing formal verification, ensuring outputs are reliable and deterministic. As AI faces challenges like hallucinations, Lean4 offers a safety net, transforming how we trust AI systems. The future of trustworthy AI starts here.
+   https://venturebeat.com/ai/lean4-how-the-theorem-prover-works-and-why-its-the-new-competitive-edge-in
+
+3. AI's listening gap is fueling bias in jobs, schools and health care - Axios
+   AI's listening gap is creating bias in critical sectors like jobs, education, and healthcare. As algorithms shape our future, it's essential to address these disparities to ensure fairness and equity for all. Read more about the implications in the full article.
+   https://news.google.com/rss/articles/CBMicEFVX3lxTFBtVWhnR3F0bmIzaVBuMjFTMVJkQVViX25tUDZBMEF6MnRjNGRDTHM0eFJxbHhTZVF6UXFRUzg2SHM4eUpoNEpDWGZNYy1pZTkzV0ZBaFBxelNSNmxjSFNYb0MzbHNHdFRfcTRjQUFRLXo?oc=5
