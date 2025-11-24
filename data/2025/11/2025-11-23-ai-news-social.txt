@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-23
+
+Prepared 3 social-ready article(s).
+
+1. The AI bubble debate: 16 business leaders, from Sam Altman to Bill Gates to Mark Cuban, weigh in - Business Insider
+   The AI bubble debate heats up as 16 influential leaders, including Sam Altman, Bill Gates, and Mark Cuban, share their insights. Are we witnessing a tech revolution or an overhyped trend? Read their perspectives and explore the future of AI.
+   https://news.google.com/rss/articles/CBMimwFBVV95cUxNZ3BhenZxWGNUcUZrbFM1UWVvSFVBVDZveGpIbzBZN0RpNVN1c3UxOWhTcDlzMUNvUFljaXF6NlVpLThZWGJzQ255RmNzMW9yeE5HOS1XMnAtZVltUks3QXo4cWM3Q2l3SWNIc3h1NlpFNGowRHZNSXBRMkdiUkI2UTFOMGpIRS1KOF90ZFZyaEc0Z2NqMDhHOVFCRQ?oc=5
+
+2. NATO and Google Cloud Sign Multi-Million Dollar Deal for AI-Enabled Sovereign Cloud - Google Cloud Press Corner
+   NATO and Google Cloud have inked a multi-million dollar deal to create an AI-enabled sovereign cloud. This partnership aims to enhance data security and operational efficiency, marking a significant step in military technology integration. Read more on Google Cloud's Press Corner.
+   https://news.google.com/rss/articles/CBMizgFBVV95cUxPQWxmdXhISGhhTEtqS3UwYVpOdTU0Ri1lM0t0aEpvcVZoWUtONHN3VWE3T3RfWlExWDY5cGhrTnJ0RGxjbzUtRE10LWxQSlAzYWZyRGNqckFnQVl3V3ZXcmRhdGFBMlBhOGNtcW9HQ25OeEJXQkVtSERoRlNCVTQzV0xPcnhwU3BqVUo4RmlUM3FhY1V6aDNjSnFpMWJna09FLTF4T0JzVVNDeXJ3bGlmSENkaWdkOExIdWpaZDNDdnZDWTllRUl5Sld6ZFM5Zw?oc=5
+
+3. About This Account reveals the scale of X’s foreign troll problem
+   X's new About This Account feature uncovers the alarming extent of foreign troll activity influencing American politics. While Russian interference has been spotlighted, this revelation suggests a broader, more complex landscape of online manipulation. Read more.
+   https://www.theverge.com/news/827298/about-this-account-reveals-the-scale-of-xs-foreign-troll-problem
