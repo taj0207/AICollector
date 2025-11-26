@@ -1,0 +1,11 @@
+# AI News Social Summaries for 2025-11-25
+
+Prepared 2 social-ready article(s).
+
+1. Warner Music Group settles lawsuit with AI music firm and launches joint venture - BBC
+   Warner Music Group has resolved its lawsuit with an AI music firm and is now embarking on a joint venture. This move highlights the growing intersection of technology and music, potentially reshaping the industry landscape. Read more about this development.
+   https://news.google.com/rss/articles/CBMiWkFVX3lxTFAwOFhfcTRIUnpnM2ZJNlZST3c1Rmg5UVpSNFBBOUZxWFZOSWYya1l0ZGNOLXpsb25qeWkxNE5QQjFYaXRZZFItMGRHQ1hBbURpX0lMSmhCNW9GUdIBX0FVX3lxTE5Gcko2ZWo1ZktFLWJwUE9MeS1xREpDdXQ4S3lVbXdrb3BFbFluT0ptMFRETV9FZW85QjlnSjhjbV83WTRidDJ3UTlyN1hOQ2JST3VZWHNVUWxXdkZLRUpN?oc=5
+
+2. What enterprises should know about The White House's new AI 'Manhattan Project' the Genesis Mission
+   The Genesis Mission, likened to the Manhattan Project, aims to revolutionize U.S. scientific research through a closed-loop AI platform. It connects national labs and supercomputers to accelerate discoveries in vital sectors, but funding details remain unclear.
+   https://venturebeat.com/ai/what-enterprises-should-know-about-the-white-houses-new-ai-manhattan-project
