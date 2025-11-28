@@ -1,0 +1,3 @@
+IT leaders are caught in a bind: drive AI initiatives without new hires. VMware remains crucial, with 80% of firms relying on its infrastructure. The shift in licensing models could reshape how enterprises approach cloud migrations. Explore the implications.
+
+Source: https://www.technologyreview.com/2025/11/27/1128465/moving-toward-lessops-with-vmware-to-cloud-migrations/

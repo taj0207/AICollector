@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-27
+
+Prepared 3 social-ready article(s).
+
+1. Baidu is emerging as a major AI chip player in China to fill the Nvidia gap - CNBC
+   Baidu is stepping up as a key player in China's AI chip market, aiming to bridge the gap left by Nvidia. As demand for AI technology surges, Baidu's advancements could reshape the landscape of AI hardware in the region. Read more about this shift.
+   https://news.google.com/rss/articles/CBMimgFBVV95cUxQU0loaG9seUp3cW82YXQyM2xWUDFXTGZ2QXR4MXVUMVVPN1d5VzA5UktYYmtNLU1BaHFvcFM0Y0lSbmN2eEtjX0pjQ3JBeUJObXNFT1FzUHdYWGNDekYyVFRwR2xGYzdXekFOUTBXV3h4REQ5LTBabW56VHp5dnFZcnNzWXZtVzh1UEJHUjdCUUxZcFpvWVVmbk930gGfAUFVX3lxTE5mQ0N0ZW1SdnM1TWsyYzFXN1FvNHNKR1FqWEh1VGhya2NxQ1N0UXIwWXhBb2NjMWhsTlhRMWxsQm1JY0dVU296dHhqX1lLQm9YbXdQTGFtem5jaVJvY3hRRzZyOWxJellRRVZ3SDZZeHNBYXRsZWlJVGh0ZndHbnc5YnBQSEF1MkNqM2JLajh1MGlndzY5VUJrZkw1eU9ETQ?oc=5
+
+2. A.I. and the Trillion-Dollar Question - The New York Times
+   The New York Times explores the trillion-dollar question surrounding A.I.: its potential to reshape industries and economies. As innovation accelerates, what will be the implications for jobs, ethics, and our daily lives? Dive into the discussion.
+   https://news.google.com/rss/articles/CBMilwFBVV95cUxPNVdGWUxSRko5TUpCeFRFcVhGcEVVYl9jVGlSaWJ4R0lyWENPMWQ1eFhHNkVwR2lRY0lvd3dGYlNDZ01FN0pDQU5QYWpjUmdvb2JUcm5YZE5XNjZXcE5NSVFsaXhNMkp5ejR4MDVCUGUtUFRxck5ldTE2Q0VJVURPS1A4TFBfSm12VllZeDQzNnJ0cXdrUzZV?oc=5
+
+3. Moving toward LessOps with VMware-to-cloud migrations
+   IT leaders are caught in a bind: drive AI initiatives without new hires. VMware remains crucial, with 80% of firms relying on its infrastructure. The shift in licensing models could reshape how enterprises approach cloud migrations. Explore the implications.
+   https://www.technologyreview.com/2025/11/27/1128465/moving-toward-lessops-with-vmware-to-cloud-migrations/
