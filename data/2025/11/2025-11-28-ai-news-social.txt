@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-28
+
+Prepared 3 social-ready article(s).
+
+1. Using smart tech and AI to help people with dementia live independently - Alzheimer's Society
+   Smart technology and AI are transforming the lives of those with dementia, enabling greater independence. The Alzheimer's Society highlights innovative solutions that empower individuals to live more autonomously while ensuring safety and support. Discover more.
+   https://news.google.com/rss/articles/CBMiyAFBVV95cUxNUUluSUV0cEVzRGVydG5LWTE0UWVlWWxYcWtMelZtYWwwVDZhYVo5RldtQmN1Tl9odXkxSlJxWWYtNzJxaFFPRjVhcEg3b3F2OE1XcHQwaFAzcUNYamNyMFdvSnJRTXRoZlN5eDUtQXFRY2hWQWc2NFdSVUwwWDN6WVpCVjNJVmFuVWJDNTNOX3MySFNidktESFk2aXowSmZLc3N0VnpLeUVTeWZLYTR4bGtEQlNCeXVwRy04aEJ6MmlXcHFVS0pnTg?oc=5
+
+2. Ukrainian drone pilots look to AI for battlefield edge - Reuters
+   Ukrainian drone pilots are turning to AI to enhance their capabilities on the battlefield. This technological shift aims to improve precision and decision-making in combat, showcasing how innovation can redefine modern warfare.
+   https://news.google.com/rss/articles/CBMirwFBVV95cUxNWjZYcEFOOGFPbVA0NHhtSVgxT2dwT1VoVkNiNmtVQ3BUZXdPODRETDByQk9PM3hPQ3VZRVAwMEdGNlpWZEhKMU95RUFUQ1lmU3hDa2JXVHhRcVc4b1NwbkY0Tk1oMzZHeWpfeVN1ZnFsRTRlZHJKUmhUNS1MMk9aTVE4VUZGQkJBSkhmVlIxZnNaYkZTQmpfVmFIRmVBeFNMWl9FQ3BvOEZFLWZMM25R?oc=5
+
+3. Anthropic says it solved the long-running AI agent problem with a new multi-session Claude SDK
+   Anthropic claims to have tackled the persistent AI agent memory issue with its new multi-session Claude SDK. By introducing a two-part solution—initializer and coding agents—it aims to enhance long-term performance across various tasks. A significant leap for AI agents.
+   https://venturebeat.com/ai/anthropic-says-it-solved-the-long-running-ai-agent-problem-with-a-new-multi

@@ -1,0 +1,3 @@
+Anthropic claims to have tackled the persistent AI agent memory issue with its new multi-session Claude SDK. By introducing a two-part solution—initializer and coding agents—it aims to enhance long-term performance across various tasks. A significant leap for AI agents.
+
+Source: https://venturebeat.com/ai/anthropic-says-it-solved-the-long-running-ai-agent-problem-with-a-new-multi
