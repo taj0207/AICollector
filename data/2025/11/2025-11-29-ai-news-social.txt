@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-29
+
+Prepared 3 social-ready article(s).
+
+1. AI is upending retirement planning - Axios
+   AI is transforming retirement planning, offering personalized strategies and real-time insights. As technology reshapes financial landscapes, it's crucial to adapt and understand how these innovations can secure your future. Explore the implications of this shift.
+   https://news.google.com/rss/articles/CBMifEFVX3lxTE1fcEd2bmZ4MUxoSmx2R2V2eUhsMFZNVHRuUFpsUjhEQXBEeUNJTDZwTG5ISGN1dzRUZjhRcE9oMV95ZWJkcDFiWFdDVEdHNXZDOHVjWnFsemtlbjJDdEpGajlyaHpMcmFnRWxFYVdTMF9jY2F3Tm1mQTRILTc?oc=5
+
+2. Leave me alone, AI - Financial Times
+   The rise of AI has sparked a growing desire for personal space. As technology infiltrates daily life, many are questioning the balance between innovation and privacy. Are we ready to reclaim our autonomy from algorithms? Read more in the Financial Times.
+   https://news.google.com/rss/articles/CBMicEFVX3lxTE5QY1dXaVJDRy1DWTlabnV5TmpBMUdWTGNid2hrYl82MjhtalJ5Q1U5RUNGUkNlbnFqN3E2MG91RzlxMnA0NU1mODJndFlWN3J6QjJrNk81Vk5oLXVZaHZQRDlLYTNRQWNnSnp1UWFDU0s?oc=5
+
+3. Why observable AI is the missing SRE layer enterprises need for reliable LLMs
+   As AI systems mature, the need for observability becomes critical. Without it, enterprises risk untraceable decisions and accountability failures. A structured observability stack can turn LLMs into reliable, auditable systems, ensuring trust and compliance in AI deployment.
+   https://venturebeat.com/ai/why-observable-ai-is-the-missing-sre-layer-enterprises-need-for-reliable
