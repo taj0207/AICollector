@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-11-30
+
+Prepared 3 social-ready article(s).
+
+1. HSBC taps French start-up Mistral to supercharge generative-AI rollout - Reuters
+   HSBC partners with French start-up Mistral to enhance its generative AI capabilities. This collaboration aims to accelerate innovation and improve services, marking a significant step in the bank's digital transformation journey. Read more: https://news.google.com/rss/articles/CBMivAFBVV95cUxPX2xkVEJUZ0FuOTQyTXV3dkRiRFNpSGFGM0RqYzhhdkZxZUpYOWwtaXFkcHcySW5mLU1zMEZqSzN2NWJINjBkRDhtXzdzZkcwTnNETldnLWNzenhBUVhvU1NRZkczM3B3dkx5UFNkSjVzbGZOYlJ4SWl1aDI2LUpudmNjY0xxVy1Md2FZa0lDU2VnUUJ1ZE1UT0R1M3hzVzg5MTJ3TFF6eTB2bjZrTEZySVNoSEQ5MXZBUWszNw?oc=5
+   https://news.google.com/rss/articles/CBMivAFBVV95cUxPX2xkVEJUZ0FuOTQyTXV3dkRiRFNpSGFGM0RqYzhhdkZxZUpYOWwtaXFkcHcySW5mLU1sMEZqSzN2NWJINjBkRDhtXzdzZkcwTnNETldnLWNzenhBUVhvU1NRZkczM3B3dkx5UFNkSjVzbGZOYlJ4SWl1aDI2LUpudmNjY0xxVy1Md2FZa0lDU2VnUUJ1ZE1UT0R1M3hzVzg5MTJ3TFF6eTB2bjZrTEZySVNoSEQ5MXZBUWszNw?oc=5
+
+2. Top consultancies freeze starting salaries as AI threatens ‘pyramid’ model - Financial Times
+   Top consultancies are halting starting salary increases as AI reshapes the traditional pyramid model. This shift raises questions about the future of entry-level positions and the evolving landscape of consulting. Read more on the implications of this trend.
+   https://news.google.com/rss/articles/CBMicEFVX3lxTE8zVUtOcGs1QnBiQm1sU0YxVEhEWWVwakZYWW9NWFBob2tSdVcweTZRNktadjR0WDhPTzVhVElGVEFHcHpOa01zNFZxWEdlUThPd0k2Q1d0bExrZzhfbkZGRzIxV2U5aEkyRGxXUU9SM3A?oc=5
+
+3. Hybrid cloud security must be rebuilt for an AI war it was never designed to fight
+   Hybrid cloud security is outdated, struggling against AI-driven cyberattacks. With breaches up 55% and detection lagging, organizations must rethink their strategies. As CrowdStrike unveils real-time solutions, the urgency for a security overhaul has never been clearer.
+   https://venturebeat.com/security/hybrid-cloud-security-reinvented-ai-era
