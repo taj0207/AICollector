@@ -1,0 +1,3 @@
+Amazon's new frontier agents can autonomously code for days, reshaping software development. With persistent memory and decision-making capabilities, these AI systems promise to enhance efficiency, but what does this mean for the future of software engineering jobs?
+
+Source: https://venturebeat.com/ai/amazons-new-ai-can-code-for-days-without-human-help-what-does-that-mean-for

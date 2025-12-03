@@ -1,0 +1,11 @@
+# AI News Social Summaries for 2025-12-02
+
+Prepared 2 social-ready article(s).
+
+1. Amazon's new AI can code for days without human help. What does that mean for software engineers?
+   Amazon's new frontier agents can autonomously code for days, reshaping software development. With persistent memory and decision-making capabilities, these AI systems promise to enhance efficiency, but what does this mean for the future of software engineering jobs?
+   https://venturebeat.com/ai/amazons-new-ai-can-code-for-days-without-human-help-what-does-that-mean-for
+
+2. New training method boosts AI multimodal reasoning with smaller, smarter datasets
+   MiroMind AI and Chinese universities unveil OpenMMReasoner, a groundbreaking framework enhancing multimodal reasoning in AI. By refining models with smaller, curated datasets, it outperforms existing systems, offering businesses a transparent, efficient alternative for local deployment.
+   https://venturebeat.com/ai/new-training-method-boosts-ai-multimodal-reasoning-with-smaller-smarter

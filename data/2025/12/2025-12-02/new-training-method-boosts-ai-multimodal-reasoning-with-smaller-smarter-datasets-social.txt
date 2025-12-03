@@ -1,0 +1,3 @@
+MiroMind AI and Chinese universities unveil OpenMMReasoner, a groundbreaking framework enhancing multimodal reasoning in AI. By refining models with smaller, curated datasets, it outperforms existing systems, offering businesses a transparent, efficient alternative for local deployment.
+
+Source: https://venturebeat.com/ai/new-training-method-boosts-ai-multimodal-reasoning-with-smaller-smarter
