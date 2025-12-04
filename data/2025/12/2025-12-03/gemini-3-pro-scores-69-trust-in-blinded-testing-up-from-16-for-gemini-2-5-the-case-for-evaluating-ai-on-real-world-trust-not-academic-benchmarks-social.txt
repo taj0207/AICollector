@@ -1,0 +1,3 @@
+Google's Gemini 3 Pro has surged to a 69% trust score in recent blind testing, up from just 16% for Gemini 2.5. This shift highlights the importance of real-world evaluations over vendor benchmarks, emphasizing user trust, adaptability, and communication style in AI performance.
+
+Source: https://venturebeat.com/ai/gemini-3-pro-scores-69-trust-in-blinded-testing-up-from-16-for-gemini-2-5

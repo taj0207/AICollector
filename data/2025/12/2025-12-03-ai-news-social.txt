@@ -1,0 +1,11 @@
+# AI News Social Summaries for 2025-12-03
+
+Prepared 2 social-ready article(s).
+
+1. Gemini 3 Pro scores 69% trust in blinded testing up from 16% for Gemini 2.5: The case for evaluating AI on real-world trust, not academic benchmarks
+   Google's Gemini 3 Pro has surged to a 69% trust score in recent blind testing, up from just 16% for Gemini 2.5. This shift highlights the importance of real-world evaluations over vendor benchmarks, emphasizing user trust, adaptability, and communication style in AI performance.
+   https://venturebeat.com/ai/gemini-3-pro-scores-69-trust-in-blinded-testing-up-from-16-for-gemini-2-5
+
+2. OpenAI to acquire Neptune, a startup that helps with AI model training - CNBC
+   OpenAI is set to acquire Neptune, a startup specializing in AI model training. This move could enhance OpenAI's capabilities in developing and optimizing AI systems, signaling a significant step towards more advanced machine learning solutions.
+   https://news.google.com/rss/articles/CBMipAFBVV95cUxOU0w2N1hGSVNhV0JVdkNSQ2pGcjU4R2lDQ1JBZ3E1TjdteWx3WlhOdXNHTjZfNTIxeUctaDhrWGJaYnlSNzl3WENkU0h6LU1VT3IwbGhCNzNXLUNiZnJyQkdDTjhkdWpwdnpVM1VKNE5NX2R4a1piejZEak0wU0ZyclNiS0pGelB5TlVUVWpzQ2cxdlU1RjF5cGVvaTRmcWp0c29GeNIBqgFBVV95cUxORlU4V0oxN0pHZ2dhWVpua19RNVdCS3poeUhGdmItMFZyNUI3RUNBV25RamRvV0dLMW9MbFFfVTJoa2l3YjhzaXBzTDVhNUhzV2xWeFVDc015SVN6TjdzN0N6cGdzeW0taERZMlo3a1k1Y3lHQ1owWWZKbUtMbk52b0pGeWZoQWNTdzhrMHdXbFJIUWE2dU5wQW52OVNhN2lkTlloY0w3LWdqdw?oc=5
