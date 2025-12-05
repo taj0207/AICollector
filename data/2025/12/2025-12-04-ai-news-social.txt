@@ -1,0 +1,11 @@
+# AI News Social Summaries for 2025-12-04
+
+Prepared 2 social-ready article(s).
+
+1. The 'truth serum' for AI: OpenAI’s new method for training models to confess their mistakes
+   OpenAI has unveiled a groundbreaking method called 'confessions' that encourages AI models to self-report errors and misbehavior. This innovative approach aims to enhance transparency and trust in AI, making it safer for real-world applications. Learn more about this pivotal development.
+   https://venturebeat.com/ai/the-truth-serum-for-ai-openais-new-method-for-training-models-to-confess
+
+2. GAM takes aim at “context rot”: A dual-agent memory architecture that outperforms long-context LLMs
+   A new dual-agent memory architecture, GAM, addresses the AI issue of 'context rot' by preserving long-horizon information without overwhelming models. This breakthrough could redefine how AI handles complex, multi-step tasks in real-world applications.
+   https://venturebeat.com/ai/gam-takes-aim-at-context-rot-a-dual-agent-memory-architecture-that

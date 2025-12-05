@@ -1,0 +1,3 @@
+A new dual-agent memory architecture, GAM, addresses the AI issue of 'context rot' by preserving long-horizon information without overwhelming models. This breakthrough could redefine how AI handles complex, multi-step tasks in real-world applications.
+
+Source: https://venturebeat.com/ai/gam-takes-aim-at-context-rot-a-dual-agent-memory-architecture-that
