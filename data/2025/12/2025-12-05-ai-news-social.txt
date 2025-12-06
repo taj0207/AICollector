@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-12-05
+
+Prepared 3 social-ready article(s).
+
+1. New York Times sues Perplexity AI for 'illegal' copying of content - Reuters
+   The New York Times has filed a lawsuit against Perplexity AI, alleging illegal copying of its content. This case raises critical questions about copyright in the age of AI and the responsibilities of tech companies in content usage.
+   https://news.google.com/rss/articles/CBMiswFBVV95cUxNWmNXZ1dKdENGS0wxeklrNWZJSS1BXzRWckJUTUNoRXhrWF82MEFYN2NZMGd5WEQxWktYNXJLczY0Qnd6Q0owT01nakhYVnBORVBZMXRLMXBDSW1MTGdFNGxlQ2NuQjhmWm40NVF4NUtvQl9QNVhZLVFIRkltWWhUSURPdmVIWGVlVTlXZF9LcEMtWDB6ZlM2b1JRUnNMT0ZlalBLdzVETlc2R0FiYjloUVMyTQ?oc=5
+
+2. Fanuc (TSE:6954) Valuation After Nvidia Physical AI Robotics Deal and Recent Share Price Surge - Yahoo Finance
+   Fanuc's valuation is soaring following Nvidia's groundbreaking deal in physical AI robotics. As the market reacts to this partnership, investors are keenly watching how this will impact Fanuc's growth trajectory and share price. The future looks promising.
+   https://news.google.com/rss/articles/CBMigwFBVV95cUxNOTJEMlotOGphRFdSbFQtUnY3TWczdURWdWZmRXB2OGhfNGQ4R1J1OGZmQUwzY3Z6YmNtWWZsREEwZTVOY2Vid0VfNDh1enowQ1o0VXZJRV9sTFBIQlZTR3FFYjJoMTIyUktONnNXem8yQVpIXzdwN3cxUGZFTW43S2lxMA?oc=5
+
+3. The era of AI persuasion in elections is about to begin
+   In January 2024, a call from Joe Biden urging Democrats to skip the primary turned out to be an AI-generated hoax. As technology evolves, the implications for election persuasion are profound. The era of AI influence in politics is just beginning.
+   https://www.technologyreview.com/2025/12/05/1128837/the-era-of-ai-persuasion-in-elections-is-about-to-begin/
