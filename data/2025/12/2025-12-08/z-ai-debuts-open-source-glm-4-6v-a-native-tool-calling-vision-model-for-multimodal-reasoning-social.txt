@@ -1,0 +1,3 @@
+Z.ai has launched GLM-4.6V, an open-source vision-language model series designed for multimodal reasoning. With a native function calling feature and impressive benchmarks, it offers a powerful alternative for both cloud and edge applications. Explore its capabilities today.
+
+Source: https://venturebeat.com/ai/z-ai-debuts-open-source-glm-4-6v-a-native-tool-calling-vision-model-for

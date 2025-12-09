@@ -1,0 +1,3 @@
+Anthropic's Claude Code now integrates with Slack, enabling engineers to delegate coding tasks directly within their messaging platform. This move enhances productivity and streamlines workflows, marking a significant step in AI's role in software development. #AI #Coding
+
+Source: https://venturebeat.com/ai/anthropics-claude-code-can-now-read-your-slack-messages-and-write-code-for
