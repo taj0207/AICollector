@@ -1,0 +1,7 @@
+# AI News Social Summaries for 2025-12-11
+
+Prepared 1 social-ready article(s).
+
+1. Nous Research just released Nomos 1, an open-source AI that ranks second on the notoriously brutal Putnam math exam
+   Nous Research has unveiled Nomos 1, an open-source AI that scored 87 on the grueling Putnam math exam, ranking second among 3,988 participants. This breakthrough highlights the potential of compact AI systems in tackling complex mathematical problems efficiently.
+   https://venturebeat.com/ai/nous-research-just-released-nomos-1-an-open-source-ai-that-ranks-second-on

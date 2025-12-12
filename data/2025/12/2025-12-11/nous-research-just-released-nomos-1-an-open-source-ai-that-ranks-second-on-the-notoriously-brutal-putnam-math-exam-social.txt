@@ -1,0 +1,3 @@
+Nous Research has unveiled Nomos 1, an open-source AI that scored 87 on the grueling Putnam math exam, ranking second among 3,988 participants. This breakthrough highlights the potential of compact AI systems in tackling complex mathematical problems efficiently.
+
+Source: https://venturebeat.com/ai/nous-research-just-released-nomos-1-an-open-source-ai-that-ranks-second-on
