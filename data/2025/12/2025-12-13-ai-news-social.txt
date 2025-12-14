@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-12-13
+
+Prepared 3 social-ready article(s).
+
+1. For the First Time, AI Analyzes Language as Well as a Human Expert - WIRED
+   A groundbreaking development in AI has emerged: for the first time, it can analyze language at a level comparable to human experts. This leap forward could reshape fields like linguistics, education, and communication, marking a pivotal moment in AI capabilities.
+   https://news.google.com/rss/articles/CBMilwFBVV95cUxObUVucHN6QlJYNUNRcWY4SG5NQVVTLU9nMDg1eE1NZ0U4X3ZuWW9uRmFmQnlaNkNjMU1fWVBuLW85RnhBRmhsSG16WXNHLUs5Z3AtM29KS2ttSkJLdzFtV1ctMzlBWFRNN2o4UzlYaDVGcTktR2FXMmpESkFRRk4waExic1ZwOERfaEEzbF96NjFnV0lzVTRn?oc=5
+
+2. Trump signs executive order restricting states' ability to regulate AI - MSN
+   Trump has signed an executive order that limits states' power to regulate artificial intelligence. This move raises significant questions about federal oversight and the future of AI governance. The implications for innovation and regulation are profound.
+   https://news.google.com/rss/articles/CBMizwFBVV95cUxOQ0ZGYkozbGp3dl9oMU43NDZzR3RsY0NfcnpfcWVPR09TMERrRE1uUmVhNFRWYkctY3pualN0QVFWWGx0MlNMQUxmNFo4MjU1WlRZMGNlcF9Bbi1fWlFIeUZrTnc0VXp4U3VNalVWY1Ixck9FMVJxQ3NkTnlCZTlKNHl3TTg4NU05MW5SWHV4T1JhbmZRNF9sZVdLaklDTkpNTEZSZ0VuYzY2NXZRU3J4OTdyLUFBM0hTVWtUQWFwMFJoMmNMLVJBcDJYQkNoNlk?oc=5
+
+3. “AI”: A Dedicated Fact-Failing Machine, or, Yet Another Reason Not to Trust It For Anything - John Scalzi's Whatever
+   John Scalzi critiques AI as a 'fact-failing machine' in his latest piece. He argues that the technology's unreliability poses serious concerns for trust and accuracy. As we integrate AI into our lives, we must question its role and implications for information integrity.
+   https://news.google.com/rss/articles/CBMixAFBVV95cUxNcnVPdE45MUVuVDB6XzBjSzBYWkpRdjdWOWNDUzA0UjRIb21NNEEtZ0hHZk9ZaGtpVTRLVDJzMU9NVXNadkRBeWlaY3VyNkRDbGFySTJHNTVqVzVIUDEyOE8wbXB2UTdiV1ktN08zaWFhNWU5UUpLOXN3R0xrUXdzRHRRSG15N09tYjRYaWZjYXFPZXB5blhMNzBRMUVyUXlIdkFJWGx1dHlZNHRET0NkYW5jZ0RfUWotZjdvVGxMRzZjUFp6?oc=5
