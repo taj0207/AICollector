@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2025-12-14
+
+Prepared 3 social-ready article(s).
+
+1. AI Use at Work Rises - Gallup.com
+   A recent Gallup report reveals a significant rise in AI usage at work, reflecting a transformative shift in how businesses operate. As organizations embrace technology, the implications for productivity and workforce dynamics are profound.
+   https://news.google.com/rss/articles/CBMic0FVX3lxTE10dVlQT2hwUldUMTFTVHZjeVU1dU5TemZUY0t2SzRlN3pyZzJqX1ZmWFp2cDRvTUhDd2xtdENUam9iVmw0YXpiSnYxT1JuWnAzVVJ6cGctc2ptSlZ1NHBsdnh0MkRMQjRmSktoZHY1OWNhME0?oc=5
+
+2. Why agentic AI needs a new category of customer data
+   Traditional customer data systems can't keep up with the demands of conversational AI. As AI evolves, so must our infrastructure. It's time to rethink how we capture and utilize customer interactions for seamless, personalized experiences.
+   https://venturebeat.com/ai/why-agentic-ai-needs-a-new-category-of-customer-data
+
+3. Build vs buy is dead — AI just killed it
+   The traditional build vs. buy debate is obsolete. With AI, anyone can create functional prototypes in hours, not weeks. This shift empowers teams to define real needs before making purchases, transforming how decisions are made in tech. The rules have changed.
+   https://venturebeat.com/ai/build-vs-buy-is-dead-ai-just-killed-it

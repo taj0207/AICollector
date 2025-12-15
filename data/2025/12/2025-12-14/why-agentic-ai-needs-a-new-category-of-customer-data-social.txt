@@ -1,0 +1,3 @@
+Traditional customer data systems can't keep up with the demands of conversational AI. As AI evolves, so must our infrastructure. It's time to rethink how we capture and utilize customer interactions for seamless, personalized experiences.
+
+Source: https://venturebeat.com/ai/why-agentic-ai-needs-a-new-category-of-customer-data
