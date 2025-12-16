@@ -1,0 +1,7 @@
+# AI News Social Summaries for 2025-12-15
+
+Prepared 1 social-ready article(s).
+
+1. Korean AI startup Motif reveals 4 big lessons for training enterprise LLMs
+   Korean startup Motif Technologies is shaking up the AI landscape with its new model, Motif-2-12.7B-Reasoning. Their white paper reveals crucial lessons for enterprise LLM training, emphasizing data alignment and infrastructure. A game changer for AI teams.
+   https://venturebeat.com/ai/korean-ai-startup-motif-reveals-4-big-lessons-for-training-enterprise-llms
