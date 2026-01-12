@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2026-01-11
+
+Prepared 3 social-ready article(s).
+
+1. National Implementation of the EU AI Act across Member States - Deloitte
+   The EU AI Act is set for national implementation across member states, marking a significant shift in AI regulation. This initiative aims to establish a unified framework that addresses ethical concerns and promotes innovation. The future of AI in Europe is evolving rapidly.
+   https://news.google.com/rss/articles/CBMimAFBVV95cUxOV1lWWk5RUmE3RE9QRWRTTHpMWmdXY2FMQ2ZtcnptSzFEaWxjeGZFOTVEN0ZXLWlqZnVfblA1ZE9ybTNpSzFTZERpdGJYOVBxYzI0aUR1QkJzNkdTaWFadG8xcnFpek1acXFkTTREdm03UkhMTE9PXzh0bnNDTHVXN0JEWFZuaVZ4WUtCa1dzZXNvQzJON2FLUQ?oc=5
+
+2. ‘Dangerous and alarming’: Google removes some of its AI summaries after users’ health put at risk - The Guardian
+   Google has pulled some AI-generated health summaries after users reported dangerous inaccuracies. This decision highlights the critical need for accuracy in AI applications, especially in sensitive areas like health. The implications for user safety are profound.
+   https://news.google.com/rss/articles/CBMiogFBVV95cUxPY0RmX0JwOU1JZVZQeTl1OE42czJQcDVXRWdhVWZMRWszT1RVZG9rb0p4a19Ca1d1OFR2UFh2aXBDdURJQ0dibDhaalB6NmhGZWVyZzZKYU5ZbWdMR0hWakRwR3JsSm5vX0ZOWUItT3h6cG4zN3ZaNDQ4cnpPa1loVktzOWdyRDZDT01oTElLQmlWdFJ0TVJXWW1tZ2tlSEVQQ3c?oc=5
+
+3. Google pulls AI overviews for some medical searches
+   Google has removed AI-generated medical overviews after a report revealed they contained misleading and potentially dangerous information. This decision highlights the critical need for accuracy in health-related searches. Read more about the implications here: https://www.theverge.com/news/860356/google-pulls-alarming-dangerous-medical-ai-overviews
+   https://www.theverge.com/news/860356/google-pulls-alarming-dangerous-medical-ai-overviews
