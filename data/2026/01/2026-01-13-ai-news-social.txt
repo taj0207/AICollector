@@ -1,0 +1,11 @@
+# AI News Social Summaries for 2026-01-13
+
+Prepared 2 social-ready article(s).
+
+1. Grok AI deepfake victim says UK government should have acted faster - BBC
+   A victim of Grok AI's deepfake technology criticizes the UK government for its slow response to the rising threat of digital impersonation. The urgency for regulatory measures has never been clearer as these technologies evolve and impact lives.
+   https://news.google.com/rss/articles/CBMiWkFVX3lxTE1BLTFJX3E3Q3ZPUW1JNHdGemRqcDhiVXQ0ZU9oRVVyd3VXQnpOOWJJR00yZkNEUTZoWGZibFFubUJvNmoyNDRWMnM0M0tuTFN3alowWkFQbWstZ9IBX0FVX3lxTE5lVGJSbng3QlcxZE5lM0RydU1CNjVwbXVZcDhOcml4UHJqMXpjWU5ucEREUlFGSnJ4QUZlYTEwYlJvcXhpc1ZhNGhZTkpUaHJfN2REazA3UnZXS0lMVHA4?oc=5
+
+2. US approves sale of Nvidia's advanced AI chips to China - BBC
+   The US greenlights Nvidia's sale of advanced AI chips to China, a significant move that could reshape tech dynamics. This decision raises questions about competition, collaboration, and the future of AI innovation on a global scale.
+   https://news.google.com/rss/articles/CBMiWkFVX3lxTFBQcVN5X3p6ZWI0eVBkblVnMVVQVGJSWTNVamFXUUdBc3ZXRjYtTTE2UWYxLU8wZkZyV1hwcWgwd0Y5Z0RWS0Z4aG4zZXEtRXhFWHFlZGRfY09Gdw?oc=5
