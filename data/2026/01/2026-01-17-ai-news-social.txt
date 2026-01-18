@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2026-01-17
+
+Prepared 3 social-ready article(s).
+
+1. Data center play spikes to highs after 95% annual surge amid AI boom - MSN
+   The data center sector has seen a remarkable 95% annual surge, driven by the AI boom. This surge reflects the growing demand for data processing and storage, highlighting the critical role of data centers in powering technological advancements. Read more: https://news.google.com/rss/articles/CBMivgFBVV95cUxOQjdTMmJGZVhwSWExX1dmcTYwMzh6TFpTQmxac0VPRWE1UGFENnV4MXBpUThQbDc4Q3lrZktPMjQxQnhyX0lNVktGSHpyVDhuWDZOQTl6YmNDR3puTXdVS2NTR2tyaEhlU2RrU1k2ZHdFOTY4WkZobG9UNnhpMFFCUHNGNHp1bURSd3VJTEhORTR2MWNUaHcycVhVZlZnOGdTZ1ZzeFFNNUpUbG1mMmJrT2FlMVROeDA5Mzd1dDl3?oc=5
+   https://news.google.com/rss/articles/CBMivgFBVV95cUxOQjdTMmJGZVhwSWExX1dmcTYwMzh6TFpTQmxac0VPRWE1UGFENnV4MXBpUThQbDc4Q3lrZktPMjQxQnhyX0lNVktGSHpyVDhuWDZOQTl6YmNDR3puTXdVS2NTR2tyaEhlU2RrU1k2ZHdFOTY4WkZobG9UNnhpMFFCUHNGNHp1bURSd3VJTEhORTR2MWNUaHcycVhVZlZnOGdTZ1ZzeFFNNUpUbG1mMmJrT2FlMVROeDA5Mzd1dDl3?oc=5
+
+2. AI Mental Health “Therapists” - Adventist Review
+   AI is stepping into the realm of mental health, offering virtual therapy options. While this technology promises accessibility, it raises questions about the efficacy and empathy of machine-driven support. Can algorithms truly understand human emotions?
+   https://news.google.com/rss/articles/CBMilwFBVV95cUxNZjgxOFJfN2J4OHRBOTItbWwwTlVYX01fc2lrUWRQUXYyVDBMUVRoMEFFZ1EtMk45SkR4R3lCcDEzOUllQ0pJTE5WSGZWNnZ4cmpPRWlUbTc2X1ZCbWt1UlVYNFoxejhKTmt5Yjg1SF90X0Fwb0VnOGFyMTVvU3lZUUVCTk12cGU1QktfY0JWUXpnbmU0clM4?oc=5
+
+3. China blocks Nvidia H200 AI chips that US government cleared for export – report - The Guardian
+   China has blocked the export of Nvidia's H200 AI chips, despite U.S. government approval. This move underscores the ongoing tensions over technology and trade between the two nations, raising questions about the future of AI development and collaboration.
+   https://news.google.com/rss/articles/CBMiyAFBVV95cUxOQU5xSExrUTRFajQtWU4wMUxHVkZQd2prZ0VraGxCb0hEa2pRRnhaWjNHSFQ4UHlOZGcwczJFcGZCbkgwd2VncXozRmJzWXpNRHBITnJnNGplQ01HSjNmdEdmQzFyVW9qQXpPRWl5TUJCa3k3QldZa2hOa3UyY2tSRE9MWnlzSWVqZTY1d0RQMHY3TVlMR2xyMkJBLUk4WUpTb1AtMWo4cnFVcVdXQ1Z1VFRodkRaYlJnY3dHZUFtMWpuYW5NdDBLVg?oc=5
