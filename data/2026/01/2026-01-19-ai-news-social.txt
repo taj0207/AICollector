@@ -1,0 +1,11 @@
+# AI News Social Summaries for 2026-01-19
+
+Prepared 2 social-ready article(s).
+
+1. OpenAI’s 2026 ‘focus’ is ‘practical adoption’
+   In 2026, OpenAI aims to prioritize 'practical adoption' of AI technology, as CFO Sarah Friar highlights the need to bridge the gap between AI capabilities and real-world usage. With significant investments in infrastructure, the potential impact is both vast and urgent.
+   https://www.theverge.com/news/864229/openai-focus-practical-adoption-sarah-friar
+
+2. Going beyond pilots with composable and sovereign AI
+   Today, enterprise AI adoption hits a critical juncture. With billions invested, only 5% of AI pilots yield real value, and many initiatives falter due to infrastructure challenges. It's time to rethink our approach to data accessibility and flexibility.
+   https://www.technologyreview.com/2026/01/19/1131422/going-beyond-pilots-with-composable-and-sovereign-ai/
