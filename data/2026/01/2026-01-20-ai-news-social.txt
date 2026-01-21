@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2026-01-20
+
+Prepared 3 social-ready article(s).
+
+1. Reimagining ERP for the agentic AI era
+   The evolution of ERP mirrors the tech advancements of its time. From mainframes to AI-driven systems, businesses are redefining organization and efficiency. Explore how the agentic AI era is reshaping enterprise resource planning and what it means for the future.
+   https://www.technologyreview.com/2026/01/20/1129965/reimagining-erp-for-the-agentic-ai-era/
+
+2. The era of agentic chaos and how data will save us
+   AI agents are evolving from simple assistants to vital enterprise players. While the potential ROI is enticing, leaders must ensure alignment to prevent chaos. The agent explosion is imminent—now is the time to lay the groundwork for a more organized future.
+   https://www.technologyreview.com/2026/01/20/1130911/the-era-of-agentic-chaos-and-how-data-will-save-us/
+
+3. The UK government is backing AI that can run its own lab experiments
+   The UK government is funding innovative startups and university teams developing AI scientists capable of conducting lab experiments independently. This initiative by ARIA signals a bold step towards revolutionizing research and discovery in science.
+   https://www.technologyreview.com/2026/01/20/1131462/the-uk-government-is-backing-ai-scientists-that-can-run-their-own-experiments/
