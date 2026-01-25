@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2026-01-24
+
+Prepared 3 social-ready article(s).
+
+1. Mental health: Increased AI use may relate to depression, anxiety - Medical News Today
+   Recent studies suggest a troubling link between increased AI use and rising rates of depression and anxiety. As technology becomes more integrated into our lives, it’s crucial to reflect on its impact on mental health. Read more: https://news.google.com/rss/articles/CBMipgFBVV95cUxOTzc5ZXpqLXc0cWNXcmpub1FDSVpLUEpmemotMVRJZVlvUG5zZHk5U2RfQ0VlZ2Q0ajhvYnJmak9tbV9scjQ4S3YtWDJIMGRNZFdwUVhiOFdVY3hrdG12clQyZnBtN2JrWEtaS0FIMXpVSWtaSWNpaWRIbXVScTc0MHN1UjRsQzRDYUxPLXR6TzBJa19DTVlkQllGaldENk1IX3pQOER3?oc=5
+   https://news.google.com/rss/articles/CBMipgFBVV95cUxOTzc5ZXpqLXc0cWNXcmpub1FDSVpLUEpmemotMVRJZVlvUG5zZHk5U2RfQ0VlZ2Q0ajhvYnJmak9tbV9scjQ4S3YtWDJIMGRNZFdwUVhiOFdVY3hrdG12clQyZnBtN2JrWEtaS0FIMXpVSWtaSWNpaWRIbXVScTc0MHN1UjRsQzRDYUxPLXR6TzBJa19DTVlkQllGaldENk1IX3pQOER3?oc=5
+
+2. The Dawn of the Autonomous Agent: When AI Starts Attacking - Palo Alto Networks
+   Palo Alto Networks highlights a critical shift in AI technology: the rise of autonomous agents capable of offensive actions. As these systems evolve, the implications for cybersecurity and ethical considerations grow increasingly complex. The future demands our attention.
+   https://news.google.com/rss/articles/CBMipwFBVV95cUxNc2Y5QjFXV3RDVGpKQTBqZ2g5clNwYmgyLTNEMkU3RXg2TU43ZC1uQW5LVC05dGJkTDZJNXdmakQ2OGdCSG14eFkwUXdmaW9CNWtfQ3I4dUw5bS1uQ0p6eE9NNl80WFViVHlvYkN3UTF4SFBzUzJsNXoxaHBfNXR4a2duSU13VnA5RTZyNzhLbEZWZUNXSlJUR2pTVHA1VXlfUGVpdUdhcw?oc=5
+
+3. Nvidia CEO Jensen Huang: 'Trillions of dollars of AI infrastructure needs to be built' - Yahoo Finance
+   Nvidia's CEO Jensen Huang emphasizes the urgent need for trillions in AI infrastructure. As AI technology rapidly evolves, the demand for robust frameworks to support it grows. The future of innovation hinges on these investments. Read more: https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMi12Rmc0RHd3SVRHSWFFNnhra2tRVTVCdjFVdlhwZVU0cmVEeDB2M1lxQi1kMlQxVkkxamJDU1FxOVk5bnB1eTVRU0JWanQ1U05IUm4xS0ZCODB5bkJ6UHhoVEp0NHlPNklGN01PdVM2U1N3TWRfSkVpWXJKcF9XQ2FOcDJYVVpPMnZJWW5JbWxpREhZQkJVYXQtcG1TNUllbnZFMU4wZUJUTFNadWVRcmZpdGF2dEdHZlFLTXNfOWdUM1d2QXVuMA?oc=5
+   https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMi12Rmc0RHd3SVRHSWFFNnhra2tRVTVCdjFVdlhwZVU0cmVEeDB2M1lxQi1kMlQxVkkxamJDU1FxOVk5bnB1eTVRU0JWanQ1U05IUm4xS0ZCODB5bkJ6UHhoVEp0NHlPNklGN01PdVM2U1N3TWRfSkVpWXJKcF9XQ2FOcDJYVVpPMnZJWW5JbWxpREhZQkJVYXQtcG1TNUllbnZFMU4wZUJUTFNadWVRcmZpdGF2dEdHZlFLTXNfOWdUM1d2QXVuMA?oc=5
