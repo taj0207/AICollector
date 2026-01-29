@@ -1,0 +1,11 @@
+# AI News Social Summaries for 2026-01-28
+
+Prepared 2 social-ready article(s).
+
+1. China plans space‑based AI data centres, challenging Musk's SpaceX ambitions - Reuters
+   China is set to establish space-based AI data centers, marking a significant challenge to Musk's SpaceX ambitions. This move could reshape the landscape of space technology and data processing, pushing the boundaries of innovation and competition in the cosmos.
+   https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcU85OHJCZmxSUDVQdUhQaEdEaDFzcS1sczJ0alJMcVdiR2tfcGhMZTNsQ1R6T09PUEhVM0g0cWJQRnBsOHNka1gzVDJYQy1Pdzg0UHItVFE4cFZKNmVwSzlsMEFRUGNydVNGeGltNUprTXlJU0tRekRwUEExQzNaMGY4Q2NkNE51QzdLVy1nMlpRMDZuVmpMNWpOeThjemdjVzh5MzlnWkpZeXM?oc=5
+
+2. Exclusive: Nvidia helped DeepSeek hone AI models later used by China's military, lawmaker says - Reuters
+   Nvidia's collaboration with DeepSeek has raised eyebrows as it reportedly aided in refining AI models for China's military. This revelation from a lawmaker highlights the complex interplay between tech innovation and geopolitical tensions. Read more: https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWmVIZzdnZ3VWTjNnRGRDZUNuTENJOWVkNzNjSlZRcHJJbENRVGpuMGhTcU5UV25jZ0RMclRJOTdrZnBUa0x1TXR1NGwwNnZYaTFEWmxLM0VRdmdXcWJTVUNFQ3QtbjlHYzEyUHljcm9ISWVPa3NfVDQ5bmUxZFZuYXJZanBMUVo4a0lSVXRUaTNLLU1GTDc0MVdkbzNHMVZEdjZERlJTbVBWNUFZWFVNbDZwaFlzd29aOVhjemI3VHNpZw?oc=5
+   https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWmVIZzdnZ3VWTjNnRGRDZUNuTENJOWVkNzNjSlZRcHJJbENRVGpuMGhTcU5UV25jZ0RMclRJOTdrZnBUa0x1TXR1NGwwNnZYaTFEWmxLM0VRdmdXcWJTVUNFQ3QtbjlHYzEyUHljcm9ISWVPa3NfVDQ5bmUxZFZuYXJZanBMUVo4a0lSVXRUaTNLLU1GTDc0MVdkbzNHMVZEdjZERlJTbVBWNUFZWFVNbDZwaFlzd29aOVhjemI3VHNpZw?oc=5
