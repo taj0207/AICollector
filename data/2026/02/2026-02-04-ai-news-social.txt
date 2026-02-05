@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2026-02-04
+
+Prepared 3 social-ready article(s).
+
+1. Introducing OpenAI Frontier - OpenAI
+   OpenAI has launched Frontier, a groundbreaking initiative set to redefine AI capabilities. This project promises to enhance accessibility and innovation in the AI landscape, potentially transforming industries and everyday life. Explore the future of AI today.
+   https://news.google.com/rss/articles/CBMiY0FVX3lxTE9PMlRDV2RiVlJZZExGZlB1dk5sNUhCU21LR1BJVjJieWdPUVA0QWk1N2x6VjFrdmRZRldOOUw5ZElxQkJMbzVvTW1FTlROajN1V2JQdUVfaF90UVdkQWtwQUY3VQ?oc=5
+
+2. Google goes from laggard to leader as it pulls ahead of OpenAI with stellar AI growth - Reuters
+   Google has surged ahead in the AI race, outpacing OpenAI with impressive growth. This shift marks a significant transformation for the tech giant, showcasing its commitment to innovation and redefining industry leadership in artificial intelligence.
+   https://news.google.com/rss/articles/CBMitwFBVV95cUxNYjNyZ05RbVhwMzd6aFFKNnVmTDBrRi1mYzdLSFVjSHdZSVdjdk1WUjU2U0hnTFM0Y1pQMDVjOVVpN3hiamdEMzBJUms1LUhiT1RwVUk0dVBfa2pxaDc3c2JQNWt6VW1lZmdQNHdYa01vamxnNnM0YW1EMnItX2EteDYwcUhEOGN3emhTWnh4bE03ZEg5U0dUTUI3Y01DbVZBVUJRUXA3am1XS2l6MHFDcU5lUmlQaFE?oc=5
+
+3. Apple picks Google Gemini over ChatGPT to power the new AI Siri - Mashable
+   Apple has chosen Google Gemini to enhance Siri's AI capabilities, moving away from ChatGPT. This strategic shift highlights Apple's focus on integrating advanced technology into its ecosystem, promising a more intuitive user experience.
+   https://news.google.com/rss/articles/CBMihwFBVV95cUxOclZXVlVyQW9Ic3QwVFlYZl9PdHN6UERTXzdleFhPSlFrYUZ0VDRKOS1IREVDQ3AybzZaNzhjZms5d1BUeGMxem9Xd1VqYU4tQkJST29IQ3MzNVVXN3NULXk2aUhnMFd5R1hUMnFneDRjMFVCTktFWS1rR05rcm9IUENMX3V1V1U?oc=5
