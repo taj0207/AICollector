@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2026-02-07
+
+Prepared 3 social-ready article(s).
+
+1. “The sheer velocity of AI-driven threats makes human-in-the-loop a bottleneck rather than a safeguard” - CTech
+   The rapid rise of AI-driven threats is outpacing human responses, turning the human-in-the-loop model into a bottleneck. As technology evolves, we must rethink our defenses to keep up with these unprecedented challenges.
+   https://news.google.com/rss/articles/CBMiakFVX3lxTE5UbldFV0FJOVd1NThBdnZveXpOQ1JLMXRGcy02TjZha1RxM09BcmUyTzBSV215bTB3bk5jclNMYm50amIyOTNUcFM5czZvNVg5T083enpDNzdJcERFM2oycU53eGNKSUdfekE?oc=5
+
+2. I turned myself into an AI-generated deathbot - here's what I found - BBC
+   Exploring the dark side of AI, one journalist transformed into a deathbot. The experience reveals unsettling truths about technology's potential and ethical dilemmas. Read about the journey and its implications for our future.
+   https://news.google.com/rss/articles/CBMiWkFVX3lxTE1QY0hKMGpaMEdreXlEaE5laWZqQUNYdFdRd0FjODdlaEdud01FN1pVUzdVWDJfajlsdlZEaWZablFYMnRQNmVSQUJfb2E2Wm5QaHAxeXVVOFZVZw?oc=5
+
+3. AI wiped out $400 billion this week — and it's only getting started - Axios
+   In a shocking turn, AI wiped out $400 billion this week, signaling a turbulent shift in the market. As technology continues to evolve, the implications for industries and investors are profound. The future is uncertain, and the stakes have never been higher.
+   https://news.google.com/rss/articles/CBMif0FVX3lxTE5XZERIdXVjdno1ZUx4RHQ3ZUxnMmxLQlNiYUJVb1ZBSGQwXzJuR2xYeXFNa3FubE1QSE8xSEVMOG1RNTJUV1J4ZkFvVEFvQmdVN0tOYjdLT24tZ2llWnVFaGk2bHhleFBqS3lwMzVTbDc3Y0RWZU8xMHpacmx2cUk?oc=5
