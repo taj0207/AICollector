@@ -1,0 +1,15 @@
+# AI News Social Summaries for 2026-02-09
+
+Prepared 3 social-ready article(s).
+
+1. AI In Robotics - New Position Paper - IFR International Federation of Robotics
+   The IFR's new position paper on AI in robotics highlights transformative potentials and ethical considerations. As AI continues to evolve, the intersection of these technologies promises to redefine industries and enhance human capabilities. Read more: https://news.google.com/rss/articles/CBMifkFVX3lxTE1xNmVSVWNmVUV0cUZUeWF5c2llWVA4X2w3NG14NkNETm9xNkRoU1hySnlnTkdBQWNCSzJ5MXN2eUU2bWpZUU9iUjZFdTZEVHhBc0hULS1QYUJQcnJ0U3dvSElHSkxOeE9NR1pNMXlfaTE4VEhWa1VWbTF0QWJBdw?oc=5
+   https://news.google.com/rss/articles/CBMifkFVX3lxTE1xNmVSVWNmVUV0cUZUeWF5c2llWVA4X2w3NG14NkNETm9xNkRoU1hySnlnTkdBQWNCSzJ5MXN2eUU2bWpZUU9iUjZFdTZEVHhBc0hULS1QYUJQcnJ0U3dvSElHSkxOeE9NR1pNMXlfaTE4VEhWa1VWbTF0QWJBdw?oc=5
+
+2. The AI Divide - Foreign Affairs
+   The AI Divide highlights the growing gap in AI development across nations. As some countries race ahead, others lag behind, raising concerns about equity, innovation, and global stability. The implications for geopolitics and economic power are profound.
+   https://news.google.com/rss/articles/CBMiZEFVX3lxTFAtd1A2ekhhSC11Ym9WZ3g4N1VhR0JSQ0h1Rk15ME5IYzh3MmVoQWl1THFhX2FuY1pUWDM1bDJUZVFZLVJtQ2F1dzB2akJxRVA0elVZSW9Yd3B3ajRVX3VXZmV5YjY?oc=5
+
+3. Inside OpenAI’s Decision to Kill the AI Model That People Loved Too Much - WSJ - The Wall Street Journal
+   OpenAI's recent decision to retire a beloved AI model has sparked debate. While it captivated users, concerns over safety and ethical implications led to its demise. This move reflects the ongoing struggle between innovation and responsibility in AI development.
+   https://news.google.com/rss/articles/CBMi6gJBVV95cUxNMXZkaHNZdkxIeWEwdFpERThlYk9PYWtWV2VKZXFDdUNCT1U1Z3J3dkt6NFRqYXlWQUxIcG80Y1NlT2UzWnctNDd3aVYwLVJCcUJKWEJmTkZxdllCNUprTWJJZ1B0RWhTbENrb1JCRGd1alpodFQ3Z0xiSlgwMnZ2Q3dCa01uaENNU21NVkNXam5MWVBjZ2UwM2YzWlBDUkhIdVEwRmZwc0JDRDQtZ1dnTnRRelpGbDB3LVlvNmw2UHdZWmFJZVV0SnljNTJZN2p5SllPYzhBa0N2eHg5TXJybjdjTG9LSG15RTR3R0ZHNU0zX2I3ek0yRnBUQWRYN3BfSzhHd192TmlzQjVCQnZ5bDdmVlZjYXB0bktNeDRfN2xQQ0ZyLWpDRW5QX3FoLTF5bGk3V1FINlRKNkFCaGRtWG5OWmh5Qm1CNzhmcjdRdlBGbnlGeEFjcmdHcDhZOFBxN2VERk1fSFVoUQ?oc=5
